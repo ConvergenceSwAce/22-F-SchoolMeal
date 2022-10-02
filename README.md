@@ -68,8 +68,9 @@
 ---
 
 ## 기술 스택
-
 <div align=left>
+👨🏻‍💻Lang & Framework👩🏻‍💻
+<br>
 <img src="https://img.shields.io/badge/python-3776AB?style=for-the-badge&logo=Python&logoColor=white">
 <img src="https://img.shields.io/badge/react-61DAFB?style=for-the-badge&logo=react&logoColor=white">
 <img src="https://img.shields.io/badge/react Native-61DAFB?style=for-the-badge&logo=react&logoColor=white">
@@ -80,12 +81,18 @@
 <img src="https://img.shields.io/badge/Selenium-43B02A?style=for-the-badge&logo=Selenium&logoColor=white">
 <img src="https://img.shields.io/badge/AWS Lambda-FF9900?style=for-the-badge&logo=AWS+Lambda&logoColor=white">
 <br>
+🛠Dev Tool🛠
+<br>
 <img src="https://img.shields.io/badge/WebStorm-000000?style=for-the-badge&logo=WebStorm&logoColor=white">
 <img src="https://img.shields.io/badge/Visual Studio Code-007ACC?style=for-the-badge&logo=Visual+Studio+Code&logoColor=white">
 <img src="https://img.shields.io/badge/PyCharm-000000?style=for-the-badge&logo=PyCharm&logoColor=white">
 <br>
+🧑🏻‍🎨Design Tool👩🏻‍🎨
+<br>
 <img src="https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=Figma&logoColor=white">
 <img src="https://img.shields.io/badge/Zeplin-FFB230?style=for-the-badge&logo=Zeplin&logoColor=white">
+<br>
+👥Collaborative Tool👥
 <br>
 <img src="https://img.shields.io/badge/github-181717?style=for-the-badge&logo=github&logoColor=white">
 <img src="https://img.shields.io/badge/git-F05032?style=for-the-badge&logo=git&logoColor=white">
