@@ -1,109 +1,114 @@
 import React from 'react';
-import {
-  SafeAreaView,
-  ScrollView,
-  StatusBar,
-  StyleSheet,
-  Text,
-  useColorScheme,
-  View,
-} from 'react-native';
+import {SafeAreaView, View, StatusBar, StyleSheet, Image, Text} from 'react-native';
 
-import {
-  Colors,
-  DebugInstructions,
-  Header,
-  LearnMoreLinks,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
-
-import propTypes from 'prop-types';
-
-const styles = StyleSheet.create({
-  sectionContainer: {
-    marginTop: 32,
-    paddingHorizontal: 24,
-  },
-  sectionTitle: {
-    fontSize: 24,
-    fontWeight: '600',
-  },
-  sectionDescription: {
-    marginTop: 8,
-    fontSize: 18,
-    fontWeight: '400',
-  },
-  highlight: {
-    fontWeight: '700',
-  },
-});
-
-function Section({children, title}) {
-  Section.propTypes = {children: propTypes.node, title: propTypes.string};
-  const isDarkMode = useColorScheme() === 'dark';
+const Header = () => {
   return (
-    <View style={styles.sectionContainer}>
+    <View style={{flex: 1, flexDirection: 'row', marginLeft: 15, bottom: 0}}>
+      <Image
+        style={{width: 32, height: 32, marginTop: 12}}
+        source={require('./assets/CalendarIcon.png')}
+      />
       <Text
-        style={[
-          styles.sectionTitle,
-          {
-            color: isDarkMode ? Colors.white : Colors.black,
-          },
-        ]}
+        style={{
+          width: 68,
+          height: 41,
+          fontSize: 28,
+          fontWeight: 'bold',
+          fontStyle: 'normal',
+          letterSpacing: 0,
+          textAlign: 'center',
+          color: '#071648',
+          marginLeft: 10,
+          marginTop: 12,
+        }}
       >
-        {title}
+        June
       </Text>
       <Text
-        style={[
-          styles.sectionDescription,
-          {
-            color: isDarkMode ? Colors.light : Colors.dark,
-          },
-        ]}
+        style={{
+          width: 37,
+          height: 23,
+          fontSize: 16,
+          fontWeight: '500',
+          fontStyle: 'normal',
+          letterSpacing: 0,
+          textAlign: 'center',
+          color: '#a8a8a8',
+          marginLeft: 10,
+          marginTop: 20,
+        }}
       >
-        {children}
+        2022
       </Text>
     </View>
   );
-}
+};
 
-function App() {
-  const isDarkMode = useColorScheme() === 'dark';
-
-  const backgroundStyle = {
-    backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
-  };
-
+const WeekCarousel = () => {
   return (
-    <SafeAreaView style={backgroundStyle}>
-      <StatusBar
-        barStyle={isDarkMode ? 'light-content' : 'dark-content'}
-        backgroundColor={backgroundStyle.backgroundColor}
-      />
-      <ScrollView contentInsetAdjustmentBehavior="automatic" style={backgroundStyle}>
-        <Header />
-        <View
-          style={{
-            backgroundColor: isDarkMode ? Colors.black : Colors.white,
-          }}
-        >
-          <Section title="Step One">
-            Edit
-            <Text style={styles.highlight}>App.js</Text>
-            to change this screen and then come back to see your edits.
-          </Section>
-          <Section title="See Your Changes">
-            <ReloadInstructions />
-          </Section>
-          <Section title="Debug">
-            <DebugInstructions />
-          </Section>
-          <Section title="Learn More">Read the docs to discover what to do next:</Section>
-          <LearnMoreLinks />
-        </View>
-      </ScrollView>
+    <View style={{flex: 10, flexDirection: 'row', marginLeft: 44}}>
+      <View style={{flex: 1, flexDirection: 'column'}}>
+        <Text style={dayStyle}>S</Text>
+        <Text style={weekStyle}>1</Text>
+      </View>
+      <View style={{flex: 1, flexDirection: 'column'}}>
+        <Text style={dayStyle}>M</Text>
+        <Text style={weekStyle}>2</Text>
+      </View>
+      <View style={{flex: 1, flexDirection: 'column'}}>
+        <Text style={dayStyle}>T</Text>
+        <Text style={weekStyle}>3</Text>
+      </View>
+      <View style={{flex: 1, flexDirection: 'column'}}>
+        <Text style={dayStyle}>W</Text>
+        <Text style={weekStyle}>4</Text>
+      </View>
+      <View style={{flex: 1, flexDirection: 'column'}}>
+        <Text style={dayStyle}>T</Text>
+        <Text style={weekStyle}>5</Text>
+      </View>
+      <View style={{flex: 1, flexDirection: 'column'}}>
+        <Text style={dayStyle}>F</Text>
+        <Text style={weekStyle}>6</Text>
+      </View>
+      <View style={{flex: 1, flexDirection: 'column'}}>
+        <Text style={dayStyle}>S</Text>
+        <Text style={weekStyle}>7</Text>
+      </View>
+    </View>
+  );
+};
+
+const App = () => {
+  return (
+    <SafeAreaView style={styles.container}>
+      <StatusBar />
+      <Header />
+      <WeekCarousel />
     </SafeAreaView>
   );
-}
+};
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+  },
+});
+
+const dayStyle = StyleSheet.create({
+  fontSize: 16,
+  fontWeight: '500',
+  fontStyle: 'normal',
+  color: '#d9d9d9',
+});
+
+const weekStyle = StyleSheet.create({
+  marginTop: 10,
+  fontSize: 18,
+  fontWeight: '500',
+  fontStyle: 'normal',
+  color: '#7b7b7b',
+});
 
 export default App;
