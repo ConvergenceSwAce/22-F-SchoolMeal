@@ -1,5 +1,5 @@
 import React from 'react';
-import {SafeAreaView, View, StatusBar, StyleSheet, Image, Text, Dimensions} from 'react-native';
+import {ScrollView, View, StatusBar, StyleSheet, Image, Text, Dimensions} from 'react-native';
 
 const {width: SCREEN_WIDTH} = Dimensions.get('window');
 
@@ -48,7 +48,7 @@ const Header = () => {
 
 const WeekCarousel = () => {
   return (
-    <View style={{flex: 10, flexDirection: 'row', marginLeft: '10%', marginTop: '15%'}}>
+    <View style={{flex: 3, flexDirection: 'row', marginLeft: '10%', marginTop: '15%'}}>
       <View style={{flex: 1, flexDirection: 'column'}}>
         <Text style={dayStyle}>S</Text>
         <Text style={weekStyle}>1</Text>
@@ -90,7 +90,7 @@ const meal = {
 
 const MealTitle = props => {
   return (
-    <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
+    <View style={mealTitle.component}>
       <Text style={mealTitle.title}>{props.type}</Text>
       <Text style={mealTitle.time}>{props.time}</Text>
     </View>
@@ -130,30 +130,35 @@ const Btn = props => {
   );
 };
 
-const MealSatisfaction = () => {
+const MealSatisfaction = props => {
   return (
     <View style={mealSatisfaction.component}>
-      <Text style={mealSatisfaction.text}>오늘의 중식 만족하시나요</Text>
+      <Text style={mealSatisfaction.text}>{props.message}</Text>
     </View>
   );
 };
 
 const App = () => {
   return (
-    <SafeAreaView style={styles.container}>
+    <ScrollView style={styles.container}>
       <StatusBar />
       <Header />
       <WeekCarousel />
       <MealTitle type={meal.lunch} time={meal.lunchTime} />
       <MenuList data={dummyData.lunch} />
-      <MealSatisfaction />
+      <MealSatisfaction message="오늘의 중식 만족하시나요" />
       <View style={btn.component}>
         <Btn btnName="Good" />
         <Btn btnName="Bad" />
       </View>
       <MealTitle type={meal.dinner} time={meal.dinnerTime} />
       <MenuList data={dummyData.dinner} />
-    </SafeAreaView>
+      <MealSatisfaction message="오늘의 석식 만족하시나요" />
+      <View style={btn.component}>
+        <Btn btnName="Good" />
+        <Btn btnName="Bad" />
+      </View>
+    </ScrollView>
   );
 };
 
@@ -180,6 +185,7 @@ const weekStyle = StyleSheet.create({
 });
 
 const mealTitle = StyleSheet.create({
+  component: {flex: 1, flexDirection: 'row', justifyContent: 'space-between'},
   title: {
     width: 87,
     height: 26,
@@ -206,8 +212,7 @@ const mealTitle = StyleSheet.create({
 });
 
 const menuComponent = {
-  width: 396,
-  height: 179,
+  flex: 4,
   borderRadius: 16,
   backgroundColor: '#ffffff',
   borderStyle: 'solid',
@@ -219,14 +224,12 @@ const menuComponent = {
 
 const item = StyleSheet.create({
   component: {
-    width: 368,
-    height: 23,
+    flex: 1,
     flexDirection: 'row', // 실제 디자인요소엔 없는데 있어야함
     justifyContent: 'space-between', // 실제 디자인요소엔 없는데 있어야함
   },
   title: {
-    width: 107,
-    height: 23,
+    flex: 1,
     // fontFamily: 'NotoSansKR',
     fontSize: 16,
     fontWeight: 'normal',
@@ -238,8 +241,7 @@ const item = StyleSheet.create({
     marginTop: 8,
   },
   kcal: {
-    width: 46,
-    height: 17,
+    flex: 1,
     // fontFamily: "NotoSansKR",
     fontSize: 12,
     fontWeight: 'normal',
@@ -252,18 +254,18 @@ const item = StyleSheet.create({
 
 const mealSatisfaction = StyleSheet.create({
   component: {
+    flex: 2,
     flexDirection: 'row',
     justifyContent: 'center',
   },
   text: {
-    width: 200,
-    height: 26,
+    flex: 1,
     // fontFamily: 'NotoSansKR',
     fontSize: 18,
     fontWeight: '500',
     fontStyle: 'normal',
     letterSpacing: 0,
-    textAlign: 'left',
+    textAlign: 'center',
     color: '#000000',
   },
 });
@@ -271,8 +273,7 @@ const mealSatisfaction = StyleSheet.create({
 const btn = StyleSheet.create({
   component: {
     //박스를 감싸고 있는 컴포넌트
-    width: 396,
-    height: 47,
+    flex: 2,
     justifyContent: 'space-between',
     flexDirection: 'row',
     // flex: ,
@@ -291,8 +292,7 @@ const btn = StyleSheet.create({
     marginRight: 8,
   },
   default: {
-    width: 180,
-    height: 47,
+    flex: 1,
     borderRadius: 4,
     backgroundColor: '#ffffff',
     borderStyle: 'solid',
