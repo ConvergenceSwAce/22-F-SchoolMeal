@@ -1,7 +1,20 @@
 import React from 'react';
-import {ScrollView, View, StatusBar, StyleSheet, Image, Text, Dimensions} from 'react-native';
+import {
+  ScrollView,
+  View,
+  StatusBar,
+  StyleSheet,
+  Image,
+  Text,
+  Dimensions,
+  TouchableOpacity,
+} from 'react-native';
 
 const {width: SCREEN_WIDTH} = Dimensions.get('window');
+
+const onPress = () => {
+  console.log('onPress');
+};
 
 const Header = () => {
   return (
@@ -48,10 +61,22 @@ const Header = () => {
 
 const WeekCarousel = () => {
   return (
-    <View style={{flex: 3, flexDirection: 'row', marginLeft: '10%', marginTop: '15%'}}>
+    <View style={{flex: 10, flexDirection: 'row', marginHorizontal: 44}}>
       <View style={{flex: 1, flexDirection: 'column'}}>
-        <Text style={dayStyle}>S</Text>
-        <Text style={weekStyle}>1</Text>
+        <TouchableOpacity activeOpacity={0.5} onPress={onPress}>
+          <View
+            style={{
+              width: 44,
+              height: 64,
+              borderRadius: 8,
+              backgroundColor: '#071648',
+              alignItems: 'center',
+            }}
+          >
+            <Text style={dayStyle}>S</Text>
+            <Text style={weekStyle}>1</Text>
+          </View>
+        </TouchableOpacity>
       </View>
       <View style={{flex: 1, flexDirection: 'column'}}>
         <Text style={dayStyle}>M</Text>
@@ -174,6 +199,8 @@ const dayStyle = StyleSheet.create({
   fontWeight: '500',
   fontStyle: 'normal',
   color: '#d9d9d9',
+  textAlign: 'center',
+  marginTop: 7,
 });
 
 const weekStyle = StyleSheet.create({
@@ -182,6 +209,7 @@ const weekStyle = StyleSheet.create({
   fontWeight: '500',
   fontStyle: 'normal',
   color: '#7b7b7b',
+  textAlign: 'center',
 });
 
 const mealTitle = StyleSheet.create({
