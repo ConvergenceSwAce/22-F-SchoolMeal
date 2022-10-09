@@ -2,7 +2,6 @@ import React from 'react';
 import {
   ScrollView,
   View,
-  StatusBar,
   StyleSheet,
   Image,
   Text,
@@ -18,7 +17,7 @@ const onPress = () => {
 
 const Header = () => {
   return (
-    <View style={{flex: 1, flexDirection: 'row', marginLeft: '3.5%', bottom: 0, marginTop: '3.2%'}}>
+    <View style={{flex: 1, flexDirection: 'row', marginLeft: 15, marginTop: 54}}>
       <Image
         style={{width: 32, height: 32, marginTop: 12}}
         source={require('./assets/CalendarIcon.png')}
@@ -33,7 +32,7 @@ const Header = () => {
           letterSpacing: 0,
           textAlign: 'center',
           color: '#071648',
-          marginLeft: '3.2%',
+          marginLeft: 10,
           marginTop: 12,
         }}
       >
@@ -49,7 +48,7 @@ const Header = () => {
           letterSpacing: 0,
           textAlign: 'center',
           color: '#a8a8a8',
-          marginLeft: '3.2%',
+          marginLeft: 10,
           marginTop: 20,
         }}
       >
@@ -61,7 +60,7 @@ const Header = () => {
 
 const WeekCarousel = () => {
   return (
-    <View style={{flex: 10, flexDirection: 'row', marginHorizontal: 44}}>
+    <View style={{flex: 10, flexDirection: 'row', marginHorizontal: 44, marginTop: 20}}>
       <View style={{flex: 1, flexDirection: 'column'}}>
         <TouchableOpacity activeOpacity={0.5} onPress={onPress}>
           <View
@@ -166,22 +165,29 @@ const MealSatisfaction = props => {
 const App = () => {
   return (
     <ScrollView style={styles.container}>
-      <StatusBar />
       <Header />
       <WeekCarousel />
       <MealTitle type={meal.lunch} time={meal.lunchTime} />
       <MenuList data={dummyData.lunch} />
       <MealSatisfaction message="오늘의 중식 만족하시나요" />
       <View style={btn.component}>
-        <Btn btnName="Good" />
-        <Btn btnName="Bad" />
+        <TouchableOpacity activeOpacity={0.5} onPress={onPress}>
+          <Btn btnName="Good" />
+        </TouchableOpacity>
+        <TouchableOpacity activeOpacity={0.5} onPress={onPress}>
+          <Btn btnName="Bad" />
+        </TouchableOpacity>
       </View>
       <MealTitle type={meal.dinner} time={meal.dinnerTime} />
       <MenuList data={dummyData.dinner} />
       <MealSatisfaction message="오늘의 석식 만족하시나요" />
       <View style={btn.component}>
-        <Btn btnName="Good" />
-        <Btn btnName="Bad" />
+        <TouchableOpacity activeOpacity={0.5} onPress={onPress}>
+          <Btn btnName="Good" />
+        </TouchableOpacity>
+        <TouchableOpacity activeOpacity={0.5} onPress={onPress}>
+          <Btn btnName="Bad" />
+        </TouchableOpacity>
       </View>
     </ScrollView>
   );
@@ -213,7 +219,12 @@ const weekStyle = StyleSheet.create({
 });
 
 const mealTitle = StyleSheet.create({
-  component: {flex: 1, flexDirection: 'row', justifyContent: 'space-between'},
+  component: {
+    flex: 10,
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+  },
   title: {
     width: 87,
     height: 26,
@@ -222,51 +233,48 @@ const mealTitle = StyleSheet.create({
     fontWeight: '500',
     fontStyle: 'normal',
     letterSpacing: 0,
-    textAlign: 'left',
     color: '#000000',
     marginLeft: 16,
+    marginTop: 42,
   },
   time: {
     width: 84,
     height: 20,
     // fontFamily: 'NotoSansKR',
-    fontSize: 14,
-    fontWeight: '500',
-    fontStyle: 'normal',
-    letterSpacing: 0,
-    textAlign: 'left',
+    fontSize: 13,
     color: '#7b7b7b',
+    marginTop: 42,
+    marginRight: 16,
   },
 });
 
 const menuComponent = {
-  flex: 4,
+  alignItems: 'center',
+  flexDirection: 'column',
   borderRadius: 16,
   backgroundColor: '#ffffff',
   borderStyle: 'solid',
   borderWidth: 1,
   borderColor: '#dbdbdb',
-  marginLeft: '3.7%',
-  marginRight: '3.7%',
+  marginHorizontal: 16,
+  marginTop: 12,
+  paddingVertical: 8,
 };
 
 const item = StyleSheet.create({
   component: {
     flex: 1,
     flexDirection: 'row', // 실제 디자인요소엔 없는데 있어야함
-    justifyContent: 'space-between', // 실제 디자인요소엔 없는데 있어야함
+    width: 368,
+    height: 23,
+    marginVertical: 4,
   },
   title: {
     flex: 1,
     // fontFamily: 'NotoSansKR',
     fontSize: 16,
-    fontWeight: 'normal',
-    fontStyle: 'normal',
-    letterSpacing: 0,
     textAlign: 'left',
     color: '#000000',
-    marginLeft: 14,
-    marginTop: 8,
   },
   kcal: {
     flex: 1,
@@ -285,6 +293,7 @@ const mealSatisfaction = StyleSheet.create({
     flex: 2,
     flexDirection: 'row',
     justifyContent: 'center',
+    marginTop: 24,
   },
   text: {
     flex: 1,
@@ -301,47 +310,35 @@ const mealSatisfaction = StyleSheet.create({
 const btn = StyleSheet.create({
   component: {
     //박스를 감싸고 있는 컴포넌트
-    flex: 2,
-    justifyContent: 'space-between',
+    flex: 1,
     flexDirection: 'row',
-    // flex: ,
+    justifyContent: 'space-around',
+    margin: 12,
   },
   isPress: {
-    width: 180,
-    height: 47,
     borderRadius: 4,
     backgroundColor: '#ffffff',
     borderStyle: 'solid',
     borderWidth: 1,
     borderColor: '#071648',
-    justifyContent: 'center',
-    alignContent: 'center',
-    marginLeft: 8,
-    marginRight: 8,
   },
   default: {
-    flex: 1,
+    width: 191,
+    height: 47,
     borderRadius: 4,
     backgroundColor: '#ffffff',
     borderStyle: 'solid',
     borderWidth: 1,
     borderColor: '#dbdbdb',
     justifyContent: 'center',
-    alignContent: 'center',
-    marginLeft: 8,
-    marginRight: 8,
   },
   text: {
-    width: 41,
-    height: 23,
-    // fontFamily: 'NotoSansKR',
     fontSize: 16,
     fontWeight: '500',
     fontStyle: 'normal',
     letterSpacing: 0,
     textAlign: 'center',
     color: '#a8a8a8',
-    marginLeft: 60,
   },
 });
 export default App;
