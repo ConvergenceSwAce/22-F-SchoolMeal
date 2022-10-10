@@ -11,7 +11,7 @@
     "sourceType": "module",
     "requireConfigFile" : "false"
   },
-  "babelOptions": { "configFile": "./.babelrc" },
+  // "babelOptions": { "configFile": "./.babelrc" },
   "plugins": ["import", "react", "prettier"],
   "rules": {
     "prettier/prettier": "error",

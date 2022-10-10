@@ -1,19 +1,29 @@
 import React from 'react';
 import {View, Text, TouchableOpacity, StyleSheet} from 'react-native';
+import {widthPercentage, heightPercentage, fontPercentage} from '../Responsive';
 
 export default function WeekCarousel() {
+  const carouselStyle = StyleSheet.create({
+    flex: 10,
+    flexDirection: 'row',
+    marginHorizontal: widthPercentage(30),
+    marginTop: heightPercentage(30),
+    justifyContent: 'space-between',
+    alignItems: 'center',
+  });
+
   const dayStyle = StyleSheet.create({
-    fontSize: 16,
+    fontSize: fontPercentage(16),
     fontWeight: '500',
     fontStyle: 'normal',
     color: '#d9d9d9',
     textAlign: 'center',
-    marginTop: 7,
+    marginTop: heightPercentage(7),
   });
 
   const weekStyle = StyleSheet.create({
-    marginTop: 10,
-    fontSize: 18,
+    marginTop: heightPercentage(5),
+    fontSize: fontPercentage(18),
     fontWeight: '500',
     fontStyle: 'normal',
     color: '#7b7b7b',
@@ -25,13 +35,13 @@ export default function WeekCarousel() {
     };
 
   return (
-    <View style={{flex: 10, flexDirection: 'row', marginHorizontal: 44, marginTop: 20}}>
+    <View style={carouselStyle}>
       <View style={{flex: 1, flexDirection: 'column'}}>
         <TouchableOpacity activeOpacity={0.5} onPress={onPress}>
           <View
             style={{
-              width: 44,
-              height: 64,
+              width: widthPercentage(44),
+              height: widthPercentage(64),
               borderRadius: 8,
               backgroundColor: '#071648',
               alignItems: 'center',

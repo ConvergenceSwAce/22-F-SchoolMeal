@@ -1,13 +1,14 @@
 import React from 'react';
 import {View, Text, StyleSheet} from 'react-native';
-
+import {widthPercentage, heightPercentage, fontPercentage} from '../Responsive';
 const btn = StyleSheet.create({
   component: {
-    // 박스를 감싸고 있는 컴포넌트
+    //박스를 감싸고 있는 컴포넌트
     flex: 1,
     flexDirection: 'row',
     justifyContent: 'space-around',
-    margin: 12,
+    marginHorizontal: heightPercentage(12),
+    marginTop: heightPercentage(16),
   },
   isPress: {
     borderRadius: 4,
@@ -17,8 +18,8 @@ const btn = StyleSheet.create({
     borderColor: '#071648',
   },
   default: {
-    width: 160,
-    height: 40,
+    width: widthPercentage(190),
+    height: heightPercentage(50),
     borderRadius: 4,
     backgroundColor: '#ffffff',
     borderStyle: 'solid',
@@ -27,10 +28,9 @@ const btn = StyleSheet.create({
     justifyContent: 'center',
   },
   text: {
-    fontSize: 16,
+    fontSize: fontPercentage(16),
     fontWeight: '500',
     fontStyle: 'normal',
-    letterSpacing: 0,
     textAlign: 'center',
     color: '#a8a8a8',
   },

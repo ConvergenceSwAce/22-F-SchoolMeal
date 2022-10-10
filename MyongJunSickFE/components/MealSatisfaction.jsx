@@ -1,20 +1,20 @@
 import React from 'react';
 import {View, Text, StyleSheet} from 'react-native';
+import {widthPercentage, heightPercentage, fontPercentage} from '../Responsive';
 
 const mealSatisfaction = StyleSheet.create({
   component: {
     flex: 2,
     flexDirection: 'row',
     justifyContent: 'center',
-    marginTop: 24,
+    marginTop: heightPercentage(24),
   },
   text: {
     flex: 1,
     // fontFamily: 'NotoSansKR',
-    fontSize: 18,
+    fontSize: fontPercentage(18),
     fontWeight: '500',
     fontStyle: 'normal',
-    letterSpacing: 0,
     textAlign: 'center',
     color: '#000000',
   },

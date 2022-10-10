@@ -1,36 +1,31 @@
 import React from 'react';
 import {View, Text, StyleSheet} from 'react-native';
+import {widthPercentage, heightPercentage, fontPercentage} from '../Responsive';
 
 export default function MealTiltle(props) {
-  const mealTitle = StyleSheet.create({
-    component: {
-      flex: 10,
-      flexDirection: 'row',
-      justifyContent: 'space-between',
-      alignItems: 'center',
-    },
-    title: {
-      width: 87,
-      height: 26,
-      // fontFamily: 'NotoSansKR',
-      fontSize: 18,
-      fontWeight: '500',
-      fontStyle: 'normal',
-      letterSpacing: 0,
-      color: '#000000',
-      marginLeft: 16,
-      marginTop: 42,
-    },
-    time: {
-      width: 84,
-      height: 20,
-      // fontFamily: 'NotoSansKR',
-      fontSize: 13,
-      color: '#7b7b7b',
-      marginTop: 42,
-      marginRight: 16,
-    },
-  });
+const mealTitle = StyleSheet.create({
+  component: {
+    width: widthPercentage(396),
+    height: heightPercentage(26),
+    flex: 10,
+    flexDirection: 'row',
+    alignContent: 'center',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    marginTop: heightPercentage(40),
+    marginLeft: widthPercentage(16),
+  },
+  title: {
+    fontSize: fontPercentage(18),
+    fontWeight: '500',
+    fontStyle: 'normal',
+    color: '#000000',
+  },
+  time: {
+    fontSize: fontPercentage(13),
+    color: '#7b7b7b',
+  },
+});
 
   return (
     <View style={mealTitle.component}>

@@ -1,41 +1,40 @@
 import React from 'react';
-import {View, Text, Image} from 'react-native';
+import {View, Text, Image, StyleSheet} from 'react-native';
+import {widthPercentage, heightPercentage, fontPercentage} from '../Responsive';
 
 export default function Header() {
+  const headerStyle = StyleSheet.create({
+    flexDirection: 'row',
+    marginLeft: widthPercentage(16),
+    marginTop: heightPercentage(54),
+    justifyContent: 'flex-start',
+    alignItems: 'center',
+  });
   return (
-    <View style={{flex: 1, flexDirection: 'row', marginLeft: 15, marginTop: 54}}>
+    <View style={headerStyle}>
       <Image
-        style={{width: 32, height: 32, marginTop: 12}}
-        source={require('../assets/CalendarIcon.png')} //require 말곤없나?
+        style={{width: widthPercentage(32), height: heightPercentage(32), objectFit: 'contain'}}
+        source={require('../assets/CalendarIcon.png')}
       />
       <Text
         style={{
-          width: 68,
-          height: 41,
-          fontSize: 28,
+          fontSize: fontPercentage(28),
           fontWeight: 'bold',
           fontStyle: 'normal',
-          letterSpacing: 0,
-          textAlign: 'center',
           color: '#071648',
-          marginLeft: 10,
-          marginTop: 12,
+          marginLeft: widthPercentage(10),
         }}
       >
         June
       </Text>
       <Text
         style={{
-          width: 37,
-          height: 23,
-          fontSize: 16,
+          fontSize: fontPercentage(16),
           fontWeight: '500',
           fontStyle: 'normal',
           letterSpacing: 0,
-          textAlign: 'center',
           color: '#a8a8a8',
-          marginLeft: 10,
-          marginTop: 20,
+          marginLeft: widthPercentage(10),
         }}
       >
         2022
