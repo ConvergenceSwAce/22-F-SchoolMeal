@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import {ScrollView, View, StyleSheet, Image, Text, TouchableOpacity} from 'react-native';
+import {ScrollView, View, StyleSheet, TouchableOpacity} from 'react-native';
 import Config from 'react-native-config';
 import axios from 'axios';
 import Header from './components/Header';
@@ -10,22 +10,24 @@ import MealSatisfaction from './components/MealSatisfaction';
 import Btn from './components/Btn';
 import {heightPercentage} from './Responsive';
 
+
 Config.API_URL;
+
+const meal = {
+  lunch: '오늘의 중식',
+  lunchTime: '11:30 - 14:00',
+  dinner: '오늘의 석식',
+  dinnerTime: '17:30 - 19:00',
+};
+
+const dummyData = {
+  lunch: ['꼬치어묵우동', '후리가케밥', '가라아게&갈릭마요소스', '단무지', '배추김치'],
+  dinner: ['일본식 카레라이스', '우동국물', '왕새우튀김', '오이지무침', '배추김치'],
+};
+
 const App = () => {
   const onPress = () => {
     console.log('onPress');
-  };
-
-  const meal = {
-    lunch: '오늘의 중식',
-    lunchTime: '11:30 - 14:00',
-    dinner: '오늘의 석식',
-    dinnerTime: '17:30 - 19:00',
-  };
-
-  const dummyData = {
-    lunch: ['꼬치어묵우동', '후리가케밥', '가라아게&갈릭마요소스', '단무지', '배추김치'],
-    dinner: ['일본식 카레라이스', '우동국물', '왕새우튀김', '오이지무침', '배추김치'],
   };
 
   const [data, setData] = useState([]);
@@ -51,10 +53,10 @@ const App = () => {
       <MealSatisfaction message="오늘의 중식 만족하시나요?" />
       <View style={btn.component}>
         <TouchableOpacity activeOpacity={0.5} onPress={onPress}>
-          <Btn btnName="Good" />
+          <Btn btnName="Good" data={dummyData.lunch} />
         </TouchableOpacity>
         <TouchableOpacity activeOpacity={0.5} onPress={onPress}>
-          <Btn btnName="Bad" />
+          <Btn btnName="Bad" data={dummyData.lunch} />
         </TouchableOpacity>
       </View>
       <MealTitle type={meal.dinner} time={meal.dinnerTime} />
@@ -62,10 +64,10 @@ const App = () => {
       <MealSatisfaction message="오늘의 석식 만족하시나요?" />
       <View style={btn.component}>
         <TouchableOpacity activeOpacity={0.5} onPress={onPress}>
-          <Btn btnName="Good" />
+          <Btn btnName="Good" data={dummyData.dinner} />
         </TouchableOpacity>
         <TouchableOpacity activeOpacity={0.5} onPress={onPress}>
-          <Btn btnName="Bad" />
+          <Btn btnName="Bad" data={dummyData.dinner} />
         </TouchableOpacity>
       </View>
     </ScrollView>
