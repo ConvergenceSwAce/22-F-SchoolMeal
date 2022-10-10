@@ -11,9 +11,12 @@ import {
 import Config from 'react-native-config';
 import axios from 'axios';
 
+import {widthPercentage, heightPercentage, fontPercentage} from './Responsive';
+
 Config.API_URL;
 const App = () => {
-  const {width: SCREEN_WIDTH} = Dimensions.get('window');
+  const WINDOW_WIDHT = Dimensions.get('window').width;
+  const WINDOW_HEIGHT = Dimensions.get('window').height;
 
   const onPress = () => {
     console.log('onPress');
@@ -21,39 +24,30 @@ const App = () => {
 
   const Header = () => {
     return (
-      <View style={{flex: 1, flexDirection: 'row', marginLeft: 15, marginTop: 54}}>
+      <View style={headerStyle}>
         <Image
-          style={{width: 32, height: 32, marginTop: 12}}
+          style={{width: widthPercentage(32), height: heightPercentage(32), objectFit: 'contain'}}
           source={require('./assets/CalendarIcon.png')}
         />
         <Text
           style={{
-            width: 68,
-            height: 41,
-            fontSize: 28,
+            fontSize: fontPercentage(28),
             fontWeight: 'bold',
             fontStyle: 'normal',
-            letterSpacing: 0,
-            textAlign: 'center',
             color: '#071648',
-            marginLeft: 10,
-            marginTop: 12,
+            marginLeft: widthPercentage(10),
           }}
         >
           June
         </Text>
         <Text
           style={{
-            width: 37,
-            height: 23,
-            fontSize: 16,
+            fontSize: fontPercentage(16),
             fontWeight: '500',
             fontStyle: 'normal',
             letterSpacing: 0,
-            textAlign: 'center',
             color: '#a8a8a8',
-            marginLeft: 10,
-            marginTop: 20,
+            marginLeft: widthPercentage(10),
           }}
         >
           2022
@@ -64,13 +58,13 @@ const App = () => {
 
   const WeekCarousel = () => {
     return (
-      <View style={{flex: 10, flexDirection: 'row', marginHorizontal: 44, marginTop: 20}}>
+      <View style={carouselStyle}>
         <View style={{flex: 1, flexDirection: 'column'}}>
           <TouchableOpacity activeOpacity={0.5} onPress={onPress}>
             <View
               style={{
-                width: 44,
-                height: 64,
+                width: widthPercentage(44),
+                height: widthPercentage(64),
                 borderRadius: 8,
                 backgroundColor: '#071648',
                 alignItems: 'center',
@@ -217,18 +211,35 @@ const styles = StyleSheet.create({
   },
 });
 
+const headerStyle = StyleSheet.create({
+  flexDirection: 'row',
+  marginLeft: widthPercentage(16),
+  marginTop: heightPercentage(54),
+  justifyContent: 'flex-start',
+  alignItems: 'center',
+});
+
+const carouselStyle = StyleSheet.create({
+  flex: 10,
+  flexDirection: 'row',
+  marginHorizontal: widthPercentage(30),
+  marginTop: heightPercentage(30),
+  justifyContent: 'space-between',
+  alignItems: 'center',
+});
+
 const dayStyle = StyleSheet.create({
-  fontSize: 16,
+  fontSize: fontPercentage(16),
   fontWeight: '500',
   fontStyle: 'normal',
   color: '#d9d9d9',
   textAlign: 'center',
-  marginTop: 7,
+  marginTop: heightPercentage(7),
 });
 
 const weekStyle = StyleSheet.create({
-  marginTop: 10,
-  fontSize: 18,
+  marginTop: heightPercentage(5),
+  fontSize: fontPercentage(18),
   fontWeight: '500',
   fontStyle: 'normal',
   color: '#7b7b7b',
@@ -237,71 +248,65 @@ const weekStyle = StyleSheet.create({
 
 const mealTitle = StyleSheet.create({
   component: {
+    width: widthPercentage(396),
+    height: heightPercentage(26),
     flex: 10,
     flexDirection: 'row',
-    justifyContent: 'space-between',
+    alignContent: 'center',
     alignItems: 'center',
+    justifyContent: 'space-between',
+    marginTop: heightPercentage(40),
+    marginLeft: widthPercentage(16),
   },
   title: {
-    width: 87,
-    height: 26,
-    // fontFamily: 'NotoSansKR',
-    fontSize: 18,
+    fontSize: fontPercentage(18),
     fontWeight: '500',
     fontStyle: 'normal',
-    letterSpacing: 0,
     color: '#000000',
-    marginLeft: 16,
-    marginTop: 42,
   },
   time: {
-    width: 84,
-    height: 20,
-    // fontFamily: 'NotoSansKR',
-    fontSize: 13,
+    fontSize: fontPercentage(13),
     color: '#7b7b7b',
-    marginTop: 42,
-    marginRight: 16,
   },
 });
 
 const menuComponent = {
+  width: widthPercentage(396),
   flex: 1,
   alignItems: 'center',
   flexDirection: 'column',
+  justifyContent: 'space-between',
   borderRadius: 16,
   backgroundColor: '#ffffff',
   borderStyle: 'solid',
   borderWidth: 1,
   borderColor: '#dbdbdb',
-  marginHorizontal: 16,
-  marginTop: 12,
-  paddingVertical: 8,
+  marginHorizontal: widthPercentage(16),
+  marginTop: heightPercentage(14),
+  paddingVertical: heightPercentage(12),
 };
 
 const item = StyleSheet.create({
   component: {
-    flex: 1,
-    flexDirection: 'row', // 실제 디자인요소엔 없는데 있어야함
-    justifyContent: 'space-between',
-    marginVertical: 4,
-    marginLeft: 16,
-    marginRight: 16,
+    flex: 2,
+    flexDirection: 'row',
+    justifyContent: 'center',
+    marginHorizontal: widthPercentage(16),
+    marginVertical: heightPercentage(8),
   },
   title: {
     flex: 1,
     // fontFamily: 'NotoSansKR',
-    fontSize: 16,
+    fontSize: fontPercentage(16),
     textAlign: 'left',
     color: '#000000',
   },
   kcal: {
     flex: 1,
     // fontFamily: "NotoSansKR",
-    fontSize: 12,
+    fontSize: fontPercentage(12),
     fontWeight: 'normal',
     fontStyle: 'normal',
-    letterSpacing: 0,
     textAlign: 'right',
     color: '#a8a8a8',
   },
@@ -312,15 +317,14 @@ const mealSatisfaction = StyleSheet.create({
     flex: 2,
     flexDirection: 'row',
     justifyContent: 'center',
-    marginTop: 24,
+    marginTop: heightPercentage(24),
   },
   text: {
     flex: 1,
     // fontFamily: 'NotoSansKR',
-    fontSize: 18,
+    fontSize: fontPercentage(18),
     fontWeight: '500',
     fontStyle: 'normal',
-    letterSpacing: 0,
     textAlign: 'center',
     color: '#000000',
   },
@@ -332,7 +336,8 @@ const btn = StyleSheet.create({
     flex: 1,
     flexDirection: 'row',
     justifyContent: 'space-around',
-    margin: 12,
+    marginHorizontal: heightPercentage(12),
+    marginTop: heightPercentage(16),
   },
   isPress: {
     borderRadius: 4,
@@ -342,8 +347,8 @@ const btn = StyleSheet.create({
     borderColor: '#071648',
   },
   default: {
-    width: 160,
-    height: 40,
+    width: widthPercentage(190),
+    height: heightPercentage(50),
     borderRadius: 4,
     backgroundColor: '#ffffff',
     borderStyle: 'solid',
@@ -352,10 +357,9 @@ const btn = StyleSheet.create({
     justifyContent: 'center',
   },
   text: {
-    fontSize: 16,
+    fontSize: fontPercentage(16),
     fontWeight: '500',
     fontStyle: 'normal',
-    letterSpacing: 0,
     textAlign: 'center',
     color: '#a8a8a8',
   },
