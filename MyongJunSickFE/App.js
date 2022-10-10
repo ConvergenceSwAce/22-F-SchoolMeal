@@ -169,7 +169,7 @@ const App = () => {
       <WeekCarousel />
       <MealTitle type={meal.lunch} time={meal.lunchTime} />
       <MenuList data={dummyData.lunch} />
-      <MealSatisfaction message="오늘의 중식 만족하시나요" />
+      <MealSatisfaction message="오늘의 중식 만족하시나요?" />
       <View style={btn.component}>
         <TouchableOpacity activeOpacity={0.5} onPress={onPress}>
           <Btn btnName="Good" />
@@ -180,7 +180,7 @@ const App = () => {
       </View>
       <MealTitle type={meal.dinner} time={meal.dinnerTime} />
       <MenuList data={dummyData.dinner} />
-      <MealSatisfaction message="오늘의 석식 만족하시나요" />
+      <MealSatisfaction message="오늘의 석식 만족하시나요?" />
       <View style={btn.component}>
         <TouchableOpacity activeOpacity={0.5} onPress={onPress}>
           <Btn btnName="Good" />
