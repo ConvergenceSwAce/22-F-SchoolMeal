@@ -266,6 +266,7 @@ const mealTitle = StyleSheet.create({
 });
 
 const menuComponent = {
+  flex: 1,
   alignItems: 'center',
   flexDirection: 'column',
   borderRadius: 16,
@@ -282,9 +283,10 @@ const item = StyleSheet.create({
   component: {
     flex: 1,
     flexDirection: 'row', // 실제 디자인요소엔 없는데 있어야함
-    width: 368,
-    height: 23,
+    justifyContent: 'space-between',
     marginVertical: 4,
+    marginLeft: 16,
+    marginRight: 16,
   },
   title: {
     flex: 1,
@@ -340,8 +342,8 @@ const btn = StyleSheet.create({
     borderColor: '#071648',
   },
   default: {
-    width: 191,
-    height: 47,
+    width: 160,
+    height: 40,
     borderRadius: 4,
     backgroundColor: '#ffffff',
     borderStyle: 'solid',
