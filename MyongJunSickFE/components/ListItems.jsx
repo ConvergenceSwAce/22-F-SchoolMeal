@@ -1,29 +1,28 @@
 import React from 'react';
 import {View, Text, StyleSheet} from 'react-native';
+import {widthPercentage, heightPercentage, fontPercentage} from '../Responsive';
 
 const item = StyleSheet.create({
   component: {
-    flex: 1,
-    flexDirection: 'row', // 실제 디자인요소엔 없는데 있어야함
-    justifyContent: 'space-between',
-    marginVertical: 4,
-    marginLeft: 16,
-    marginRight: 16,
+    flex: 2,
+    flexDirection: 'row',
+    justifyContent: 'center',
+    marginHorizontal: widthPercentage(16),
+    marginVertical: heightPercentage(8),
   },
   title: {
     flex: 1,
     // fontFamily: 'NotoSansKR',
-    fontSize: 16,
+    fontSize: fontPercentage(16),
     textAlign: 'left',
     color: '#000000',
   },
   kcal: {
     flex: 1,
     // fontFamily: "NotoSansKR",
-    fontSize: 12,
+    fontSize: fontPercentage(12),
     fontWeight: 'normal',
     fontStyle: 'normal',
-    letterSpacing: 0,
     textAlign: 'right',
     color: '#a8a8a8',
   },
