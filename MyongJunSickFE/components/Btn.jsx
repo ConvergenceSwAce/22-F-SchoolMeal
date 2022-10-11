@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import {View, StyleSheet, Button, Text} from 'react-native';
+import {View, StyleSheet, Text, TouchableOpacity} from 'react-native';
 import Modal from 'react-native-modal';
 import BouncyCheckbox from 'react-native-bouncy-checkbox';
 import {widthPercentage, heightPercentage, fontPercentage} from '../Responsive';
@@ -10,9 +10,14 @@ export default function Btn({btnName, data}) {
     setModalVisible(!isModalVisible);
   };
 
+  const transText =  (btnName === '네!') ? '맛있었던 메뉴를 선택해주세요!' : '별로였던 메뉴를 선택해주세요!';
+  const subText =  (btnName === '네!') ? '이 메뉴가 맛있었어요!' : '이 메뉴는 별로였어요..';
+
   return (
     <View style={isModalVisible ? btn.isPress : btn.default}>
-      <Text style={isModalVisible ?btn.isPressText : btn.text} onPress={toggleModal} >{btnName}</Text>
+      <TouchableOpacity activeOpacity={0.8} onPress={toggleModal} >
+      <Text style={isModalVisible ?btn.isPressText : btn.text} >{btnName}</Text>
+      </TouchableOpacity>
 
       <Modal
         isVisible={isModalVisible}
@@ -20,6 +25,7 @@ export default function Btn({btnName, data}) {
         style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}
       >
         <View style={modalComponent.component}>
+        <Text style={modalComponent.modalTitle}>{transText}</Text>
           {data &&
             data.map(menu => (
               <View style={modalComponent.itemComponent}>
@@ -28,12 +34,8 @@ export default function Btn({btnName, data}) {
                   size={25}
                   fillColor="#071648"
                   unfillColor="#fff"
-                  textStyle={{
-                    textDecorationLine: 'none',
-                    color: '#000000',
-                  }}
+                  textStyle={modalComponent.itemText}
                   text={menu}
-                  iconStyle={{borderColor: 'red'}}
                   innerIconStyle={{borderWidth: 2}}
                   onPress={
                     () => console.log(menu) //스테이트에 담아서 투표 누르면 통신 추가해야함
@@ -41,8 +43,9 @@ export default function Btn({btnName, data}) {
                 />
               </View>
             ))}
-
-          <Button title={btnName} onPress={toggleModal} />
+          <TouchableOpacity style={modalComponent.submitBtn} activeOpacity={0.5} onPress={toggleModal} >
+            <Text style={modalComponent.submitText} >{subText}</Text>
+          </TouchableOpacity>
         </View>
       </Modal>
     </View>
@@ -52,10 +55,9 @@ export default function Btn({btnName, data}) {
 const modalComponent = StyleSheet.create({
   component: {
     flexDirection: 'column',
-    // textAlign: 'left',
     alignItems: 'center',
-    paddingHorizontal: widthPercentage(10),
-    paddingVertical: heightPercentage(10),
+    paddingHorizontal: widthPercentage(15),
+    paddingVertical: heightPercentage(15),
     width: widthPercentage(320),
     backgroundColor: '#fff',
     borderRadius: 10,
@@ -63,13 +65,40 @@ const modalComponent = StyleSheet.create({
   itemComponent: {
     width: widthPercentage(280),
     flexDirection: 'row',
-    textAlign: 'left',
+    textAlign: 'center',
     justifyContent: 'space-between',
   },
-  text: {
+  itemText: {
+    textDecorationLine: 'none',
     marginTop: heightPercentage(8),
     marginBottom: heightPercentage(8),
+    color: '#000000',
   },
+  modalTitle: {
+    fontSize: fontPercentage(16),
+    fontWeight: '500',
+    fontStyle: 'normal',
+    textAlign: 'left',
+    color: '#071648',
+    marginBottom: heightPercentage(10),
+  },
+  submitBtn: {
+    width: widthPercentage(280),
+    height: heightPercentage(40),
+    backgroundColor: '#071648',
+    borderRadius: 10,
+    marginTop: heightPercentage(10),
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  submitText: {
+    textAlign: 'center',
+    color: '#fff',
+    fontSize: fontPercentage(16),
+    fontWeight: '500',
+    fontStyle: 'normal',
+  },
+
 });
 
 const btn = StyleSheet.create({
@@ -105,6 +134,6 @@ const btn = StyleSheet.create({
     fontWeight: '500',
     fontStyle: 'normal',
     textAlign: 'center',
-    color: '#071648',
+    color: '#000000',
   },
 });

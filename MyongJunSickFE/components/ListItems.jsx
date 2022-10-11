@@ -9,6 +9,7 @@ const item = StyleSheet.create({
     justifyContent: 'center',
     marginHorizontal: widthPercentage(16),
     marginVertical: heightPercentage(8),
+    alignItems: 'center',
   },
   title: {
     flex: 1,
@@ -21,10 +22,10 @@ const item = StyleSheet.create({
     flex: 1,
     // fontFamily: "NotoSansKR",
     fontSize: fontPercentage(12),
-    fontWeight: 'normal',
+    fontWeight: '900',
     fontStyle: 'normal',
     textAlign: 'right',
-    color: '#a8a8a8',
+    color: '#000000',
   },
 });
 
@@ -32,7 +33,7 @@ export default function ListItems(props) {
   return (
     <View style={item.component}>
       <Text style={item.title}>{props.menu}</Text>
-      <Text style={item.kcal}>칼로리가 없네?</Text>
+      <Text style={item.kcal}>•</Text>
     </View>
   );
 }
