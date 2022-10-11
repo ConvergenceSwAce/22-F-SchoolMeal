@@ -13,14 +13,12 @@ const item = StyleSheet.create({
   },
   title: {
     flex: 1,
-    // fontFamily: 'NotoSansKR',
     fontSize: fontPercentage(16),
     textAlign: 'left',
     color: '#000000',
   },
   kcal: {
     flex: 1,
-    // fontFamily: "NotoSansKR",
     fontSize: fontPercentage(12),
     fontWeight: '900',
     fontStyle: 'normal',
