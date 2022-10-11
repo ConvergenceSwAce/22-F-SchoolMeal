@@ -4,14 +4,47 @@ import {widthPercentage, heightPercentage, fontPercentage} from '../Responsive';
 
 export default function Header() {
   const headerStyle = StyleSheet.create({
-    flexDirection: 'row',
-    marginLeft: widthPercentage(16),
+    width: widthPercentage(428),
+    height: heightPercentage(43),
     marginTop: heightPercentage(54),
-    justifyContent: 'flex-start',
+    marginHorizontal: widthPercentage(20),
+    flexDirection: 'row',
+    justifyContent: 'space-between',
     alignItems: 'center',
   });
+
+  const dateStyle = StyleSheet.create({
+    flex:1,
+    width: widthPercentage(193),
+    height: heightPercentage(41),
+    justifyContent: 'flex-start',
+    flexDirection: 'row',
+    alignItems: 'center',
+  });
+
+  const title = StyleSheet.create({
+    component: {
+      flex: 1,
+      width: widthPercentage(218),
+      height: heightPercentage(43),
+      flexDirection: 'row',
+      justifyContent: 'flex-end',
+      alignItems: 'center',
+    },
+    text: {
+      flexGrow: 1,
+      fontSize: fontPercentage(16),
+      fontWeight: 'bold',
+      fontStyle: 'normal',
+      textAlign: 'center',
+      color: '#071648',
+      marginLeft: widthPercentage(20),
+    },
+  });
+
   return (
     <View style={headerStyle}>
+    <View style={dateStyle}>
       <Image
         style={{width: widthPercentage(32), height: heightPercentage(32), objectFit: 'contain'}}
         source={require('../assets/CalendarIcon.png')}
@@ -39,6 +72,10 @@ export default function Header() {
       >
         2022
       </Text>
+    </View>
+    <View style={title.component}>
+      <Text style={title.text}>MCC 학생식당</Text>
+    </View>
     </View>
   );
 }

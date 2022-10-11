@@ -7,7 +7,7 @@ export default function WeekCarousel() {
     flex: 10,
     flexDirection: 'row',
     marginHorizontal: widthPercentage(30),
-    marginTop: heightPercentage(30),
+    marginTop: heightPercentage(20),
     justifyContent: 'space-between',
     alignItems: 'center',
   });

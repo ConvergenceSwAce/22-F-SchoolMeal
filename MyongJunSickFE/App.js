@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import {ScrollView, View, StyleSheet, TouchableOpacity} from 'react-native';
+import {ScrollView, View, StyleSheet, TouchableOpacity, Text} from 'react-native';
 import Config from 'react-native-config';
 import axios from 'axios';
 import Header from './components/Header';
@@ -10,8 +10,11 @@ import MealSatisfaction from './components/MealSatisfaction';
 import Btn from './components/Btn';
 import {heightPercentage} from './Responsive';
 
-
 Config.API_URL;
+
+const titleData = {
+  title: '인문캠퍼스 MCC 식당',
+};
 
 const meal = {
   lunch: '오늘의 중식',
@@ -77,6 +80,8 @@ const App = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    flexDirection: 'column',
+    position: 'relative',
     backgroundColor: '#fff',
   },
 });
