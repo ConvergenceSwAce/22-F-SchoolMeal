@@ -2,11 +2,11 @@ import React from 'react';
 import {View, Text, Image, StyleSheet} from 'react-native';
 import {widthPercentage, heightPercentage, fontPercentage} from '../Responsive';
 
-export default function Header() {
+export default function Header(props) {
   const headerStyle = StyleSheet.create({
     width: widthPercentage(428),
-    height: heightPercentage(43),
-    marginTop: heightPercentage(54),
+    height: heightPercentage(60),
+    marginTop: heightPercentage(50),
     marginHorizontal: widthPercentage(20),
     flexDirection: 'row',
     justifyContent: 'space-between',
@@ -58,7 +58,7 @@ export default function Header() {
           marginLeft: widthPercentage(10),
         }}
       >
-        June
+        {props.month}
       </Text>
       <Text
         style={{
@@ -70,11 +70,11 @@ export default function Header() {
           marginLeft: widthPercentage(10),
         }}
       >
-        2022
+        {props.year}
       </Text>
     </View>
     <View style={title.component}>
-      <Text style={title.text}>MCC 학생식당</Text>
+      <Text style={title.text}>{props.title}</Text>
     </View>
     </View>
   );

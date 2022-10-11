@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import {ScrollView, View, StyleSheet, TouchableOpacity, Text} from 'react-native';
+import {ScrollView, View, StyleSheet} from 'react-native';
 import Config from 'react-native-config';
 import axios from 'axios';
 import Header from './components/Header';
@@ -9,11 +9,14 @@ import MenuList from './components/MenuList';
 import MealSatisfaction from './components/MealSatisfaction';
 import Btn from './components/Btn';
 import {heightPercentage} from './Responsive';
+import Footer from './components/Footer';
 
 Config.API_URL;
 
 const titleData = {
-  title: '인문캠퍼스 MCC 식당',
+  title: 'MCC 학생식당',
+  month: '10월',
+  year: '2022',
 };
 
 const meal = {
@@ -35,7 +38,7 @@ const App = () => {
   useEffect(() => {
     const fetchData = async () => {
       setLoading(true);
-      // const result = await axios.get(`${Config.API_URL}/info`);
+      const result = await axios.get(`${Config.API_URL}/info`);
       setData(result.data);
       console.log(result.data);
       setLoading(false);
@@ -45,22 +48,23 @@ const App = () => {
 
   return (
     <ScrollView style={styles.container}>
-      <Header />
+      <Header year={titleData.year} month={titleData.month} title={titleData.title} />
       <WeekCarousel />
       <MealTitle type={meal.lunch} time={meal.lunchTime} />
       <MenuList data={dummyData.lunch} />
       <MealSatisfaction message="오늘의 중식 만족하시나요?" />
       <View style={btn.component}>
-        <Btn btnName="Good" data={dummyData.lunch} />
-        <Btn btnName="Bad" data={dummyData.lunch} />
+        <Btn btnName="네!" data={dummyData.lunch} />
+        <Btn btnName="아니요.." data={dummyData.lunch} />
       </View>
       <MealTitle type={meal.dinner} time={meal.dinnerTime} />
       <MenuList data={dummyData.dinner} />
       <MealSatisfaction message="오늘의 석식 만족하시나요?" />
       <View style={btn.component}>
-        <Btn btnName="Good" data={dummyData.dinner} />
-        <Btn btnName="Bad" data={dummyData.dinner} />
+        <Btn btnName="네!" data={dummyData.dinner} />
+        <Btn btnName="아니요.." data={dummyData.dinner} />
       </View>
+      <Footer />
     </ScrollView>
   );
 };

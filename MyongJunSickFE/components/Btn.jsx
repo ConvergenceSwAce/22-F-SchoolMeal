@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import {View, StyleSheet, Button, Text, TouchableOpacity} from 'react-native';
+import {View, StyleSheet, Text, TouchableOpacity} from 'react-native';
 import Modal from 'react-native-modal';
 import BouncyCheckbox from 'react-native-bouncy-checkbox';
 import {widthPercentage, heightPercentage, fontPercentage} from '../Responsive';
@@ -9,6 +9,9 @@ export default function Btn({btnName, data}) {
   const toggleModal = () => {
     setModalVisible(!isModalVisible);
   };
+
+  const transText =  (btnName === '네!') ? '맛있었던 메뉴를 선택해주세요!' : '별로였던 메뉴를 선택해주세요!';
+  const subText =  (btnName === '네!') ? '이 메뉴가 맛있었어요!' : '이 메뉴는 별로였어요..';
 
   return (
     <View style={isModalVisible ? btn.isPress : btn.default}>
@@ -22,7 +25,7 @@ export default function Btn({btnName, data}) {
         style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}
       >
         <View style={modalComponent.component}>
-        <Text style={modalComponent.modalTitle}>맛있었던 메뉴를 선택해주세요!</Text>
+        <Text style={modalComponent.modalTitle}>{transText}</Text>
           {data &&
             data.map(menu => (
               <View style={modalComponent.itemComponent}>
@@ -41,7 +44,7 @@ export default function Btn({btnName, data}) {
               </View>
             ))}
           <TouchableOpacity style={modalComponent.submitBtn} activeOpacity={0.5} onPress={toggleModal} >
-            <Text style={modalComponent.submitText} >{btnName}</Text>
+            <Text style={modalComponent.submitText} >{subText}</Text>
           </TouchableOpacity>
         </View>
       </Modal>
