@@ -26,8 +26,7 @@ export default function Loading() {
  });
   return (
     <View style={loadingComponent.container}>
-      {/* <Text style={loadingComponent.text}>학식 메뉴를 가져오고 있어요!</Text> */}
-      <ActivityIndicator size="small" color="#000000" />
+      <Text style={loadingComponent.text}>학식 메뉴를 가져오고 있어요!</Text>
     </View>
   );
 }

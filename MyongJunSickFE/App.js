@@ -48,7 +48,12 @@ const App = () => {
 
   return (
     <ScrollView style={styles.container}>
-      <Header year={titleData.year} month={titleData.month} title={titleData.title} />
+      <Header
+        loading={loading}
+        year={titleData.year}
+        month={titleData.month}
+        title={titleData.title}
+      />
       <WeekCarousel />
       <MealTitle type={meal.lunch} time={meal.lunchTime} />
       {loading ? <Loading /> : <MenuList data={dummyData.lunch} />}
