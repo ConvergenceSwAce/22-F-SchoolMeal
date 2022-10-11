@@ -29,10 +29,6 @@ const dummyData = {
 };
 
 const App = () => {
-  const onPress = () => {
-    console.log('onPress');
-  };
-
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(false);
 
@@ -55,23 +51,15 @@ const App = () => {
       <MenuList data={dummyData.lunch} />
       <MealSatisfaction message="오늘의 중식 만족하시나요?" />
       <View style={btn.component}>
-        <TouchableOpacity activeOpacity={0.5} onPress={onPress}>
-          <Btn btnName="Good" data={dummyData.lunch} />
-        </TouchableOpacity>
-        <TouchableOpacity activeOpacity={0.5} onPress={onPress}>
-          <Btn btnName="Bad" data={dummyData.lunch} />
-        </TouchableOpacity>
+        <Btn btnName="Good" data={dummyData.lunch} />
+        <Btn btnName="Bad" data={dummyData.lunch} />
       </View>
       <MealTitle type={meal.dinner} time={meal.dinnerTime} />
       <MenuList data={dummyData.dinner} />
       <MealSatisfaction message="오늘의 석식 만족하시나요?" />
       <View style={btn.component}>
-        <TouchableOpacity activeOpacity={0.5} onPress={onPress}>
-          <Btn btnName="Good" data={dummyData.dinner} />
-        </TouchableOpacity>
-        <TouchableOpacity activeOpacity={0.5} onPress={onPress}>
-          <Btn btnName="Bad" data={dummyData.dinner} />
-        </TouchableOpacity>
+        <Btn btnName="Good" data={dummyData.dinner} />
+        <Btn btnName="Bad" data={dummyData.dinner} />
       </View>
     </ScrollView>
   );

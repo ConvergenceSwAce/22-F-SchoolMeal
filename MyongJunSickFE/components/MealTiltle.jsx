@@ -12,7 +12,7 @@ const mealTitle = StyleSheet.create({
     alignContent: 'center',
     alignItems: 'center',
     justifyContent: 'space-between',
-    marginTop: heightPercentage(40),
+    marginTop: heightPercentage(30),
     marginLeft: widthPercentage(16),
   },
   title: {
