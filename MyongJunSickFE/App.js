@@ -59,15 +59,15 @@ const App = () => {
       {loading ? <Loading /> : <MenuList data={dummyData.lunch} />}
       <MealSatisfaction message="오늘의 중식 만족하시나요?" />
       <View style={btn.component}>
-        <Btn btnName="네!" data={dummyData.lunch} />
-        <Btn btnName="아니요.." data={dummyData.lunch} />
+        <Btn type="중식" btnName="네!" data={dummyData.lunch} />
+        <Btn type="중식" btnName="아니요.." data={dummyData.lunch} />
       </View>
       <MealTitle type={meal.dinner} time={meal.dinnerTime} />
       {loading ? <Loading /> : <MenuList data={dummyData.dinner} />}
       <MealSatisfaction message="오늘의 석식 만족하시나요?" />
       <View style={btn.component}>
-        <Btn btnName="네!" data={dummyData.dinner} />
-        <Btn btnName="아니요.." data={dummyData.dinner} />
+        <Btn type="석식" btnName="네!" data={dummyData.dinner} />
+        <Btn type="석식" btnName="아니요.." data={dummyData.dinner} />
       </View>
       <Footer />
     </ScrollView>
