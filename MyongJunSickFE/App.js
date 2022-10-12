@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import {ScrollView, View, StyleSheet} from 'react-native';
+import {ScrollView, View, StyleSheet, Text} from 'react-native';
 import Config from 'react-native-config';
 import axios from 'axios';
 import Header from './components/Header';
@@ -10,6 +10,7 @@ import MealSatisfaction from './components/MealSatisfaction';
 import Btn from './components/Btn';
 import {heightPercentage} from './Responsive';
 import Footer from './components/Footer';
+import Loading from './components/Loading';
 
 Config.API_URL;
 
@@ -40,7 +41,6 @@ const App = () => {
       setLoading(true);
       const result = await axios.get(`${Config.API_URL}/info`);
       setData(result.data);
-      console.log(result.data);
       setLoading(false);
     };
     fetchData();
@@ -48,17 +48,22 @@ const App = () => {
 
   return (
     <ScrollView style={styles.container}>
-      <Header year={titleData.year} month={titleData.month} title={titleData.title} />
+      <Header
+        loading={loading}
+        year={titleData.year}
+        month={titleData.month}
+        title={titleData.title}
+      />
       <WeekCarousel />
       <MealTitle type={meal.lunch} time={meal.lunchTime} />
-      <MenuList data={dummyData.lunch} />
+      {loading ? <Loading /> : <MenuList data={dummyData.lunch} />}
       <MealSatisfaction message="오늘의 중식 만족하시나요?" />
       <View style={btn.component}>
         <Btn btnName="네!" data={dummyData.lunch} />
         <Btn btnName="아니요.." data={dummyData.lunch} />
       </View>
       <MealTitle type={meal.dinner} time={meal.dinnerTime} />
-      <MenuList data={dummyData.dinner} />
+      {loading ? <Loading /> : <MenuList data={dummyData.dinner} />}
       <MealSatisfaction message="오늘의 석식 만족하시나요?" />
       <View style={btn.component}>
         <Btn btnName="네!" data={dummyData.dinner} />

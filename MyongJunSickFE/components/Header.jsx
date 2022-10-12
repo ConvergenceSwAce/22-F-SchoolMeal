@@ -1,8 +1,9 @@
 import React from 'react';
-import {View, Text, Image, StyleSheet} from 'react-native';
+import {View, Text, Image, StyleSheet, ActivityIndicator} from 'react-native';
 import {widthPercentage, heightPercentage, fontPercentage} from '../Responsive';
 
 export default function Header(props) {
+  const loading = props.loading
   const headerStyle = StyleSheet.create({
     width: widthPercentage(428),
     height: heightPercentage(60),
@@ -49,8 +50,9 @@ export default function Header(props) {
         style={{width: widthPercentage(32), height: heightPercentage(32), objectFit: 'contain'}}
         source={require('../assets/CalendarIcon.png')}
       />
-      <Text
-        style={{
+{loading ? <ActivityIndicator size="small" color="#000000" /> :
+     <Text
+      style={{
           fontSize: fontPercentage(28),
           fontWeight: 'bold',
           fontStyle: 'normal',
@@ -59,7 +61,8 @@ export default function Header(props) {
         }}
       >
         {props.month}
-      </Text>
+      </Text>}
+      {loading ? <ActivityIndicator size="small" color="#000000" /> :
       <Text
         style={{
           fontSize: fontPercentage(16),
@@ -72,9 +75,12 @@ export default function Header(props) {
       >
         {props.year}
       </Text>
+}
     </View>
     <View style={title.component}>
-      <Text style={title.text}>{props.title}</Text>
+    {loading ? <ActivityIndicator style={title.text} size="small" color="#000000" /> :
+
+      <Text style={title.text}>{props.title}</Text>}
     </View>
     </View>
   );
