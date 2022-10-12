@@ -35,14 +35,39 @@ const dummyData = {
 const App = () => {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(false);
+  const [mon, setMon] = useState({day: '월', date: '...', lunch: [], dinner: []});
+  const [tue, setTue] = useState({day: '화', date: '...', lunch: [], dinner: []});
+  const [wed, setWed] = useState({day: '수', date: '...', lunch: [], dinner: []});
+  const [thu, setThu] = useState({day: '목', date: '...', lunch: [], dinner: []});
+  const [fri, setFri] = useState({day: '금', date: '...', lunch: [], dinner: []});
+
+  const fetchData = async () => {
+    setLoading(true);
+    await axios.get(`${Config.API_URL}/info`).then(res => {
+      setData(res.data);
+      setLoading(false);
+      console.log(data);
+    });
+    getDay();
+  };
+
+  const getDay = () => {
+    data.map(item => {
+      if (item.day === '월') {
+        setMon(item);
+      } else if (item.day === '화') {
+        setTue(item);
+      } else if (item.day === '수') {
+        setWed(item);
+      } else if (item.day === '목') {
+        setThu(item);
+      } else if (item.day === '금') {
+        setFri(item);
+      }
+    });
+  };
 
   useEffect(() => {
-    const fetchData = async () => {
-      setLoading(true);
-      const result = await axios.get(`${Config.API_URL}/info`);
-      setData(result.data);
-      setLoading(false);
-    };
     fetchData();
   }, []);
 
@@ -54,7 +79,7 @@ const App = () => {
         month={titleData.month}
         title={titleData.title}
       />
-      <WeekCarousel />
+      <WeekCarousel mon={mon.date} tue={tue.date} wed={wed.date} thu={thu.date} fri={fri.date} />
       <MealTitle type={meal.lunch} time={meal.lunchTime} />
       {loading ? <Loading /> : <MenuList data={dummyData.lunch} />}
       <MealSatisfaction message="오늘의 중식 만족하시나요?" />
