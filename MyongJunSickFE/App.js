@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import {ScrollView, View, StyleSheet, Text} from 'react-native';
+import {ScrollView, View, StyleSheet} from 'react-native';
 import Config from 'react-native-config';
 import axios from 'axios';
 import Header from './components/Header';
@@ -8,9 +8,8 @@ import MealTitle from './components/MealTiltle';
 import MenuList from './components/MenuList';
 import MealSatisfaction from './components/MealSatisfaction';
 import Btn from './components/Btn';
-import {heightPercentage} from './Responsive';
+import {heightPercentage, widthPercentage} from './Responsive';
 import Footer from './components/Footer';
-import Loading from './components/Loading';
 
 Config.API_URL;
 
@@ -76,22 +75,17 @@ const App = () => {
 
   return (
     <ScrollView style={styles.container}>
-      <Header
-        loading={loading}
-        year={titleData.year}
-        month={titleData.month}
-        title={titleData.title}
-      />
+      <Header year={titleData.year} month={titleData.month} title={titleData.title} />
       <WeekCarousel mon={mon.date} tue={tue.date} wed={wed.date} thu={thu.date} fri={fri.date} />
       <MealTitle type={meal.lunch} time={meal.lunchTime} />
-      {loading ? <Loading /> : <MenuList data={dummyData.lunch} />}
+      <MenuList data={dummyData.lunch} />
       <MealSatisfaction message="오늘의 중식 만족하시나요?" />
       <View style={btn.component}>
         <Btn type="중식" btnName="네!" data={dummyData.lunch} />
         <Btn type="중식" btnName="아니요.." data={dummyData.lunch} />
       </View>
       <MealTitle type={meal.dinner} time={meal.dinnerTime} />
-      {loading ? <Loading /> : <MenuList data={dummyData.dinner} />}
+      <MenuList data={dummyData.dinner} />
       <MealSatisfaction message="오늘의 석식 만족하시나요?" />
       <View style={btn.component}>
         <Btn type="석식" btnName="네!" data={dummyData.dinner} />
@@ -117,7 +111,7 @@ const btn = StyleSheet.create({
     flex: 1,
     flexDirection: 'row',
     justifyContent: 'space-around',
-    marginHorizontal: heightPercentage(12),
+    marginHorizontal: widthPercentage(12),
     marginTop: heightPercentage(16),
   },
 });
