@@ -48,7 +48,6 @@ const App = () => {
       setLoading(false);
       console.log(data);
     });
-    getDay();
   };
 
   const getDay = () => {
@@ -70,6 +69,10 @@ const App = () => {
   useEffect(() => {
     fetchData();
   }, []);
+
+  useEffect(() => {
+    getDay();
+  }, [data]);
 
   return (
     <ScrollView style={styles.container}>

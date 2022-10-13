@@ -4,31 +4,34 @@ import {widthPercentage, heightPercentage, fontPercentage} from '../Responsive';
 
 export default function Footer() {
   const footerStyle = StyleSheet.create({
-    marginVertical: heightPercentage(30),
+    marginTop: heightPercentage(40),
+    paddingTop: heightPercentage(10),
+    paddingBottom: heightPercentage(10),
     flexDirection: 'row',
-    justifyContent: 'center',
+    justifyContent: 'space-around',
     alignItems: 'center',
+    backgroundColor: '#071648',
   });
 
   const footerText = StyleSheet.create({
-    component: {
-      flex: 1,
-      width: widthPercentage(218),
-      height: heightPercentage(43),
-      flexDirection: 'row',
-    },
     text: {
+      paddingVertical: heightPercentage(10),
+      paddingHorizontal: widthPercentage(30),
       flexGrow: 1,
       fontSize: fontPercentage(12),
-      fontWeight: '100',
+      fontWeight: '200',
       fontStyle: 'normal',
+      color: '#ffffff',
     },
   });
 
   return (
     <View style={footerStyle}>
+      <TouchableOpacity activeOpacity={1}>
+        <Text style={footerText.text}>MJU Convergence Software</Text>
+      </TouchableOpacity>
       <TouchableOpacity activeOpacity={0.3}>
-        <Text style={footerText.text}>@Copyright Convergence Software</Text>
+        <Text style={footerText.text}>문의하기</Text>
       </TouchableOpacity>
     </View>
   );
