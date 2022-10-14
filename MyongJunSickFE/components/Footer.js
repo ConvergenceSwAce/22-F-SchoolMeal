@@ -4,13 +4,16 @@ import {widthPercentage, heightPercentage, fontPercentage} from '../Responsive';
 
 export default function Footer() {
   const footerStyle = StyleSheet.create({
-    marginTop: heightPercentage(40),
+    height: "100%",
+    flexGrow: 1,
+    marginTop: heightPercentage(60),
     paddingTop: heightPercentage(10),
     paddingBottom: heightPercentage(10),
     flexDirection: 'row',
     justifyContent: 'space-around',
     alignItems: 'center',
     backgroundColor: '#071648',
+    bottom: 0,
   });
 
   const footerText = StyleSheet.create({
