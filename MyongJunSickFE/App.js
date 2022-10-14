@@ -9,6 +9,7 @@ import MealSatisfaction from './components/MealSatisfaction';
 import Btn from './components/Btn';
 import {heightPercentage, widthPercentage} from './Responsive';
 import Footer from './components/Footer';
+import Splash from './components/Splash';
 import {RecoilRoot, useRecoilValueLoadable} from 'recoil';
 import {getDayByMeal} from './states';
 
@@ -55,9 +56,9 @@ export const MainView = () => {
       );
     case 'loading':
       return (
-        <ScrollView style={styles.container}>
-          <Text style={{textAlign: 'center'}}>loading...</Text>
-        </ScrollView>
+        <View style={styles.container}>
+          <Splash />
+        </View>
       );
   }
 };
