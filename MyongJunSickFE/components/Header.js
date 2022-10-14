@@ -58,7 +58,7 @@ export default function Header(props) {
             marginLeft: widthPercentage(10),
           }}
         >
-          {props.month}
+          {props.month + '월'}
         </Text>
         <Text
           style={{
@@ -74,7 +74,7 @@ export default function Header(props) {
         </Text>
       </View>
       <View style={title.component}>
-        <Text style={title.text}>{props.title}</Text>
+        <Text style={title.text}>MCC 학생식당</Text>
       </View>
     </View>
   );

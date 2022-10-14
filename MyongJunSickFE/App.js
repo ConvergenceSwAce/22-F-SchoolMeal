@@ -1,4 +1,5 @@
 import React from 'react';
+import dayjs from 'dayjs';
 import {ScrollView, View, StyleSheet, Text} from 'react-native';
 import Header from './components/Header';
 import WeekCarousel from './components/WeekCarousel';
@@ -11,11 +12,9 @@ import Footer from './components/Footer';
 import {RecoilRoot, useRecoilState, useRecoilValue, useRecoilValueLoadable} from 'recoil';
 import {monData, thuData, tueData, wedData, friData, getDayByMeal} from './states';
 
-const titleData = {
-  title: 'MCC 학생식당',
-  month: '10월',
-  year: '2022',
-};
+let now = dayjs();
+let year = now.format('YYYY');
+let month = now.format('MM');
 
 const mealTime = {
   lunch: '오늘의 중식',
@@ -37,7 +36,7 @@ export const MainView = () => {
     case 'hasValue':
       return (
         <ScrollView style={styles.container}>
-          <Header year={titleData.year} month={titleData.month} title={titleData.title} />
+          <Header year={year} month={month} />
           <WeekCarousel />
           <MealTitle type={mealTime.lunch} time={mealTime.lunchTime} />
           <MenuList data={dummyData.lunch} />
