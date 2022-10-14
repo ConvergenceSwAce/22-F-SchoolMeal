@@ -1,6 +1,6 @@
 import React from 'react';
 import {View, StyleSheet} from 'react-native';
-import ListItems from './ListItems'
+import ListItems from './ListItems';
 import {widthPercentage, heightPercentage, fontPercentage} from '../Responsive';
 
 export default function MenuList(props) {
@@ -22,9 +22,7 @@ export default function MenuList(props) {
   };
   return (
     <View style={menuComponent}>
-      {data.map(menu => (
-        <ListItems key={menu} menu={menu} />
-      ))}
+      {data && data.map(menu => <ListItems key={menu} menu={menu} />)}
     </View>
   );
 }

@@ -16,31 +16,26 @@ export const getDayByMeal = selector({
 export const monData = atom({
   key: 'monday',
   default: {},
-  pressed: false,
 });
 
 export const tueData = atom({
   key: 'tuesday',
   default: {},
-  pressed: false,
 });
 
 export const wedData = atom({
   key: 'wednesday',
   default: {},
-  pressed: false,
 });
 
 export const thuData = atom({
   key: 'thursday',
   default: {},
-  pressed: false,
 });
 
 export const friData = atom({
   key: 'friday',
   default: {},
-  pressed: false,
 });
 
 export function splitMealData() {

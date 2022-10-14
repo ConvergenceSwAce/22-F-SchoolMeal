@@ -12,7 +12,7 @@ const item = StyleSheet.create({
     alignItems: 'center',
   },
   title: {
-    flex: 1,
+    flexGrow: 1,
     fontSize: fontPercentage(16),
     textAlign: 'left',
     color: '#000000',
