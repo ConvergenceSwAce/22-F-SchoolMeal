@@ -1,14 +1,22 @@
 import React from 'react';
 import {View, Text, TouchableOpacity, StyleSheet} from 'react-native';
+import {useRecoilValue} from 'recoil';
 import {widthPercentage, heightPercentage, fontPercentage} from '../Responsive';
+import {monData, tueData, wedData, thuData, friData, splitMealData} from '../states';
 
-export default function WeekCarousel(props) {
+export default function WeekCarousel() {
+  splitMealData();
+  const mon = useRecoilValue(monData);
+  const tue = useRecoilValue(tueData);
+  const wed = useRecoilValue(wedData);
+  const thu = useRecoilValue(thuData);
+  const fri = useRecoilValue(friData);
 
-  const mon_date = props.mon.split(".")[1];
-  const tue_date = props.tue.split(".")[1];
-  const wed_date = props.wed.split(".")[1];
-  const thu_date = props.thu.split(".")[1];
-  const fri_date = props.fri.split(".")[1];
+  let mon_date = mon.date.split('.')[1];
+  let tue_date = tue.date.split('.')[1];
+  let wed_date = wed.date.split('.')[1];
+  let thu_date = thu.date.split('.')[1];
+  let fri_date = fri.date.split('.')[1];
 
   const carouselStyle = StyleSheet.create({
     flex: 10,
@@ -53,40 +61,54 @@ export default function WeekCarousel(props) {
     alignItems: 'center',
   });
 
-    const onPress = () => {
-      console.log('onPress');
-      console.log(props);
-      
-    };
+  const monPress = () => {
+    console.log('onPress');
+  };
+
+  const tuePress = () => {
+    console.log('onPress');
+  };
+
+  const wedPress = () => {
+    console.log('onPress');
+  };
+
+  const thuPress = () => {
+    console.log('onPress');
+  };
+
+  const friPress = () => {
+    console.log('onPress');
+  };
 
   return (
     <View style={carouselStyle}>
       <View style={{flex: 1, flexDirection: 'column'}}>
-        <TouchableOpacity style={touchStyle} activeOpacity={0.5} onPress={onPress}>
-            <Text style={dayStyle}>Mon</Text>
-            <Text style={weekStyle}>{mon_date}</Text>
+        <TouchableOpacity style={touchStyle} activeOpacity={0.5} onPress={monPress}>
+          <Text style={dayStyle}>Mon</Text>
+          <Text style={weekStyle}>{mon_date}</Text>
         </TouchableOpacity>
       </View>
       <View style={{flex: 1, flexDirection: 'column'}}>
-        <TouchableOpacity style={defaultTouchStyle} activeOpacity={0.5} onPress={onPress}>
+        <TouchableOpacity style={defaultTouchStyle} activeOpacity={0.5} onPress={tuePress}>
           <Text style={dayStyle}>Tue</Text>
           <Text style={weekStyle}>{tue_date}</Text>
         </TouchableOpacity>
       </View>
       <View style={{flex: 1, flexDirection: 'column'}}>
-        <TouchableOpacity style={defaultTouchStyle} activeOpacity={0.5} onPress={onPress}>
+        <TouchableOpacity style={defaultTouchStyle} activeOpacity={0.5} onPress={wedPress}>
           <Text style={dayStyle}>Wed</Text>
           <Text style={weekStyle}>{wed_date}</Text>
         </TouchableOpacity>
       </View>
       <View style={{flex: 1, flexDirection: 'column'}}>
-        <TouchableOpacity style={defaultTouchStyle} activeOpacity={0.5} onPress={onPress}>
+        <TouchableOpacity style={defaultTouchStyle} activeOpacity={0.5} onPress={thuPress}>
           <Text style={dayStyle}>Thu</Text>
           <Text style={weekStyle}>{thu_date}</Text>
         </TouchableOpacity>
       </View>
       <View style={{flex: 1, flexDirection: 'column'}}>
-        <TouchableOpacity style={defaultTouchStyle} activeOpacity={0.5} onPress={onPress}>
+        <TouchableOpacity style={defaultTouchStyle} activeOpacity={0.5} onPress={friPress}>
           <Text style={dayStyle}>Fri</Text>
           <Text style={weekStyle}>{fri_date}</Text>
         </TouchableOpacity>

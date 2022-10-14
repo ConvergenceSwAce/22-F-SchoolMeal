@@ -14,7 +14,7 @@ export default function Header(props) {
   });
 
   const dateStyle = StyleSheet.create({
-    flex:1,
+    flex: 1,
     width: widthPercentage(193),
     height: heightPercentage(41),
     justifyContent: 'flex-start',
@@ -44,38 +44,38 @@ export default function Header(props) {
 
   return (
     <View style={headerStyle}>
-    <View style={dateStyle}>
-      <Image
-        style={{width: widthPercentage(32), height: heightPercentage(32), objectFit: 'contain'}}
-        source={require('../assets/CalendarIcon.png')}
-      />
-     <Text
-      style={{
-          fontSize: fontPercentage(28),
-          fontWeight: 'bold',
-          fontStyle: 'normal',
-          color: '#071648',
-          marginLeft: widthPercentage(10),
-        }}
-      >
-        {props.month}
-      </Text>
-      <Text
-        style={{
-          fontSize: fontPercentage(16),
-          fontWeight: '500',
-          fontStyle: 'normal',
-          letterSpacing: 0,
-          color: '#a8a8a8',
-          marginLeft: widthPercentage(10),
-        }}
-      >
-        {props.year}
-      </Text>
-    </View>
-    <View style={title.component}>
-      <Text style={title.text}>{props.title}</Text>
-    </View>
+      <View style={dateStyle}>
+        <Image
+          style={{width: widthPercentage(32), height: heightPercentage(32), objectFit: 'contain'}}
+          source={require('../assets/CalendarIcon.png')}
+        />
+        <Text
+          style={{
+            fontSize: fontPercentage(28),
+            fontWeight: 'bold',
+            fontStyle: 'normal',
+            color: '#071648',
+            marginLeft: widthPercentage(10),
+          }}
+        >
+          {props.month + '월'}
+        </Text>
+        <Text
+          style={{
+            fontSize: fontPercentage(16),
+            fontWeight: '500',
+            fontStyle: 'normal',
+            letterSpacing: 0,
+            color: '#a8a8a8',
+            marginLeft: widthPercentage(10),
+          }}
+        >
+          {props.year}
+        </Text>
+      </View>
+      <View style={title.component}>
+        <Text style={title.text}>MCC 학생식당</Text>
+      </View>
     </View>
   );
 }
