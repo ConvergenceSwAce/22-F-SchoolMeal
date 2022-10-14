@@ -1,14 +1,14 @@
-import Config from 'react-native-config';
 import {atom, selector, useRecoilValue, useSetRecoilState} from 'recoil';
 import axios from 'axios';
-
-Config.API_URL;
 
 // 식단 정보를 가져오는 API
 export const getDayByMeal = selector({
   key: 'dayByMeal/get',
   get: async ({get}) => {
-    const response = await axios.get(`${Config.API_URL}/info`);
+    const response = await axios.get(
+      'https://gea662yjyk.execute-api.ap-northeast-2.amazonaws.com/info',
+    );
+    console.log(response.data);
     return response.data;
   },
 });

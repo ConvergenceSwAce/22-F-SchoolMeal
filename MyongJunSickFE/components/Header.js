@@ -6,7 +6,7 @@ export default function Header(props) {
   const headerStyle = StyleSheet.create({
     width: widthPercentage(428),
     height: heightPercentage(60),
-    marginTop: heightPercentage(50),
+    marginTop: heightPercentage(20),
     marginHorizontal: widthPercentage(20),
     flexDirection: 'row',
     justifyContent: 'space-between',
