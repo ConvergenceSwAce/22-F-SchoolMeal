@@ -45,6 +45,14 @@ export default function WeekCarousel(props) {
     alignItems: 'center',
   });
 
+  const defaultTouchStyle = StyleSheet.create({
+    borderRadius: 20,
+    paddingVertical: heightPercentage(5),
+    backgroundColor: '#fff',
+    justifyContent: 'center',
+    alignItems: 'center',
+  });
+
     const onPress = () => {
       console.log('onPress');
       console.log(props);
@@ -60,20 +68,28 @@ export default function WeekCarousel(props) {
         </TouchableOpacity>
       </View>
       <View style={{flex: 1, flexDirection: 'column'}}>
-        <Text style={dayStyle}>Tue</Text>
-        <Text style={weekStyle}>{tue_date}</Text>
+        <TouchableOpacity style={defaultTouchStyle} activeOpacity={0.5} onPress={onPress}>
+          <Text style={dayStyle}>Tue</Text>
+          <Text style={weekStyle}>{tue_date}</Text>
+        </TouchableOpacity>
       </View>
       <View style={{flex: 1, flexDirection: 'column'}}>
-        <Text style={dayStyle}>Wed</Text>
-        <Text style={weekStyle}>{wed_date}</Text>
+        <TouchableOpacity style={defaultTouchStyle} activeOpacity={0.5} onPress={onPress}>
+          <Text style={dayStyle}>Wed</Text>
+          <Text style={weekStyle}>{wed_date}</Text>
+        </TouchableOpacity>
       </View>
       <View style={{flex: 1, flexDirection: 'column'}}>
-        <Text style={dayStyle}>Thu</Text>
-        <Text style={weekStyle}>{thu_date}</Text>
+        <TouchableOpacity style={defaultTouchStyle} activeOpacity={0.5} onPress={onPress}>
+          <Text style={dayStyle}>Thu</Text>
+          <Text style={weekStyle}>{thu_date}</Text>
+        </TouchableOpacity>
       </View>
       <View style={{flex: 1, flexDirection: 'column'}}>
-        <Text style={dayStyle}>Fri</Text>
-        <Text style={weekStyle}>{fri_date}</Text>
+        <TouchableOpacity style={defaultTouchStyle} activeOpacity={0.5} onPress={onPress}>
+          <Text style={dayStyle}>Fri</Text>
+          <Text style={weekStyle}>{fri_date}</Text>
+        </TouchableOpacity>
       </View>
     </View>
   );
