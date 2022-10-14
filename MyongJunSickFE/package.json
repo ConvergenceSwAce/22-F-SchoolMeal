@@ -18,7 +18,8 @@
     "react-native-config": "^1.4.6",
     "react-native-extra-dimensions-android": "^1.2.5",
     "react-native-modal": "^13.0.1",
-    "react-native-responsive-dimensions": "^3.1.1"
+    "react-native-responsive-dimensions": "^3.1.1",
+    "recoil": "^0.7.6"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",
