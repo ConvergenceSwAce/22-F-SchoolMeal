@@ -1,11 +1,10 @@
 import {React, useState} from 'react';
 import dayjs from 'dayjs';
-import {ScrollView, View, StyleSheet, Text, StatusBar} from 'react-native';
+import {ScrollView, View, StyleSheet, StatusBar, Platform} from 'react-native';
 import Header from './components/Header';
 import WeekCarousel from './components/WeekCarousel';
 import MealTitle from './components/MealTiltle';
 import MenuList from './components/MenuList';
-import {heightPercentage, widthPercentage} from './Responsive';
 import Splash from './components/Splash';
 import {RecoilRoot, useRecoilValue, useRecoilValueLoadable} from 'recoil';
 import {getDayByMeal, isLunchSubmit, isDinnerSubmit} from './states';
@@ -71,7 +70,6 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
     position: 'relative',
     backgroundColor: '#fff',
-    marginTop: StatusBar.currentHeight || heightPercentage(20),
   },
   splash: {
     flex: 1,
