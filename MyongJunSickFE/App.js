@@ -55,7 +55,7 @@ export const MainView = () => {
       );
     case 'loading':
       return (
-        <View style={styles.container}>
+        <View style={styles.splash}>
           <Splash />
         </View>
       );
@@ -77,6 +77,10 @@ const styles = StyleSheet.create({
     position: 'relative',
     backgroundColor: '#fff',
     marginBottom: heightPercentage(50),
+  },
+  splash: {
+    flex: 1,
+    flexDirection: 'column',
   },
 });
 
