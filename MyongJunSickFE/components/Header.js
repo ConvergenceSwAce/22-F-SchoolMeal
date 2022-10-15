@@ -3,13 +3,13 @@ import {View, Text, Image, StyleSheet, StatusBar, Platform} from 'react-native';
 import {widthPercentage, heightPercentage, fontPercentage} from '../Responsive';
 import {getStatusBarHeight} from 'react-native-status-bar-height';
 
-const StatusBarHeight = Platform.OS === 'ios' ? getStatusBarHeight(true) : StatusBar.currentHeight;
+const StatusBarHeight = Platform.OS === 'ios' ? getStatusBarHeight(true) : 0;
 
 export default function Header(props) {
   const headerStyle = StyleSheet.create({
     width: widthPercentage(428),
     height: heightPercentage(60),
-    marginTop: StatusBarHeight + heightPercentage(20),
+    marginTop: StatusBarHeight,
     marginHorizontal: widthPercentage(20),
     flexDirection: 'row',
     justifyContent: 'space-between',
