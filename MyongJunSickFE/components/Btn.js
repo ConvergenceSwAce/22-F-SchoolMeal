@@ -4,6 +4,8 @@ import Modal from 'react-native-modal';
 import BouncyCheckbox from 'react-native-bouncy-checkbox';
 import {widthPercentage, heightPercentage, fontPercentage} from '../Responsive';
 import axios from 'axios';
+import {useSetRecoilState} from 'recoil';
+import {isLunchSubmit, isDinnerSubmit} from '../states';
 
 const postData = {
   SatisfyType: '', // Good or Bad
@@ -25,6 +27,15 @@ export default function Btn({btnName, data, type}) {
     type === '중식' ? setMealType('중식') : setMealType('석식');
     // console.log(checkedData);
   }, [checkedData]);
+
+  let lunchSubmit = useSetRecoilState(isLunchSubmit);
+  let dinnerSubmit = useSetRecoilState(isDinnerSubmit);
+
+  function submitClose() {
+    console.log(lunchSubmit);
+    type === '중식' ? lunchSubmit(true) : dinnerSubmit(true);
+    console.log(lunchSubmit);
+  }
 
   const transText =
     SatisfyType === 'Good' ? '맛있었던 메뉴를 선택해주세요!' : '별로였던 메뉴를 선택해주세요!';
@@ -72,13 +83,14 @@ export default function Btn({btnName, data, type}) {
             activeOpacity={0.5}
             onPress={async () => {
               postData.MealType = MealType;
-              postData.SatisfyType = MealType;
+              postData.SatisfyType = SatisfyType;
               postData.SelectList = checkedData;
+              submitClose();
               console.log(postData);
-              await axios.post('#', {
-                postData,
-              });
-              setModalVisible(false); //
+              // await axios.post('#', {
+              //   postData,
+              // });
+              setModalVisible(false);
             }}
           >
             <Text style={modalComponent.submitText}>{subText}</Text>

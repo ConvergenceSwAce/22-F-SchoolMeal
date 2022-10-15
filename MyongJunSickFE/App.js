@@ -5,18 +5,18 @@ import Header from './components/Header';
 import WeekCarousel from './components/WeekCarousel';
 import MealTitle from './components/MealTiltle';
 import MenuList from './components/MenuList';
-import MealSatisfaction from './components/MealSatisfaction';
-import Btn from './components/Btn';
 import {heightPercentage, widthPercentage} from './Responsive';
-import Footer from './components/Footer';
 import Splash from './components/Splash';
-import {RecoilRoot, useRecoilValueLoadable} from 'recoil';
-import {getDayByMeal} from './states';
+import {RecoilRoot, useRecoilValue, useRecoilValueLoadable} from 'recoil';
+import {getDayByMeal, isLunchSubmit, isDinnerSubmit} from './states';
+import LunchForm from './components/LunchForm';
+import DinnerForm from './components/DinnerForm';
 
 let now = dayjs();
 let day = now.get('day');
 let year = now.format('YYYY');
 let month = now.format('MM');
+let date = now.format('DD');
 
 const mealTime = {
   lunch: '오늘의 중식',
@@ -31,6 +31,9 @@ export const MainView = () => {
 
   const [mealData, setMealData] = useState({});
 
+  const LunchSubmit = useRecoilValue(isLunchSubmit);
+  const dinnerSumbit = useRecoilValue(isDinnerSubmit);
+
   switch (mealLoadable.state) {
     case 'hasValue':
       return (
@@ -39,23 +42,15 @@ export const MainView = () => {
           <WeekCarousel day={day} setMealData={setMealData} />
           <MealTitle type={mealTime.lunch} time={mealTime.lunchTime} />
           <MenuList data={mealData.lunch} />
-          <MealSatisfaction message="오늘의 중식 만족하시나요?" />
-          <View style={btn.component}>
-            <Btn type="중식" btnName="네!" data={mealData.lunch} />
-            <Btn type="중식" btnName="아니요.." data={mealData.lunch} />
-          </View>
+          {date === mealData.date && !LunchSubmit ? <LunchForm mealData={mealData} /> : <></>}
           <MealTitle type={mealTime.dinner} time={mealTime.dinnerTime} />
           <MenuList data={mealData.dinner} />
-          <MealSatisfaction message="오늘의 석식 만족하시나요?" />
-          <View style={btn.component}>
-            <Btn type="석식" btnName="네!" data={mealData.dinner} />
-            <Btn type="석식" btnName="아니요.." data={mealData.dinner} />
-          </View>
+          {date === mealData.date && !dinnerSumbit ? <DinnerForm mealData={mealData} /> : <></>}
         </ScrollView>
       );
     case 'loading':
       return (
-        <View style={styles.container}>
+        <View style={styles.splash}>
           <Splash />
         </View>
       );
@@ -76,17 +71,10 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
     position: 'relative',
     backgroundColor: '#fff',
-    marginBottom: heightPercentage(50),
+    marginTop: StatusBar.currentHeight || heightPercentage(20),
   },
-});
-
-const btn = StyleSheet.create({
-  component: {
-    //박스를 감싸고 있는 컴포넌트
+  splash: {
     flex: 1,
-    flexDirection: 'row',
-    justifyContent: 'space-around',
-    marginHorizontal: widthPercentage(12),
-    marginTop: heightPercentage(16),
+    flexDirection: 'column',
   },
 });

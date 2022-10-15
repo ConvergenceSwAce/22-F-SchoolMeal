@@ -38,6 +38,16 @@ export const friData = atom({
   default: {},
 });
 
+export const isLunchSubmit = atom({
+  key: 'isLunchSubmit',
+  default: false,
+});
+
+export const isDinnerSubmit = atom({
+  key: 'isDinnerSubmit',
+  default: false,
+});
+
 export function splitMealData() {
   const mealData = useRecoilValue(getDayByMeal);
   const setMon = useSetRecoilState(monData);
