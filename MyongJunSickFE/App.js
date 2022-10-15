@@ -1,6 +1,6 @@
 import {React, useState} from 'react';
 import dayjs from 'dayjs';
-import {ScrollView, View, StyleSheet, StatusBar, Platform} from 'react-native';
+import {ScrollView, View, StyleSheet, StatusBar} from 'react-native';
 import Header from './components/Header';
 import WeekCarousel from './components/WeekCarousel';
 import MealTitle from './components/MealTiltle';
@@ -59,6 +59,7 @@ export const MainView = () => {
 export default function App() {
   return (
     <RecoilRoot>
+      <StatusBar />
       <MainView />
     </RecoilRoot>
   );
