@@ -59,7 +59,6 @@ export const MainView = () => {
 export default function App() {
   return (
     <RecoilRoot>
-      <StatusBar />
       <MainView />
     </RecoilRoot>
   );
