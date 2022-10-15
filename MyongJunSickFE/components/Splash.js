@@ -34,7 +34,6 @@ export default function Splash() {
       >
         <FadeInView style={styles.fade}>
           <Image style={styles.logo} source={require('../assets/images/Logo.png')} />
-          <Text style={styles.text}>명지대가 준비한 식사 : 명준식</Text>
         </FadeInView>
       </ImageBackground>
     </View>
@@ -53,12 +52,10 @@ const styles = StyleSheet.create({
     width: widthPercentage(160),
     height: heightPercentage(160),
     marginLeft: widthPercentage(134),
-    marginBottom: heightPercentage(20),
     objectFit: 'cover',
   },
   fade: {
     flex: 1,
     justifyContent: 'center',
   },
-  text: {fontSize: fontPercentage(20), fontWeight: 'bold', textAlign: 'center', color: '#ffffff'},
 });
