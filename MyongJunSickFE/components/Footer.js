@@ -4,7 +4,6 @@ import {widthPercentage, heightPercentage, fontPercentage} from '../Responsive';
 
 export default function Footer() {
   const footerStyle = StyleSheet.create({
-    height: "100%",
     flexGrow: 1,
     marginTop: heightPercentage(60),
     paddingTop: heightPercentage(10),

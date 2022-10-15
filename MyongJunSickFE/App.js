@@ -1,6 +1,6 @@
 import {React, useState} from 'react';
 import dayjs from 'dayjs';
-import {ScrollView, View, StyleSheet, Text} from 'react-native';
+import {ScrollView, View, StyleSheet, Text, StatusBar} from 'react-native';
 import Header from './components/Header';
 import WeekCarousel from './components/WeekCarousel';
 import MealTitle from './components/MealTiltle';
@@ -50,7 +50,6 @@ export const MainView = () => {
             <Btn type="석식" btnName="네!" data={mealData.dinner} />
             <Btn type="석식" btnName="아니요.." data={mealData.dinner} />
           </View>
-          <Footer />
         </ScrollView>
       );
     case 'loading':
@@ -76,6 +75,7 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
     position: 'relative',
     backgroundColor: '#fff',
+    marginBottom: heightPercentage(50),
   },
 });
 
