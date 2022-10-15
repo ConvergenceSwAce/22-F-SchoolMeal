@@ -1,12 +1,10 @@
 import {React, useState} from 'react';
 import dayjs from 'dayjs';
-import {getStatusBarHeight} from 'react-native-status-bar-height';
 import {ScrollView, View, StyleSheet, StatusBar, Platform} from 'react-native';
 import Header from './components/Header';
 import WeekCarousel from './components/WeekCarousel';
 import MealTitle from './components/MealTiltle';
 import MenuList from './components/MenuList';
-import {heightPercentage, widthPercentage} from './Responsive';
 import Splash from './components/Splash';
 import {RecoilRoot, useRecoilValue, useRecoilValueLoadable} from 'recoil';
 import {getDayByMeal, isLunchSubmit, isDinnerSubmit} from './states';
@@ -65,7 +63,6 @@ export default function App() {
     </RecoilRoot>
   );
 }
-const StatusBarHeight = Platform.OS === 'ios' ? getStatusBarHeight(true) : StatusBar.currentHeight;
 
 const styles = StyleSheet.create({
   container: {
@@ -73,7 +70,6 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
     position: 'relative',
     backgroundColor: '#fff',
-    marginTop: StatusBarHeight,
   },
   splash: {
     flex: 1,
