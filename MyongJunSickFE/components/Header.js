@@ -47,7 +47,7 @@ export default function Header(props) {
       <View style={dateStyle}>
         <Image
           style={{width: widthPercentage(32), height: heightPercentage(32), objectFit: 'contain'}}
-          source={require('../assets/CalendarIcon.png')}
+          source={require('../assets/images/CalendarIcon.png')}
         />
         <Text
           style={{
