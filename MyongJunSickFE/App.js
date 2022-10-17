@@ -10,15 +10,17 @@ import {RecoilRoot, useRecoilValue, useRecoilValueLoadable} from 'recoil';
 import {getDayByMeal, isLunchSubmit, isDinnerSubmit} from './states';
 import LunchForm from './components/LunchForm';
 import DinnerForm from './components/DinnerForm';
+import {heightPercentage} from './Responsive';
 
 let now = dayjs();
 let day = now.get('day');
 let year = now.format('YYYY');
 let month = now.format('MM');
-let date = now.format('DD');
+let date = now.format('MM.DD');
 
 const mealTime = {
-  lunch: '오늘의 중식',
+  lunchA: '오늘의 중식A',
+  lunchB: '오늘의 중식B',
   lunchTime: '11:30 - 14:00',
   dinner: '오늘의 석식',
   dinnerTime: '17:30 - 19:00',
@@ -39,12 +41,24 @@ export const MainView = () => {
         <ScrollView style={styles.container}>
           <Header year={year} month={month} />
           <WeekCarousel day={day} setMealData={setMealData} />
-          <MealTitle type={mealTime.lunch} time={mealTime.lunchTime} />
-          <MenuList data={mealData.lunch} />
-          {date === mealData.date && !LunchSubmit ? <LunchForm mealData={mealData} /> : <></>}
+          <MealTitle type={mealTime.lunchA} time={mealTime.lunchTime} />
+          <MenuList data={mealData.lunchA} />
+          {date === mealData.date && !LunchSubmit ? (
+            <LunchForm mealData={mealData.lunchA} title="오늘의 중식A 만족하셨나요?" />
+          ) : (
+            <></>
+          )}
+          <MealTitle type={mealTime.lunchB} time={mealTime.lunchTime} />
+          <MenuList data={mealData.lunchB} />
+          {date === mealData.date && !LunchSubmit ? (
+            <LunchForm mealData={mealData.lunchB} title="오늘의 중식B 만족하셨나요?" />
+          ) : (
+            <></>
+          )}
           <MealTitle type={mealTime.dinner} time={mealTime.dinnerTime} />
           <MenuList data={mealData.dinner} />
           {date === mealData.date && !dinnerSumbit ? <DinnerForm mealData={mealData} /> : <></>}
+          <View style={{height: heightPercentage(50)}} />
         </ScrollView>
       );
     case 'loading':
