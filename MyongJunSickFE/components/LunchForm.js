@@ -4,13 +4,13 @@ import {heightPercentage, widthPercentage} from '../Responsive';
 import Btn from './Btn';
 import MealSatisfaction from './MealSatisfaction';
 
-export default function LunchForm({mealData}) {
+export default function LunchForm({mealData, title}) {
   return (
     <View>
-      <MealSatisfaction message="오늘의 중식 만족하시나요?" />
+      <MealSatisfaction message={title} />
       <View style={btn.component}>
-        <Btn type="중식" btnName="네!" data={mealData.lunch} />
-        <Btn type="중식" btnName="아니요.." data={mealData.lunch} />
+        <Btn type="중식" btnName="네!" data={mealData} />
+        <Btn type="중식" btnName="아니요.." data={mealData} />
       </View>
     </View>
   );
