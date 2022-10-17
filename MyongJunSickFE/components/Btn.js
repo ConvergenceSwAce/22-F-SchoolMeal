@@ -6,12 +6,19 @@ import {widthPercentage, heightPercentage, fontPercentage} from '../Responsive';
 import axios from 'axios';
 import {useSetRecoilState} from 'recoil';
 import {isLunchSubmit, isDinnerSubmit} from '../states';
+import DeviceInfo from 'react-native-device-info';
 
 const postData = {
   SatisfyType: '', // Good or Bad
   MealType: '', // 중식 or 석식
   SelectList: null, // 선택된 리스트
+  UniqId: '', //기기 고유아이디
 };
+
+const uniqId = DeviceInfo.getUniqueId().then(uniqueId => {
+  console.log(uniqueId);
+  postData.UniqId = uniqueId;
+});
 
 export default function Btn({btnName, data, type}) {
   const [isModalVisible, setModalVisible] = useState(false);
