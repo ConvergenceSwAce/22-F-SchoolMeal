@@ -32,9 +32,7 @@ export default function Btn({btnName, data, type}) {
   let dinnerSubmit = useSetRecoilState(isDinnerSubmit);
 
   function submitClose() {
-    console.log(lunchSubmit);
     type === '중식' ? lunchSubmit(true) : dinnerSubmit(true);
-    console.log(lunchSubmit);
   }
 
   const transText =
@@ -69,6 +67,7 @@ export default function Btn({btnName, data, type}) {
                   text={menu}
                   innerIconStyle={{borderWidth: 2}}
                   onPress={() => {
+                    console.log(checkedData.length);
                     if (checkedData.indexOf(menu) === -1) {
                       setCheckedData([menu, ...checkedData]);
                     } else {
@@ -82,15 +81,22 @@ export default function Btn({btnName, data, type}) {
             style={modalComponent.submitBtn}
             activeOpacity={0.5}
             onPress={async () => {
-              postData.MealType = MealType;
-              postData.SatisfyType = SatisfyType;
-              postData.SelectList = checkedData;
-              submitClose();
-              console.log(postData);
-              // await axios.post('#', {
-              //   postData,
-              // });
-              setModalVisible(false);
+              if (checkedData.length > 0) {
+                postData.MealType = MealType;
+                postData.SatisfyType = SatisfyType;
+                postData.SelectList = checkedData;
+                submitClose();
+                console.log(postData);
+                await axios.post(
+                  'https://gea662yjyk.execute-api.ap-northeast-2.amazonaws.com/survey',
+                  {
+                    postData,
+                  },
+                );
+                setModalVisible(false);
+              } else {
+                setModalVisible(false);
+              }
             }}
           >
             <Text style={modalComponent.submitText}>{subText}</Text>
