@@ -34,7 +34,13 @@ export default function Splash() {
         style={styles.image}
       >
         <FadeInView style={styles.fade}>
-          <Image style={styles.logo} source={require('../assets/images/Logo.png')} />
+          <View style={styles.logoContainer}>
+            <ImageBackground
+              source={require('../assets/images/Logo.png')}
+              style={styles.logo}
+              resizeMode="contain"
+            />
+          </View>
         </FadeInView>
       </ImageBackground>
     </View>
@@ -44,16 +50,20 @@ export default function Splash() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    backgroundColor: '#fff',
   },
   image: {
     flex: 1,
     justifyContent: 'center',
   },
-  logo: {
+  logoContainer: {
+    flex: 1,
     width: widthPercentage(160),
     height: heightPercentage(160),
     marginLeft: widthPercentage(134),
-    objectFit: 'cover',
+  },
+  logo: {
+    flexGrow: 1,
   },
   fade: {
     flex: 1,
