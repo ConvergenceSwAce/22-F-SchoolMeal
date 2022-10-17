@@ -15,7 +15,7 @@ const postData = {
   UniqId: '', //기기 고유아이디
 };
 
-const uniqId = DeviceInfo.getUniqueId().then(uniqueId => {
+DeviceInfo.getUniqueId().then(uniqueId => {
   console.log(uniqueId);
   postData.UniqId = uniqueId;
 });
@@ -88,21 +88,25 @@ export default function Btn({btnName, data, type}) {
             style={modalComponent.submitBtn}
             activeOpacity={0.5}
             onPress={async () => {
-              if (checkedData.length > 0) {
-                postData.MealType = MealType;
-                postData.SatisfyType = SatisfyType;
-                postData.SelectList = checkedData;
-                submitClose();
-                console.log(postData);
-                await axios.post(
-                  'https://gea662yjyk.execute-api.ap-northeast-2.amazonaws.com/survey',
-                  {
-                    postData,
-                  },
-                );
-                setModalVisible(false);
-              } else {
-                setModalVisible(false);
+              try {
+                if (checkedData.length > 0) {
+                  postData.MealType = MealType;
+                  postData.SatisfyType = SatisfyType;
+                  postData.SelectList = checkedData;
+                  submitClose();
+                  console.log(postData);
+                  await axios.post(
+                    'https://gea662yjyk.execute-api.ap-northeast-2.amazonaws.com/survey',
+                    {
+                      postData,
+                    },
+                  );
+                  setModalVisible(false);
+                } else {
+                  setModalVisible(false);
+                }
+              } catch (e) {
+                console.log('error>>', e);
               }
             }}
           >
