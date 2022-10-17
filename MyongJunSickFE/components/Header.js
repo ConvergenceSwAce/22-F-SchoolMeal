@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Text, Image, StyleSheet, StatusBar, Platform} from 'react-native';
+import {View, Text, Image, StyleSheet, StatusBar, Platform, ImageBackground} from 'react-native';
 import {widthPercentage, heightPercentage, fontPercentage} from '../Responsive';
 import {getStatusBarHeight} from 'react-native-status-bar-height';
 
@@ -45,12 +45,20 @@ export default function Header(props) {
     },
   });
 
+  const logoStyle = StyleSheet.create({
+    contain: {
+      width: widthPercentage(35),
+      height: heightPercentage(35),
+    },
+  });
+
   return (
     <View style={headerStyle}>
       <View style={dateStyle}>
-        <Image
-          style={{width: widthPercentage(32), height: heightPercentage(32), objectFit: 'contain'}}
+        <ImageBackground
+          style={logoStyle.contain}
           source={require('../assets/images/CalendarIcon.png')}
+          resizeMode="contain"
         />
         <Text
           style={{
