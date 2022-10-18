@@ -28,21 +28,15 @@ const FadeInView = props => {
 export default function Splash() {
   return (
     <View style={styles.container}>
-      <ImageBackground
-        source={require('../assets/images/landing_background.jpg')}
-        resizeMode="cover"
-        style={styles.image}
-      >
-        <FadeInView style={styles.fade}>
-          <View style={styles.logoContainer}>
-            <ImageBackground
-              source={require('../assets/images/Logo.png')}
-              style={styles.logo}
-              resizeMode="contain"
-            />
-          </View>
-        </FadeInView>
-      </ImageBackground>
+      <FadeInView style={styles.fade}>
+        <View style={styles.logoContainer}>
+          <ImageBackground
+            source={require('../assets/images/Logo.png')}
+            style={styles.logo}
+            resizeMode="contain"
+          />
+        </View>
+      </FadeInView>
     </View>
   );
 }
@@ -50,7 +44,7 @@ export default function Splash() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#071648',
   },
   image: {
     flex: 1,
