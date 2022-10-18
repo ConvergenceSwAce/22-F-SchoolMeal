@@ -1,6 +1,6 @@
 import React, {useRef, useEffect} from 'react';
-import {Animated, Image, ImageBackground, StyleSheet, Text, View} from 'react-native';
-import {fontPercentage, heightPercentage, widthPercentage} from '../Responsive';
+import {Animated, ImageBackground, StyleSheet, View} from 'react-native';
+import {heightPercentage, widthPercentage} from '../Responsive';
 
 const FadeInView = props => {
   const fadeAnim = useRef(new Animated.Value(0)).current; // Initial value for opacity: 0
@@ -45,10 +45,6 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#071648',
-  },
-  image: {
-    flex: 1,
-    justifyContent: 'center',
   },
   logoContainer: {
     flex: 1,
