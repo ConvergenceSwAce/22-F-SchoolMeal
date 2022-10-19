@@ -1,6 +1,6 @@
 import React, {useRef, useEffect} from 'react';
-import {Animated, Image, ImageBackground, StyleSheet, Text, View} from 'react-native';
-import {fontPercentage, heightPercentage, widthPercentage} from '../Responsive';
+import {Animated, ImageBackground, StyleSheet, View} from 'react-native';
+import {heightPercentage, widthPercentage} from '../Responsive';
 
 const FadeInView = props => {
   const fadeAnim = useRef(new Animated.Value(0)).current; // Initial value for opacity: 0
@@ -28,21 +28,15 @@ const FadeInView = props => {
 export default function Splash() {
   return (
     <View style={styles.container}>
-      <ImageBackground
-        source={require('../assets/images/landing_background.jpg')}
-        resizeMode="cover"
-        style={styles.image}
-      >
-        <FadeInView style={styles.fade}>
-          <View style={styles.logoContainer}>
-            <ImageBackground
-              source={require('../assets/images/Logo.png')}
-              style={styles.logo}
-              resizeMode="contain"
-            />
-          </View>
-        </FadeInView>
-      </ImageBackground>
+      <FadeInView style={styles.fade}>
+        <View style={styles.logoContainer}>
+          <ImageBackground
+            source={require('../assets/images/Logo.png')}
+            style={styles.logo}
+            resizeMode="contain"
+          />
+        </View>
+      </FadeInView>
     </View>
   );
 }
@@ -50,11 +44,7 @@ export default function Splash() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-  },
-  image: {
-    flex: 1,
-    justifyContent: 'center',
+    backgroundColor: '#071648',
   },
   logoContainer: {
     flex: 1,
