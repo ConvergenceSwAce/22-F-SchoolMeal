@@ -9,6 +9,7 @@ import {isLunchSubmit, isDinnerSubmit} from '../states';
 import DeviceInfo from 'react-native-device-info';
 
 const postData = {
+  //서버에 보내질 데이터
   SatisfyType: '', // Good or Bad
   MealType: '', // 중식 or 석식
   SelectList: null, // 선택된 리스트
@@ -16,7 +17,8 @@ const postData = {
 };
 
 DeviceInfo.getUniqueId().then(uniqueId => {
-  console.log(uniqueId);
+  //기기 고유아이디를 postData에 추가함
+  // console.log(uniqueId);
   postData.UniqId = uniqueId;
 });
 
@@ -24,12 +26,15 @@ export default function Btn({btnName, data, type}) {
   const [isModalVisible, setModalVisible] = useState(false);
   const [SatisfyType, setSatisfyType] = useState('');
   const [MealType, setMealType] = useState('');
+
   const toggleModal = () => {
+    //Modal On/Off
     setModalVisible(!isModalVisible);
   };
-  const [checkedData, setCheckedData] = useState([]);
+  const [checkedData, setCheckedData] = useState([]); //체크된 식단이 담기는 list
 
   useEffect(() => {
+    //checkdata에 변화가 감지되면 satisfyType, mealtype 스테이트를 바꿈
     btnName === '네!' ? setSatisfyType('Good') : setSatisfyType('Bad');
     type === '중식' ? setMealType('중식') : setMealType('석식');
     // console.log(checkedData);
@@ -39,6 +44,7 @@ export default function Btn({btnName, data, type}) {
   let dinnerSubmit = useSetRecoilState(isDinnerSubmit);
 
   function submitClose() {
+    //mealType에 따라 만족도조사를 했다고 전역스테이트를 바꿈
     type === '중식' ? lunchSubmit(true) : dinnerSubmit(true);
   }
 
@@ -98,7 +104,7 @@ export default function Btn({btnName, data, type}) {
                   await axios.post(
                     'https://gea662yjyk.execute-api.ap-northeast-2.amazonaws.com/survey',
                     {
-                      postData,
+                      data: postData,
                     },
                   );
                   setModalVisible(false);
@@ -106,7 +112,7 @@ export default function Btn({btnName, data, type}) {
                   setModalVisible(false);
                 }
               } catch (e) {
-                console.log('error>>', e);
+                console.log(e);
               }
             }}
           >
