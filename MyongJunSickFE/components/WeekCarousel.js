@@ -1,12 +1,11 @@
 import {React, useState, useEffect} from 'react';
 import {View, Text, TouchableOpacity, StyleSheet} from 'react-native';
-import {useRecoilValue, useRecoilValueLoadable} from 'recoil';
+import {useRecoilValue} from 'recoil';
 import {widthPercentage, heightPercentage, fontPercentage} from '../Responsive';
-import {monData, tueData, wedData, thuData, friData, splitMealData, getDayByMeal} from '../states';
+import {monData, tueData, wedData, thuData, friData, splitMealData} from '../states';
 
-export default function WeekCarousel(props) {
-  const mealLoadable = useRecoilValueLoadable(getDayByMeal);
-  const day = props.day;
+export default function WeekCarousel({day, setMealData}) {
+  const today = day;
   splitMealData();
   const mon = useRecoilValue(monData);
   const tue = useRecoilValue(tueData);
@@ -21,7 +20,7 @@ export default function WeekCarousel(props) {
   const [friIsPress, setIsFripress] = useState(false);
 
   useEffect(() => {
-    switch (day) {
+    switch (today) {
       case 1:
         setIsMonpress(true);
         monPress();
@@ -99,7 +98,7 @@ export default function WeekCarousel(props) {
   });
 
   const monPress = () => {
-    props.setMealData(mon);
+    setMealData(mon);
     setIsMonpress(true);
     setIsTuepress(false);
     setIsWedpress(false);
@@ -110,7 +109,7 @@ export default function WeekCarousel(props) {
   };
 
   const tuePress = () => {
-    props.setMealData(tue);
+    setMealData(tue);
     setIsTuepress(true);
     setIsMonpress(false);
     setIsWedpress(false);
@@ -120,7 +119,7 @@ export default function WeekCarousel(props) {
   };
 
   const wedPress = () => {
-    props.setMealData(wed);
+    setMealData(wed);
     setIsWedpress(true);
     setIsMonpress(false);
     setIsTuepress(false);
@@ -130,7 +129,7 @@ export default function WeekCarousel(props) {
   };
 
   const thuPress = () => {
-    props.setMealData(thu);
+    setMealData(thu);
     setIsThupress(true);
     setIsMonpress(false);
     setIsTuepress(false);
@@ -140,7 +139,7 @@ export default function WeekCarousel(props) {
   };
 
   const friPress = () => {
-    props.setMealData(fri);
+    setMealData(fri);
     setIsFripress(true);
     setIsMonpress(false);
     setIsTuepress(false);

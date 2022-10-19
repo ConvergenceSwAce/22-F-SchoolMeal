@@ -38,7 +38,8 @@ export const MainView = () => {
   switch (mealLoadable.state) {
     case 'hasValue':
       return (
-        <ScrollView style={styles.container}>
+        <ScrollView style={styles.container} showsVerticalScrollIndicator={false}>
+          <StatusBar barStyle="dark-content" />
           <Header year={year} month={month} />
           <WeekCarousel day={day} setMealData={setMealData} />
           <MealTitle type={mealTime.lunchA} time={mealTime.lunchTime} />
@@ -64,6 +65,7 @@ export const MainView = () => {
     case 'loading':
       return (
         <View style={styles.splash}>
+          <StatusBar translucent={true} backgroundColor={'transparent'} />
           <Splash />
         </View>
       );

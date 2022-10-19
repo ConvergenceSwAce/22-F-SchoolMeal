@@ -70,9 +70,8 @@ export default function Btn({btnName, data, type}) {
           <Text style={modalComponent.modalTitle}>{transText}</Text>
           {data &&
             data.map(menu => (
-              <View style={modalComponent.itemComponent}>
+              <View style={modalComponent.itemComponent} key={menu}>
                 <BouncyCheckbox
-                  key={menu}
                   size={25}
                   fillColor="#071648"
                   unfillColor="#fff"
