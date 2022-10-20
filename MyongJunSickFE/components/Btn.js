@@ -11,7 +11,7 @@ import DeviceInfo from 'react-native-device-info';
 const postData = {
   SatisfyType: '', // Good or Bad
   MealType: '', // 중식 or 석식
-  SelectList: null, // 선택된 리스트
+  SelectList: [], // 선택된 리스트
   UniqId: '', //기기 고유아이디
 };
 
@@ -95,7 +95,7 @@ export default function Btn({btnName, data, type}) {
                   submitClose();
                   console.log(postData);
                   await axios.post(
-                    'https://gea662yjyk.execute-api.ap-northeast-2.amazonaws.com/survey',
+                    'https://p1fbf7i6p8.execute-api.ap-northeast-2.amazonaws.com/Test/MJS_SurveyData',
                     {
                       postData,
                     },
