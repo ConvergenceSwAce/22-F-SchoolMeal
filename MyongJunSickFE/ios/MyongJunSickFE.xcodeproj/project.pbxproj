@@ -492,6 +492,8 @@
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 5UU4FUZH93;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = MyongJunSickFE/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "명준식";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.food-and-drink";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -526,6 +528,8 @@
 				DEVELOPMENT_TEAM = "";
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 5UU4FUZH93;
 				INFOPLIST_FILE = MyongJunSickFE/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "명준식";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.food-and-drink";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
