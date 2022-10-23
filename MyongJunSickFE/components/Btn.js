@@ -5,7 +5,7 @@ import BouncyCheckbox from 'react-native-bouncy-checkbox';
 import {widthPercentage, heightPercentage, fontPercentage} from '../Responsive';
 import axios from 'axios';
 import {useRecoilValue, useSetRecoilState} from 'recoil';
-import {isLunchSubmit, isDinnerSubmit, restInfo} from '../states';
+import {isLunchSubmit, isDinnerSubmit, restInfo, isLunchSubmit2, isDinnerSubmit2} from '../states';
 import DeviceInfo from 'react-native-device-info';
 
 const postData = {
@@ -39,10 +39,18 @@ export default function Btn({btnName, data, type}) {
   }, [checkedData]);
 
   let lunchSubmit = useSetRecoilState(isLunchSubmit);
+  let lunchSubmit2 = useSetRecoilState(isLunchSubmit2);
   let dinnerSubmit = useSetRecoilState(isDinnerSubmit);
+  let dinnerSubmit2 = useSetRecoilState(isDinnerSubmit2);
 
   function submitClose() {
-    type === '중식' ? lunchSubmit(true) : dinnerSubmit(true);
+    CampusInfo === '인문캠퍼스'
+      ? type === '중식'
+        ? lunchSubmit(true)
+        : dinnerSubmit(true)
+      : type === '중식'
+      ? lunchSubmit2(true)
+      : dinnerSubmit2(true);
   }
 
   const transText =
