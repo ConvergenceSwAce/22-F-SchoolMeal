@@ -2,16 +2,38 @@ import {React, useState, useEffect} from 'react';
 import {View, Text, TouchableOpacity, StyleSheet} from 'react-native';
 import {useRecoilValue} from 'recoil';
 import {widthPercentage, heightPercentage, fontPercentage} from '../Responsive';
-import {monData, tueData, wedData, thuData, friData, splitMealData} from '../states';
+import {
+  monData,
+  tueData,
+  wedData,
+  thuData,
+  friData,
+  splitMealData,
+  splitMealData2,
+  monData2,
+  tueData2,
+  wedData2,
+  thuData2,
+  friData2,
+  restInfo,
+} from '../states';
 
-export default function WeekCarousel({day, setMealData}) {
+export default function WeekCarousel({day, setMealData, setMealData2}) {
+  const restSelect = useRecoilValue(restInfo);
   const today = day;
   splitMealData();
+  splitMealData2();
   const mon = useRecoilValue(monData);
   const tue = useRecoilValue(tueData);
   const wed = useRecoilValue(wedData);
   const thu = useRecoilValue(thuData);
   const fri = useRecoilValue(friData);
+
+  const mon2 = useRecoilValue(monData2);
+  const tue2 = useRecoilValue(tueData2);
+  const wed2 = useRecoilValue(wedData2);
+  const thu2 = useRecoilValue(thuData2);
+  const fri2 = useRecoilValue(friData2);
 
   const [monIsPress, setIsMonpress] = useState(false);
   const [tueIsPress, setIsTuepress] = useState(false);
@@ -43,10 +65,9 @@ export default function WeekCarousel({day, setMealData}) {
         break;
       default:
         setIsMonpress(true);
-        monPress();
         break;
     }
-  }, [mon]);
+  }, [restSelect]);
 
   let mon_date = mon.date.split('.')[1];
   let tue_date = tue.date.split('.')[1];
@@ -98,7 +119,9 @@ export default function WeekCarousel({day, setMealData}) {
   });
 
   const monPress = () => {
-    setMealData(mon);
+    {
+      restSelect === '인문캠퍼스' ? setMealData(mon) : setMealData2(mon2);
+    }
     setIsMonpress(true);
     setIsTuepress(false);
     setIsWedpress(false);
@@ -109,7 +132,9 @@ export default function WeekCarousel({day, setMealData}) {
   };
 
   const tuePress = () => {
-    setMealData(tue);
+    {
+      restSelect === '인문캠퍼스' ? setMealData(tue) : setMealData2(tue2);
+    }
     setIsTuepress(true);
     setIsMonpress(false);
     setIsWedpress(false);
@@ -119,7 +144,9 @@ export default function WeekCarousel({day, setMealData}) {
   };
 
   const wedPress = () => {
-    setMealData(wed);
+    {
+      restSelect === '인문캠퍼스' ? setMealData(wed) : setMealData2(wed2);
+    }
     setIsWedpress(true);
     setIsMonpress(false);
     setIsTuepress(false);
@@ -129,7 +156,9 @@ export default function WeekCarousel({day, setMealData}) {
   };
 
   const thuPress = () => {
-    setMealData(thu);
+    {
+      restSelect === '인문캠퍼스' ? setMealData(thu) : setMealData2(thu2);
+    }
     setIsThupress(true);
     setIsMonpress(false);
     setIsTuepress(false);
@@ -139,7 +168,9 @@ export default function WeekCarousel({day, setMealData}) {
   };
 
   const friPress = () => {
-    setMealData(fri);
+    {
+      restInfo === '인문캠퍼스' ? setMealData(fir) : setMealData2(fri2);
+    }
     setIsFripress(true);
     setIsMonpress(false);
     setIsTuepress(false);
