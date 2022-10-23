@@ -1,11 +1,32 @@
-import React from 'react';
-import {View, Text, Image, StyleSheet, StatusBar, Platform, ImageBackground} from 'react-native';
+import React, {useState} from 'react';
+import {
+  View,
+  Text,
+  Image,
+  StyleSheet,
+  StatusBar,
+  Platform,
+  ImageBackground,
+  TouchableOpacity,
+} from 'react-native';
 import {widthPercentage, heightPercentage, fontPercentage} from '../Responsive';
 import {getStatusBarHeight} from 'react-native-status-bar-height';
+import {useRecoilState, useRecoilValue} from 'recoil';
+import {restInfo} from '../states';
 
 const StatusBarHeight = Platform.OS === 'ios' ? getStatusBarHeight(true) : StatusBar.currentHeight;
 
-export default function Header(props) {
+export default function Header({month, year}) {
+  const [rests, setRest] = useRecoilState(restInfo);
+  const touchRest = () => {
+    if (rests === '인문캠퍼스') {
+      setRest('자연캠퍼스');
+      console.log();
+    } else {
+      setRest('인문캠퍼스');
+    }
+  };
+
   const headerStyle = StyleSheet.create({
     width: widthPercentage(428),
     height: heightPercentage(60),
@@ -69,7 +90,7 @@ export default function Header(props) {
             marginLeft: widthPercentage(10),
           }}
         >
-          {props.month + '월'}
+          {month + '월'}
         </Text>
         <Text
           style={{
@@ -81,12 +102,14 @@ export default function Header(props) {
             marginLeft: widthPercentage(10),
           }}
         >
-          {props.year}
+          {year}
         </Text>
       </View>
-      <View style={title.component}>
-        <Text style={title.text}>MCC 학생식당</Text>
-      </View>
+      <TouchableOpacity activeOpacity={0.5} onPress={touchRest}>
+        <View style={title.component}>
+          <Text style={title.text}>{rests}</Text>
+        </View>
+      </TouchableOpacity>
     </View>
   );
 }
