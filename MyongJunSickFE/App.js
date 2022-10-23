@@ -69,6 +69,8 @@ export const MainView = () => {
           <Splash />
         </View>
       );
+    case 'hasError':
+      throw userNameLoadable.contents;
   }
 };
 
