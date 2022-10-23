@@ -4,8 +4,8 @@ import Modal from 'react-native-modal';
 import BouncyCheckbox from 'react-native-bouncy-checkbox';
 import {widthPercentage, heightPercentage, fontPercentage} from '../Responsive';
 import axios from 'axios';
-import {useSetRecoilState} from 'recoil';
-import {isLunchSubmit, isDinnerSubmit} from '../states';
+import {useRecoilValue, useSetRecoilState} from 'recoil';
+import {isLunchSubmit, isDinnerSubmit, restInfo} from '../states';
 import DeviceInfo from 'react-native-device-info';
 
 const postData = {
@@ -13,6 +13,7 @@ const postData = {
   MealType: '', // 중식 or 석식
   SelectList: [], // 선택된 리스트
   UniqId: '', //기기 고유아이디
+  Campus: '', // 인문캠퍼스 or 자연캠퍼스
 };
 
 DeviceInfo.getUniqueId().then(uniqueId => {
@@ -28,6 +29,8 @@ export default function Btn({btnName, data, type}) {
     setModalVisible(!isModalVisible);
   };
   const [checkedData, setCheckedData] = useState([]);
+
+  const CampusInfo = useRecoilValue(restInfo);
 
   useEffect(() => {
     btnName === '네!' ? setSatisfyType('Good') : setSatisfyType('Bad');
@@ -92,6 +95,7 @@ export default function Btn({btnName, data, type}) {
                   postData.MealType = MealType;
                   postData.SatisfyType = SatisfyType;
                   postData.SelectList = checkedData;
+                  postData.Campus = CampusInfo;
                   submitClose();
                   await axios
                     .post(
