@@ -66,6 +66,7 @@ export default function Btn({btnName, data, type}) {
             data.map(menu => (
               <View style={modalComponent.itemComponent} key={menu}>
                 <BouncyCheckbox
+                  style={{width: widthPercentage(290)}}
                   size={25}
                   fillColor="#071648"
                   unfillColor="#fff"
