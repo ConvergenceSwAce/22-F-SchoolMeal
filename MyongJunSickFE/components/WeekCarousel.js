@@ -43,7 +43,7 @@ export default function WeekCarousel({day, setMealData}) {
         break;
       default:
         setIsMonpress(true);
-        friPress();
+        monPress();
         break;
     }
   }, [mon]);
