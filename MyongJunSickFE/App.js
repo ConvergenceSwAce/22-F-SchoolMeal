@@ -20,6 +20,9 @@ import LunchForm from './components/LunchForm';
 import DinnerForm from './components/DinnerForm';
 import {heightPercentage} from './Responsive';
 
+Text.defaultProps = Text.defaultProps || {};
+Text.defaultProps.allowFontScaling = false;
+
 let now = dayjs();
 let day = now.get('day');
 let year = now.format('YYYY');
