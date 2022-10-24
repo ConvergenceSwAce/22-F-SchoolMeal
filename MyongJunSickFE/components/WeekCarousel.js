@@ -65,6 +65,7 @@ export default function WeekCarousel({day, setMealData, setMealData2}) {
         break;
       default:
         setIsMonpress(true);
+        monPress();
         break;
     }
   }, [restSelect]);
@@ -169,7 +170,7 @@ export default function WeekCarousel({day, setMealData, setMealData2}) {
 
   const friPress = () => {
     {
-      restInfo === '인문캠퍼스' ? setMealData(fri) : setMealData2(fri2);
+      restSelect === '인문캠퍼스' ? setMealData(fri) : setMealData2(fri2);
     }
     setIsFripress(true);
     setIsMonpress(false);
