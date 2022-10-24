@@ -169,7 +169,7 @@ export default function WeekCarousel({day, setMealData, setMealData2}) {
 
   const friPress = () => {
     {
-      restInfo === '인문캠퍼스' ? setMealData(fir) : setMealData2(fri2);
+      restInfo === '인문캠퍼스' ? setMealData(fri) : setMealData2(fri2);
     }
     setIsFripress(true);
     setIsMonpress(false);
