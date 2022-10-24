@@ -21,9 +21,6 @@ import DinnerForm from './components/DinnerForm';
 import {heightPercentage} from './Responsive';
 import codePush from 'react-native-code-push';
 
-Text.defaultProps = Text.defaultProps || {};
-Text.defaultProps.allowFontScaling = false;
-
 let now = dayjs();
 let day = now.get('day');
 let year = now.format('YYYY');
