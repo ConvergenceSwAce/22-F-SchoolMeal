@@ -13,13 +13,13 @@
         </a>
     </td>
     <td>
-        <a href="https://github.com/k-kbk">
-            <img src="https://avatars.githubusercontent.com/u/49053676?v=4" width="100px" />
+        <a href="https://github.com/MinsuKim21">
+            <img src="https://avatars.githubusercontent.com/u/80405708?v=4" width="100px" />
         </a>
     </td>
     <td>
-        <a href="https://github.com/MinsuKim21">
-            <img src="https://avatars.githubusercontent.com/u/80405708?v=4" width="100px" />
+        <a href="https://github.com/k-kbk">
+            <img src="https://avatars.githubusercontent.com/u/79684339?v=4" width="100px" />
         </a>
     </td>
     <td>
@@ -40,15 +40,17 @@
   </tr>
 
   <tr>
-    <td><b>권성중</b></b></td>
+    <td><b>권성중</b></td>
     <td><b>김민수</b></td>
+    <td><b>김보겸</b></td>
     <td><b>김태강</b></td>
     <td><b>고성인</b></td>
     <td><b>고승환</b></td>
   </tr>
   <tr>
     <td><b>Data ML</b></td>
-    <td><b>Full Stack</b></td>
+    <td><b>FE</b></td>
+    <td><b>BE</b></td>
     <td><b>Full Stack</b></td>
     <td><b>DB</b></td>
     <td><b>Design</b></td>
