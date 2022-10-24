@@ -62,7 +62,7 @@ export default function Header({month, year}) {
       fontStyle: 'normal',
       textAlign: 'center',
       color: '#071648',
-      marginLeft: widthPercentage(20),
+      marginLeft: widthPercentage(60),
     },
   });
 

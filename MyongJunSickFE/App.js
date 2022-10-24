@@ -1,6 +1,6 @@
 import {React, Suspense, useState} from 'react';
 import dayjs from 'dayjs';
-import {ScrollView, View, StyleSheet, StatusBar} from 'react-native';
+import {ScrollView, View, StyleSheet, StatusBar, ActivityIndicator} from 'react-native';
 import Header from './components/Header';
 import WeekCarousel from './components/WeekCarousel';
 import MealTitle from './components/MealTiltle';
@@ -65,6 +65,7 @@ export const MainView = () => {
           <StatusBar barStyle="dark-content" />
           <Header year={year} month={month} />
           <WeekCarousel day={day} setMealData={setMealData} setMealData2={setMealData2} />
+
           {restSelect === '인문캠퍼스' ? (
             <MealTitle type={mealTime.lunchA} time={mealTime.lunchTime} />
           ) : (
@@ -136,7 +137,12 @@ export const MainView = () => {
         </View>
       );
     case 'hasError':
-      throw userNameLoadable.contents;
+      return (
+        <View style={styles.splash}>
+          <StatusBar translucent={true} backgroundColor={'transparent'} />
+          <Splash />
+        </View>
+      );
   }
 };
 
