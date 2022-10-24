@@ -19,6 +19,7 @@ import {
 import LunchForm from './components/LunchForm';
 import DinnerForm from './components/DinnerForm';
 import {heightPercentage} from './Responsive';
+import codePush from 'react-native-code-push';
 
 Text.defaultProps = Text.defaultProps || {};
 Text.defaultProps.allowFontScaling = false;
@@ -142,7 +143,7 @@ export const MainView = () => {
   }
 };
 
-export default function App() {
+function App() {
   return (
     <RecoilRoot>
       <Suspense fallback={<Splash />}>
@@ -151,6 +152,8 @@ export default function App() {
     </RecoilRoot>
   );
 }
+
+export default codePush(App);
 
 const styles = StyleSheet.create({
   container: {
