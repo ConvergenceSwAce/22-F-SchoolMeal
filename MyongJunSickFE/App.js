@@ -20,6 +20,7 @@ import LunchForm from './components/LunchForm';
 import DinnerForm from './components/DinnerForm';
 import {heightPercentage} from './Responsive';
 import codePush from 'react-native-code-push';
+import SeoulCamView from './pages/SeoulCamView';
 
 let now = dayjs();
 let day = now.get('day');
@@ -149,9 +150,10 @@ export const MainView = () => {
 function App() {
   return (
     <RecoilRoot>
-      <Suspense fallback={<Splash />}>
-        <MainView />
-      </Suspense>
+      <Header year={year} month={month} />
+      {/* <WeekCarousel day={day} setMealData={setMealData} setMealData2={setMealData2} /> */}
+      <SeoulCamView />
+      {/* <MainView /> */}
     </RecoilRoot>
   );
 }

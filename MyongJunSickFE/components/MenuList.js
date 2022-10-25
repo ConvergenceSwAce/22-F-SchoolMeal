@@ -4,7 +4,8 @@ import ListItems from './ListItems';
 import {widthPercentage, heightPercentage, fontPercentage} from '../Responsive';
 
 export default function MenuList(props) {
-  const {data} = props; // lunch or dinner
+  const data = props.data;
+  console.log(data);
   const menuComponent = {
     width: widthPercentage(396),
     flex: 1,
