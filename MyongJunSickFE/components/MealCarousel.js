@@ -12,6 +12,7 @@ import {
   View,
 } from 'react-native';
 import {useRecoilValue} from 'recoil';
+import {heightPercentage, widthPercentage} from '../Responsive';
 import {isLunchSubmit} from '../states';
 import LunchForm from './LunchForm';
 import MenuList from './MenuList';
@@ -71,18 +72,19 @@ const styles = StyleSheet.create({
     height: 8,
     width: 35,
     backgroundColor: '#071648',
-    marginHorizontal: 4,
+    marginHorizontal: widthPercentage(4),
     borderRadius: 4,
   },
   indicatorOff: {
     height: 8,
     width: 35,
     backgroundColor: '#dfdfdf',
-    marginHorizontal: 4,
+    marginHorizontal: widthPercentage(4),
     borderRadius: 4,
   },
   indicatorContainer: {
-    marginTop: 15,
+    marginTop: heightPercentage(15),
+    marginBottom: heightPercentage(5),
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',

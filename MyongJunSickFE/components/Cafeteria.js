@@ -23,15 +23,15 @@ export default function Cafeteria(props) {
   switch (page) {
     case 0:
       return (
-        <ScrollView>
-          <MealTiltle type={'중식'} time={'11-30 : 14:00'} />
+        <ScrollView showsVerticalScrollIndicator={false}>
+          <MealTiltle type={'중식'} time={'11:30 - 13:30'} />
           <MenuList data={mealData.lunch10} />
           {date === mealData.date && !LunchSubmit2 ? (
             <LunchForm mealData={mealData.lunch10} title={'중식'} />
           ) : (
             <></>
           )}
-          <MealTiltle type={'석식'} time={'17-30 : 19:00'} />
+          <MealTiltle type={'석식'} time={'17:30 - 18:30'} />
           <MenuList data={mealData.dinner10} />
           {date === mealData.date && !DinnerSubmit2 ? (
             <View>
@@ -48,8 +48,8 @@ export default function Cafeteria(props) {
       );
     case 1:
       return (
-        <ScrollView>
-          <MealTiltle type={'중식'} time={'11-30 : 14:00'} />
+        <ScrollView showsVerticalScrollIndicator={false}>
+          <MealTiltle type={'중식'} time={'11:30 - 14:00'} />
           <MenuList data={mealData.lunch11} />
           {date === mealData.date && !LunchSubmit2 ? (
             <LunchForm mealData={mealData.lunch11} title={'중식'} />
@@ -60,15 +60,15 @@ export default function Cafeteria(props) {
       );
     case 2:
       return (
-        <ScrollView>
-          <MealTiltle type={'중식'} time={'11-30 : 14:00'} />
+        <ScrollView showsVerticalScrollIndicator={false}>
+          <MealTiltle type={'중식'} time={'11:30 - 13:30'} />
           <MenuList data={mealData.lunch12} />
           {date === mealData.date && !LunchSubmit2 ? (
             <LunchForm mealData={mealData.lunch12} title={'중식'} />
           ) : (
             <></>
           )}
-          <MealTiltle type={'석식'} time={'17-30 : 19:00'} />
+          <MealTiltle type={'석식'} time={'17:00 - 18:30'} />
           <MenuList data={mealData.dinner12} />
           {date === mealData.date && !DinnerSubmit2 ? (
             <View>
