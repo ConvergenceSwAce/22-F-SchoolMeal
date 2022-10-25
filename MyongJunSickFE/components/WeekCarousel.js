@@ -80,7 +80,7 @@ export default function WeekCarousel({day, setMealData, setMealData2}) {
     flexGrow: 1,
     flexDirection: 'row',
     marginHorizontal: widthPercentage(50),
-    marginTop: heightPercentage(20),
+    marginVertical: heightPercentage(20),
     justifyContent: 'space-between',
     alignItems: 'center',
   });
