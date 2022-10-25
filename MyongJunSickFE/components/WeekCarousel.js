@@ -77,7 +77,7 @@ export default function WeekCarousel({day, setMealData, setMealData2}) {
   let fri_date = fri.date.split('.')[1];
 
   const carouselStyle = StyleSheet.create({
-    flex: 10,
+    flexGrow: 1,
     flexDirection: 'row',
     marginHorizontal: widthPercentage(50),
     marginTop: heightPercentage(20),

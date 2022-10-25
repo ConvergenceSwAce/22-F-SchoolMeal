@@ -44,15 +44,6 @@ const mealTime2 = {
 };
 
 export const MainView = () => {
-  const restSelect = useRecoilValue(restInfo);
-
-  // API에서 데이터를 가져온다.
-  const mealLoadable = useRecoilValueLoadable(getDayByMeal);
-  const mealLoadable2 = useRecoilValueLoadable(getDayByMeal2);
-
-  const [mealData, setMealData] = useState({});
-  const [mealData2, setMealData2] = useState({});
-
   const LunchSubmit = useRecoilValue(isLunchSubmit);
   const LunchSubmit2 = useRecoilValue(isLunchSubmit2);
 
@@ -147,13 +138,48 @@ export const MainView = () => {
   }
 };
 
+function Main() {
+  const restSelect = useRecoilValue(restInfo);
+
+  // API에서 데이터를 가져온다.
+  const mealLoadable = useRecoilValueLoadable(getDayByMeal);
+  const mealLoadable2 = useRecoilValueLoadable(getDayByMeal2);
+
+  const [mealData, setMealData] = useState({});
+  const [mealData2, setMealData2] = useState({});
+
+  switch (mealLoadable.state && mealLoadable2.state) {
+    case 'hasValue':
+      return (
+        <View style={styles.container}>
+          <Header year={year} month={month} />
+          <WeekCarousel day={day} setMealData={setMealData} setMealData2={setMealData2} />
+          <SeoulCamView mealData={mealData} />
+          {/* <MainView /> */}
+        </View>
+      );
+    case 'loading':
+      return (
+        <View style={styles.splash}>
+          <StatusBar translucent={true} backgroundColor={'transparent'} />
+          <Splash />
+        </View>
+      );
+    case 'hasError':
+      return (
+        <View style={styles.splash}>
+          <StatusBar translucent={true} backgroundColor={'transparent'} />
+          <Splash />
+        </View>
+      );
+  }
+}
 function App() {
   return (
     <RecoilRoot>
-      <Header year={year} month={month} />
-      {/* <WeekCarousel day={day} setMealData={setMealData} setMealData2={setMealData2} /> */}
-      <SeoulCamView />
-      {/* <MainView /> */}
+      <Suspense fallback={<Splash />}>
+        <Main />
+      </Suspense>
     </RecoilRoot>
   );
 }

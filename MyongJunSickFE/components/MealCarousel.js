@@ -13,36 +13,10 @@ import {heightPercentage, widthPercentage} from '../Responsive';
 import LunchForm from './LunchForm';
 import MenuList from './MenuList';
 
-const dummy = [
-  {
-    date: '10.17',
-    day: '월',
-    lunchA: ['베이컨김치볶음밥', '맑은우동국물', '피쉬앤칩스&케찹', '단무지', '배추김치'],
-    lunchB: [
-      '모짜렐라치즈 돈가츠',
-      '맑은우동국물',
-      '추가밥',
-      '스위트콘&그린샐러드',
-      '오이피클',
-      '배추김치',
-    ],
-    dinner: [
-      '해물볶음우동',
-      '말은우동국물',
-      '추가밥',
-      '모둠튀김(고구마/단호박/김말이)',
-      '단무지',
-      '배추김치',
-    ],
-  },
-];
-
-export default function MealCarousel() {
-  const scrollX = useRef(new Animated.Value(0)).current;
+export default function MealCarousel({data}) {
   // const [data, setData] = useState([]);
   const [page, setPage] = useState(0); // 케러셀에서 포커스된 페이지 인덱스
   const [lunch, setLunch] = useState('lunchA');
-  console.log('test', `dummy[0].${lunch}`);
   return (
     <>
       <SafeAreaView style={styles.container}>
@@ -65,8 +39,8 @@ export default function MealCarousel() {
             }}
             scrollEventThrottle={1}
           >
-            <MenuList data={dummy[0].lunchA} />
-            <MenuList data={dummy[0].lunchB} />
+            <MenuList data={data.lunchA} />
+            <MenuList data={data.lunchB} />
           </ScrollView>
           <View style={styles.indicatorContainer}>
             <View style={page === 0 ? styles.indicatorOn : styles.indicatorOff}></View>
@@ -74,7 +48,7 @@ export default function MealCarousel() {
           </View>
         </View>
       </SafeAreaView>
-      <LunchForm mealData={lunch === 'lunchA' ? dummy[0].lunchA : dummy[0].lunchB} title={'중식'} />
+      <LunchForm mealData={lunch === 'lunchA' ? data.lunchA : data.lunchB} title={'중식'} />
     </>
   );
 }
@@ -109,19 +83,3 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
 });
-
-const menuComponent = {
-  width: widthPercentage(396),
-  flex: 1,
-  alignItems: 'center',
-  flexDirection: 'column',
-  justifyContent: 'space-between',
-  borderRadius: 16,
-  backgroundColor: '#ffffff',
-  borderStyle: 'solid',
-  borderWidth: 1,
-  borderColor: '#dbdbdb',
-  marginHorizontal: widthPercentage(16),
-  marginTop: heightPercentage(14),
-  paddingVertical: heightPercentage(12),
-};
