@@ -7,7 +7,7 @@ import MealSatisfaction from './MealSatisfaction';
 export default function LunchForm({mealData}) {
   return (
     <View>
-      <MealSatisfaction message={'오늘의 중식 만족하시나요'} />
+      <MealSatisfaction message={'오늘의 중식 만족하시나요?'} />
       <View style={btn.component}>
         <Btn type="중식" btnName="네!" data={mealData} />
         <Btn type="중식" btnName="아니요.." data={mealData} />
