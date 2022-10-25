@@ -2,6 +2,7 @@ import dayjs from 'dayjs';
 import React, {useEffect, useRef, useState} from 'react';
 import {
   Animated,
+  Dimensions,
   LogBox,
   SafeAreaView,
   ScrollView,
@@ -11,13 +12,18 @@ import {
   View,
 } from 'react-native';
 import {useRecoilValue} from 'recoil';
-import {heightPercentage, widthPercentage} from '../Responsive';
 import {isLunchSubmit} from '../states';
 import LunchForm from './LunchForm';
 import MenuList from './MenuList';
 
-export default function MealCarousel({data}) {
-  // const [data, setData] = useState([]);
+export default function MealCarousel({data, lunchName}) {
+  const {width, height} = Dimensions.get('window');
+  const lunchType = ['중식A', '중식B'];
+  const [AorB, setLunchName] = useState('중식A');
+  useEffect(() => {
+    setLunchName(lunchType[page]);
+    lunchName(AorB);
+  });
   const [page, setPage] = useState(0); // 케러셀에서 포커스된 페이지 인덱스
   const [lunch, setLunch] = useState('lunchA');
   let now = dayjs();
@@ -32,14 +38,13 @@ export default function MealCarousel({data}) {
         pagingEnabled
         showsHorizontalScrollIndicator={false}
         onScroll={e => {
-          const newPage = Math.round(e.nativeEvent.contentOffset.x); //호라이즌 스크롤 값
-          if (newPage >= 0) {
+          const newPage = Math.round(e.nativeEvent.contentOffset.x / width); //호라이즌 스크롤 값
+          if (newPage === 0) {
             setPage(newPage);
-            if (newPage === 0) {
-              setLunch('lunchA');
-            } else {
-              setLunch('lunchB');
-            }
+            setLunch('lunchA');
+          } else if (newPage === 1) {
+            setPage(newPage);
+            setLunch('lunchB');
           }
           console.log(page);
         }}

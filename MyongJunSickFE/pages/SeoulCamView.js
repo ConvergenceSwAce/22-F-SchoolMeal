@@ -1,5 +1,5 @@
 import dayjs from 'dayjs';
-import React from 'react';
+import React, {useState} from 'react';
 import {ScrollView, Text, View} from 'react-native';
 import {useRecoilValue} from 'recoil';
 import Btn from '../components/Btn';
@@ -17,10 +17,17 @@ export default function SeoulCamView({mealData}) {
 
   const dinnerSumbit = useRecoilValue(isDinnerSubmit);
 
+  const [AorB, setAorB] = useState('중식A');
+
+  const lunchName = x => {
+    setAorB(x);
+    console.log(x);
+  };
+
   return (
     <ScrollView>
-      <MealTiltle type={'중식'} time={'11-30 : 14:00'} />
-      <MealCarousel data={mealData} />
+      <MealTiltle type={AorB} time={'11-30 : 14:00'} />
+      <MealCarousel data={mealData} lunchName={lunchName} />
       <MealTiltle type={'석식'} time={'17-30 : 19:00'} />
       <MenuList data={mealData.dinner} />
       {date === mealData.date && !dinnerSumbit ? (
