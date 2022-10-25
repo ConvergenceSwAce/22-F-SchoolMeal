@@ -1,3 +1,4 @@
+import dayjs from 'dayjs';
 import React, {useEffect, useRef, useState} from 'react';
 import {
   Animated,
@@ -9,7 +10,9 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
+import {useRecoilValue} from 'recoil';
 import {heightPercentage, widthPercentage} from '../Responsive';
+import {isLunchSubmit} from '../states';
 import LunchForm from './LunchForm';
 import MenuList from './MenuList';
 
@@ -17,6 +20,11 @@ export default function MealCarousel({data}) {
   // const [data, setData] = useState([]);
   const [page, setPage] = useState(0); // 케러셀에서 포커스된 페이지 인덱스
   const [lunch, setLunch] = useState('lunchA');
+  let now = dayjs();
+  let date = now.format('MM.DD');
+
+  const LunchSubmit = useRecoilValue(isLunchSubmit);
+
   return (
     <>
       <ScrollView
@@ -44,7 +52,11 @@ export default function MealCarousel({data}) {
         <View style={page === 0 ? styles.indicatorOn : styles.indicatorOff}></View>
         <View style={page === 0 ? styles.indicatorOff : styles.indicatorOn}></View>
       </View>
-      <LunchForm mealData={lunch === 'lunchA' ? data.lunchA : data.lunchB} title={'중식'} />
+      {date === data.date && !LunchSubmit ? (
+        <LunchForm mealData={lunch === 'lunchA' ? data.lunchA : data.lunchB} title={'중식'} />
+      ) : (
+        <></>
+      )}
     </>
   );
 }

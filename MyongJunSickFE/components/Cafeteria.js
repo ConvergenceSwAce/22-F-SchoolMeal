@@ -1,6 +1,9 @@
+import dayjs from 'dayjs';
 import React from 'react';
 import {ScrollView, StyleSheet, View} from 'react-native';
-import { heightPercentage, widthPercentage } from '../Responsive';
+import {useRecoilValue} from 'recoil';
+import {heightPercentage, widthPercentage} from '../Responsive';
+import {isDinnerSubmit2, isLunchSubmit2} from '../states';
 import Btn from './Btn';
 import DinnerForm from './DinnerForm';
 import LunchForm from './LunchForm';
@@ -9,6 +12,12 @@ import MealTiltle from './MealTiltle';
 import MenuList from './MenuList';
 
 export default function Cafeteria(props) {
+  let now = dayjs();
+  let date = now.format('MM.DD');
+
+  const LunchSubmit2 = useRecoilValue(isLunchSubmit2);
+  const DinnerSubmit2 = useRecoilValue(isDinnerSubmit2);
+
   const mealData = props.mealData;
   let page = props.page;
   switch (page) {
@@ -17,16 +26,24 @@ export default function Cafeteria(props) {
         <ScrollView>
           <MealTiltle type={'중식'} time={'11-30 : 14:00'} />
           <MenuList data={mealData.lunch10} />
-          <LunchForm mealData={mealData.lunch10} title={'중식'} />
+          {date === mealData.date && !LunchSubmit2 ? (
+            <LunchForm mealData={mealData.lunch10} title={'중식'} />
+          ) : (
+            <></>
+          )}
           <MealTiltle type={'석식'} time={'17-30 : 19:00'} />
           <MenuList data={mealData.dinner10} />
-          <View>
-            <MealSatisfaction message="오늘의 석식 만족하시나요?" />
-            <View style={btn.component}>
-              <Btn type="석식" btnName="네!" data={mealData.dinner10} />
-              <Btn type="석식" btnName="아니요.." data={mealData.dinner10} />
+          {date === mealData.date && !DinnerSubmit2 ? (
+            <View>
+              <MealSatisfaction message="오늘의 석식 만족하시나요?" />
+              <View style={btn.component}>
+                <Btn type="석식" btnName="네!" data={mealData.dinner10} />
+                <Btn type="석식" btnName="아니요.." data={mealData.dinner10} />
+              </View>
             </View>
-          </View>
+          ) : (
+            <></>
+          )}
         </ScrollView>
       );
     case 1:
@@ -34,7 +51,11 @@ export default function Cafeteria(props) {
         <ScrollView>
           <MealTiltle type={'중식'} time={'11-30 : 14:00'} />
           <MenuList data={mealData.lunch11} />
-          <LunchForm mealData={mealData.lunch11} title={'중식'} />
+          {date === mealData.date && !LunchSubmit2 ? (
+            <LunchForm mealData={mealData.lunch11} title={'중식'} />
+          ) : (
+            <></>
+          )}
         </ScrollView>
       );
     case 2:
@@ -42,21 +63,29 @@ export default function Cafeteria(props) {
         <ScrollView>
           <MealTiltle type={'중식'} time={'11-30 : 14:00'} />
           <MenuList data={mealData.lunch12} />
-          <LunchForm mealData={mealData.lunch12} title={'중식'} />
+          {date === mealData.date && !LunchSubmit2 ? (
+            <LunchForm mealData={mealData.lunch12} title={'중식'} />
+          ) : (
+            <></>
+          )}
           <MealTiltle type={'석식'} time={'17-30 : 19:00'} />
           <MenuList data={mealData.dinner12} />
-          <View>
-            <MealSatisfaction message="오늘의 석식 만족하시나요?" />
-            <View style={btn.component}>
-              <Btn type="석식" btnName="네!" data={mealData.dinner12} />
-              <Btn type="석식" btnName="아니요.." data={mealData.dinner12} />
+          {date === mealData.date && !DinnerSubmit2 ? (
+            <View>
+              <MealSatisfaction message="오늘의 석식 만족하시나요?" />
+
+              <View style={btn.component}>
+                <Btn type="석식" btnName="네!" data={mealData.dinner12} />
+                <Btn type="석식" btnName="아니요.." data={mealData.dinner12} />
+              </View>
             </View>
-          </View>
+          ) : (
+            <></>
+          )}
         </ScrollView>
       );
   }
 }
-
 
 const btn = StyleSheet.create({
   component: {
