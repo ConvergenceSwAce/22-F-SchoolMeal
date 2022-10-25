@@ -21,6 +21,7 @@ import DinnerForm from './components/DinnerForm';
 import {heightPercentage} from './Responsive';
 import codePush from 'react-native-code-push';
 import SeoulCamView from './pages/SeoulCamView';
+import YonginCamView from './pages/YonginCamView';
 
 let now = dayjs();
 let day = now.get('day');
@@ -154,8 +155,11 @@ function Main() {
         <View style={styles.container}>
           <Header year={year} month={month} />
           <WeekCarousel day={day} setMealData={setMealData} setMealData2={setMealData2} />
-          <SeoulCamView mealData={mealData} />
-          {/* <MainView /> */}
+          {restSelect === '인문캠퍼스' ? (
+            <SeoulCamView mealData={mealData} />
+          ) : (
+            <YonginCamView mealData={mealData2} />
+          )}
         </View>
       );
     case 'loading':
