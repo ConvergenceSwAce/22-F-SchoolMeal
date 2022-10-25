@@ -153,6 +153,7 @@ function Main() {
     case 'hasValue':
       return (
         <View style={styles.container}>
+          <StatusBar barStyle="dark-content" />
           <Header year={year} month={month} />
           <WeekCarousel day={day} setMealData={setMealData} setMealData2={setMealData2} />
           {restSelect === '인문캠퍼스' ? (
