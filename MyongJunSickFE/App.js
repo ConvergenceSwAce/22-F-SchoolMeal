@@ -197,6 +197,7 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
     position: 'relative',
     backgroundColor: '#fff',
+    fontFamily: 'NotoSansKR-Regular',
   },
   splash: {
     flex: 1,

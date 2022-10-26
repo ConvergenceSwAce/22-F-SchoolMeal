@@ -13,6 +13,7 @@
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		7699B88040F8A987B510C191 /* libPods-MyongJunSickFE-MyongJunSickFETests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-MyongJunSickFE-MyongJunSickFETests.a */; };
+		B38C39FB2908E50E0013374A /* Fonts in Resources */ = {isa = PBXBuildFile; fileRef = B38C39FA2908E50E0013374A /* Fonts */; };
 		B3CBC5E12904E64400D8CD23 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3CBC5E02904E64400D8CD23 /* Launch Screen.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +44,7 @@
 		5DCACB8F33CDC322A6C60F78 /* libPods-MyongJunSickFE.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MyongJunSickFE.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		68820F28868C4CE89B04213F /* Pods-MyongJunSickFE-MyongJunSickFETests.staging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyongJunSickFE-MyongJunSickFETests.staging.xcconfig"; path = "Target Support Files/Pods-MyongJunSickFE-MyongJunSickFETests/Pods-MyongJunSickFE-MyongJunSickFETests.staging.xcconfig"; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-MyongJunSickFE-MyongJunSickFETests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyongJunSickFE-MyongJunSickFETests.release.xcconfig"; path = "Target Support Files/Pods-MyongJunSickFE-MyongJunSickFETests/Pods-MyongJunSickFE-MyongJunSickFETests.release.xcconfig"; sourceTree = "<group>"; };
+		B38C39FA2908E50E0013374A /* Fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Fonts; sourceTree = "<group>"; };
 		B3CBC5E02904E64400D8CD23 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		D2C740F45D8845C2D29D09E4 /* Pods-MyongJunSickFE.staging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyongJunSickFE.staging.xcconfig"; path = "Target Support Files/Pods-MyongJunSickFE/Pods-MyongJunSickFE.staging.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
@@ -117,6 +119,7 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				B38C39FA2908E50E0013374A /* Fonts */,
 				B3CBC5E02904E64400D8CD23 /* Launch Screen.storyboard */,
 				13B07FAE1A68108700A75B9A /* MyongJunSickFE */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
@@ -246,6 +249,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B38C39FB2908E50E0013374A /* Fonts in Resources */,
 				B3CBC5E12904E64400D8CD23 /* Launch Screen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 			);
