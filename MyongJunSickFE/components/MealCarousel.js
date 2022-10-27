@@ -1,16 +1,6 @@
 import dayjs from 'dayjs';
-import React, {useEffect, useRef, useState} from 'react';
-import {
-  Animated,
-  Dimensions,
-  LogBox,
-  SafeAreaView,
-  ScrollView,
-  StyleSheet,
-  Text,
-  TouchableOpacity,
-  View,
-} from 'react-native';
+import React, {useEffect, useState} from 'react';
+import {Dimensions, ScrollView, StyleSheet, View} from 'react-native';
 import {useRecoilValue} from 'recoil';
 import {heightPercentage, widthPercentage} from '../Responsive';
 import {isLunchSubmit} from '../states';
@@ -18,7 +8,7 @@ import LunchForm from './LunchForm';
 import MenuList from './MenuList';
 
 export default function MealCarousel({data, lunchName}) {
-  const {width, height} = Dimensions.get('window');
+  const {width} = Dimensions.get('window');
   const lunchType = ['중식A', '중식B'];
   const [AorB, setLunchName] = useState('중식A');
   useEffect(() => {

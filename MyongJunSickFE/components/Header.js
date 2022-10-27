@@ -1,8 +1,7 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {
   View,
   Text,
-  Image,
   StyleSheet,
   StatusBar,
   Platform,
@@ -11,10 +10,11 @@ import {
 } from 'react-native';
 import {widthPercentage, heightPercentage, fontPercentage} from '../Responsive';
 import {getStatusBarHeight} from 'react-native-status-bar-height';
-import {useRecoilState, useRecoilValue} from 'recoil';
+import {useRecoilState} from 'recoil';
 import {restInfo} from '../states';
 
-const StatusBarHeight = Platform.OS === 'ios' ? getStatusBarHeight(true) : StatusBar.currentHeight;
+const StatusBarHeight =
+  Platform.OS === 'ios' ? getStatusBarHeight(true) : StatusBar.currentHeight - heightPercentage(5);
 
 export default function Header({month, year}) {
   const [rests, setRest] = useRecoilState(restInfo);
@@ -58,8 +58,7 @@ export default function Header({month, year}) {
     text: {
       flexGrow: 1,
       fontSize: fontPercentage(16),
-      fontWeight: 'bold',
-      fontStyle: 'normal',
+      fontFamily: 'NotoSansKR-Bold',
       textAlign: 'center',
       color: '#071648',
       marginLeft: widthPercentage(60),
@@ -84,8 +83,7 @@ export default function Header({month, year}) {
         <Text
           style={{
             fontSize: fontPercentage(28),
-            fontWeight: 'bold',
-            fontStyle: 'normal',
+            fontFamily: 'NotoSansKR-Bold',
             color: '#071648',
             marginLeft: widthPercentage(10),
           }}
@@ -95,8 +93,7 @@ export default function Header({month, year}) {
         <Text
           style={{
             fontSize: fontPercentage(16),
-            fontWeight: '500',
-            fontStyle: 'normal',
+            fontFamily: 'NotoSansKR-Regular',
             letterSpacing: 0,
             color: '#a8a8a8',
             marginLeft: widthPercentage(10),
