@@ -11,10 +11,8 @@ const mealSatisfaction = StyleSheet.create({
   },
   text: {
     flex: 1,
-    // fontFamily: 'NotoSansKR',
+    fontFamily: 'NotoSansKR-Medium',
     fontSize: fontPercentage(18),
-    fontWeight: '500',
-    fontStyle: 'normal',
     textAlign: 'center',
     color: '#000000',
   },

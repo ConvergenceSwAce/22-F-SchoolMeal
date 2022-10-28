@@ -19,7 +19,7 @@ export default function CafeteriaCarousel(props) {
           color: '#000000',
           textAlign: 'center',
           fontSize: fontPercentage(15),
-          fontWeight: '600',
+          fontFamily: 'NotoSansKR-Medium',
         }}
       >
         {name}

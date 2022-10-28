@@ -24,15 +24,6 @@
 	<string>1</string>
 	<key>CodePushDeploymentKey</key>
 	<string>${CODEPUSH_KEY}</string>
-	<key>Fonts provided by application</key>
-	<array>
-		<string>Fonts/NotoSansKR-Black.otf</string>
-		<string>Fonts/NotoSansKR-Bold.otf</string>
-		<string>Fonts/NotoSansKR-Light.otf</string>
-		<string>Fonts/NotoSansKR-Medium.otf</string>
-		<string>Fonts/NotoSansKR-Regular.otf</string>
-		<string>Fonts/NotoSansKR-Thin.otf</string>
-	</array>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSAppTransportSecurity</key>
@@ -47,7 +38,7 @@
 		</dict>
 	</dict>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string></string>
+	<string/>
 	<key>UILaunchStoryboardName</key>
 	<string>Launch Screen.storyboard</string>
 	<key>UIRequiredDeviceCapabilities</key>
@@ -64,5 +55,14 @@
 	<string>Light</string>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
+	<key>UIAppFonts</key>
+	<array>
+		<string>NotoSansKR-Black.otf</string>
+		<string>NotoSansKR-Bold.otf</string>
+		<string>NotoSansKR-Light.otf</string>
+		<string>NotoSansKR-Medium.otf</string>
+		<string>NotoSansKR-Regular.otf</string>
+		<string>NotoSansKR-Thin.otf</string>
+	</array>
 </dict>
 </plist>

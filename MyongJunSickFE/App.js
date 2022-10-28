@@ -179,7 +179,7 @@ function Main() {
       );
   }
 }
-function App() {
+export default function App() {
   return (
     <RecoilRoot>
       <Suspense fallback={<Splash />}>
@@ -189,15 +189,12 @@ function App() {
   );
 }
 
-export default codePush(App);
-
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     flexDirection: 'column',
     position: 'relative',
     backgroundColor: '#fff',
-    fontFamily: 'NotoSansKR-Regular',
   },
   splash: {
     flex: 1,

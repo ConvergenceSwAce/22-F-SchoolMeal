@@ -1,10 +1,8 @@
 import dayjs from 'dayjs';
 import React, {useState} from 'react';
-import {ScrollView, Text, View} from 'react-native';
+import {ScrollView, View} from 'react-native';
 import {useRecoilValue} from 'recoil';
-import Btn from '../components/Btn';
 import DinnerForm from '../components/DinnerForm';
-import LunchForm from '../components/LunchForm';
 import MealCarousel from '../components/MealCarousel';
 import MealTiltle from '../components/MealTiltle';
 import MenuList from '../components/MenuList';

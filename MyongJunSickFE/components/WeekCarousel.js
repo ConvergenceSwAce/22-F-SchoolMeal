@@ -86,8 +86,7 @@ export default function WeekCarousel({day, setMealData, setMealData2}) {
 
   const dayStyle = StyleSheet.create({
     fontSize: fontPercentage(16),
-    fontWeight: '500',
-    fontStyle: 'normal',
+    fontFamily: 'NotoSansKR-Bold',
     color: '#d9d9d9',
     textAlign: 'center',
     marginTop: heightPercentage(7),
@@ -96,8 +95,7 @@ export default function WeekCarousel({day, setMealData, setMealData2}) {
   const weekStyle = StyleSheet.create({
     marginVertical: heightPercentage(5),
     fontSize: fontPercentage(18),
-    fontWeight: '500',
-    fontStyle: 'normal',
+    fontFamily: 'NotoSansKR-Regular',
     color: '#7b7b7b',
     textAlign: 'center',
   });

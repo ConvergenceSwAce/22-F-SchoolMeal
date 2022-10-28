@@ -1,7 +1,7 @@
 import React from 'react';
-import {View, StyleSheet} from 'react-native';
+import {View} from 'react-native';
 import ListItems from './ListItems';
-import {widthPercentage, heightPercentage, fontPercentage} from '../Responsive';
+import {widthPercentage, heightPercentage} from '../Responsive';
 
 export default function MenuList(props) {
   const data = props.data;

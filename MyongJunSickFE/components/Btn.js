@@ -150,11 +150,12 @@ const modalComponent = StyleSheet.create({
     marginTop: heightPercentage(8),
     marginBottom: heightPercentage(8),
     color: '#000000',
+    fontSize: fontPercentage(16),
+    fontFamily: 'NotoSansKR-Regular',
   },
   modalTitle: {
     fontSize: fontPercentage(16),
-    fontWeight: '500',
-    fontStyle: 'normal',
+    fontFamily: 'NotoSansKR-Medium',
     textAlign: 'left',
     color: '#071648',
     marginBottom: heightPercentage(10),
@@ -172,8 +173,7 @@ const modalComponent = StyleSheet.create({
     textAlign: 'center',
     color: '#fff',
     fontSize: fontPercentage(16),
-    fontWeight: '500',
-    fontStyle: 'normal',
+    fontFamily: 'NotoSansKR-Regular',
   },
 });
 
@@ -200,15 +200,13 @@ const btn = StyleSheet.create({
   },
   text: {
     fontSize: fontPercentage(16),
-    fontWeight: '500',
-    fontStyle: 'normal',
+    fontFamily: 'NotoSansKR-Regular',
     textAlign: 'center',
     color: '#a8a8a8',
   },
   isPressText: {
     fontSize: fontPercentage(16),
-    fontWeight: '500',
-    fontStyle: 'normal',
+    fontFamily: 'NotoSansKR-Medium',
     textAlign: 'center',
     color: '#000000',
   },
