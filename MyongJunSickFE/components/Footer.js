@@ -6,9 +6,7 @@ import SettingModal from './SettingModal';
 export default function Footer() {
   const footerStyle = StyleSheet.create({
     flexGrow: 1,
-    marginTop: heightPercentage(60),
-    paddingTop: heightPercentage(10),
-    paddingBottom: heightPercentage(10),
+    paddingVertical: heightPercentage(10),
     flexDirection: 'row',
     justifyContent: 'space-around',
     alignItems: 'center',
