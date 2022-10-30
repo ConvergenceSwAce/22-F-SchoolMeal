@@ -1,13 +1,12 @@
 import React from 'react';
 import {View, Text, StyleSheet, TouchableOpacity} from 'react-native';
 import {widthPercentage, heightPercentage, fontPercentage} from '../Responsive';
+import SettingModal from './SettingModal';
 
 export default function Footer() {
   const footerStyle = StyleSheet.create({
     flexGrow: 1,
-    marginTop: heightPercentage(60),
-    paddingTop: heightPercentage(10),
-    paddingBottom: heightPercentage(10),
+    paddingVertical: heightPercentage(10),
     flexDirection: 'row',
     justifyContent: 'space-around',
     alignItems: 'center',
@@ -21,8 +20,7 @@ export default function Footer() {
       paddingHorizontal: widthPercentage(30),
       flexGrow: 1,
       fontSize: fontPercentage(12),
-      fontWeight: '200',
-      fontStyle: 'normal',
+      fontFamily: 'NotoSansKR-Light',
       color: '#ffffff',
     },
   });
@@ -30,11 +28,9 @@ export default function Footer() {
   return (
     <View style={footerStyle}>
       <TouchableOpacity activeOpacity={1}>
-        <Text style={footerText.text}>MJU Convergence Software</Text>
+        <Text style={footerText.text}>@ 2022 MJU Convergence Software</Text>
       </TouchableOpacity>
-      <TouchableOpacity activeOpacity={0.3}>
-        <Text style={footerText.text}>문의하기</Text>
-      </TouchableOpacity>
+      <SettingModal />
     </View>
   );
 }

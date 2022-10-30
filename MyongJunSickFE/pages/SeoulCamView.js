@@ -23,7 +23,7 @@ export default function SeoulCamView({mealData}) {
   };
 
   return (
-    <ScrollView showsVerticalScrollIndicator={false}>
+    <ScrollView showsVerticalScrollIndicator={false} style={{height: 800}}>
       <MealTiltle type={AorB} time={'11:30 - 14:00'} />
       <MealCarousel data={mealData} lunchName={lunchName} />
       <MealTiltle type={'석식'} time={'17:30 - 19:00'} />
@@ -33,7 +33,6 @@ export default function SeoulCamView({mealData}) {
       ) : (
         <></>
       )}
-      <View style={{height: heightPercentage(50)}} />
     </ScrollView>
   );
 }

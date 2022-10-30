@@ -66,7 +66,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   scrollContainer: {
-    height: 800,
+    height: heightPercentage(800),
   },
   indicatorOn: {
     height: 8,

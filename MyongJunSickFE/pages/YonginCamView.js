@@ -1,7 +1,7 @@
 import React from 'react';
 import {View} from 'react-native';
 import CafeteriaCarousel from '../components/CafeteriaCarousel';
-import { heightPercentage } from '../Responsive';
+import {heightPercentage} from '../Responsive';
 
 export default function YonginCamView(props) {
   const mealData = props.mealData;
@@ -9,7 +9,6 @@ export default function YonginCamView(props) {
   return (
     <>
       <CafeteriaCarousel mealData={mealData} />
-      <View style={{height: heightPercentage(50)}} />
     </>
   );
 }
