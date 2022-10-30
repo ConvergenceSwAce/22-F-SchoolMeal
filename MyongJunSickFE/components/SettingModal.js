@@ -74,7 +74,7 @@ const styles = StyleSheet.create({
     color: '#ffffff',
   },
   modalText: {
-    marginBottom: 15,
+    marginBottom: heightPercentage(15),
     textAlign: 'center',
   },
   modalTitle: {
