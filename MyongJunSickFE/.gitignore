@@ -65,3 +65,10 @@ buck-out/
 
 #realse
 /Android/app/release/
+
+# config
+appcenter-config.json
+
+#gradle
+*.gradle
+gradle.properties
