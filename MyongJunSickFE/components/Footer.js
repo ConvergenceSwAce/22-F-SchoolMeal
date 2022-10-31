@@ -3,22 +3,20 @@ import {View, Text, StyleSheet, TouchableOpacity} from 'react-native';
 import {widthPercentage, heightPercentage, fontPercentage} from '../Responsive';
 import SettingModal from './SettingModal';
 
-export default function Footer({campus}) {
+export default function Footer() {
   const footerStyle = StyleSheet.create({
-    flexGrow: 1,
-    paddingVertical: heightPercentage(5),
-    flexDirection: 'row',
-    justifyContent: 'space-around',
+    flex: 1,
+    paddingVertical: heightPercentage(20),
+    width: '100%',
+    height: '100%',
     alignItems: 'center',
     backgroundColor: '#071648',
-    bottom: 0,
   });
 
   const footerText = StyleSheet.create({
     text: {
-      paddingVertical: heightPercentage(10),
-      paddingHorizontal: widthPercentage(30),
-      flexGrow: 1,
+      marginBottom: heightPercentage(20),
+      alignItems: 'center',
       fontSize: fontPercentage(12),
       fontFamily: 'NotoSansKR-Light',
       color: '#ffffff',
