@@ -24,7 +24,8 @@ import codePush from 'react-native-code-push';
 import SeoulCamView from './pages/SeoulCamView';
 import YonginCamView from './pages/YonginCamView';
 import Footer from './components/Footer';
-import AsyncStorage from '@react-native-community/async-storage';
+// import AsyncStorage from '@react-native-community/async-storage';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 let now = dayjs();
 let day = now.get('day');
@@ -199,7 +200,7 @@ function Main() {
       );
   }
 }
-export default function App() {
+function App() {
   return (
     <RecoilRoot>
       <Suspense fallback={<Splash />}>
@@ -208,6 +209,7 @@ export default function App() {
     </RecoilRoot>
   );
 }
+export default codePush(App);
 
 const styles = StyleSheet.create({
   container: {

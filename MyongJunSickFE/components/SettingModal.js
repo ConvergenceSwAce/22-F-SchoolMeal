@@ -1,7 +1,8 @@
 import React, {useEffect, useState} from 'react';
 import {StyleSheet, Text, Pressable, View, Switch} from 'react-native';
 import {fontPercentage, heightPercentage, widthPercentage} from '../Responsive';
-import AsyncStorage from '@react-native-community/async-storage';
+// import AsyncStorage from '@react-native-community/async-storage';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import Modal from 'react-native-modal';
 import {useRecoilState, useRecoilValue} from 'recoil';
 import {campusInfo} from '../states';
