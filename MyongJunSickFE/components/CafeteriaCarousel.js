@@ -2,9 +2,10 @@ import React, {useEffect, useState} from 'react';
 import {Dimensions, ScrollView, StyleSheet, Text, View} from 'react-native';
 import {fontPercentage, heightPercentage, widthPercentage} from '../Responsive';
 import Cafeteria from './Cafeteria';
+import Footer from './Footer';
 
-export default function CafeteriaCarousel(props) {
-  console.log('cafeteriaCarousel :', props.mealData);
+export default function CafeteriaCarousel({mealData, campus}) {
+  console.log('cafeteriaCarousel :', mealData);
   const {width, height} = Dimensions.get('window');
   const [page, setPage] = useState(0); // 케러셀에서 포커스된 페이지 좌표
   const cafeteriasName = ['교직원 식당', '학관 식당', '생활관 식당'];
@@ -51,9 +52,9 @@ export default function CafeteriaCarousel(props) {
         }}
         scrollEventThrottle={1}
       >
-        <Cafeteria mealData={props.mealData} page={page} />
-        <Cafeteria mealData={props.mealData} page={page} />
-        <Cafeteria mealData={props.mealData} page={page} />
+        <Cafeteria mealData={mealData} page={page} campus={campus} />
+        <Cafeteria mealData={mealData} page={page} campus={campus} />
+        <Cafeteria mealData={mealData} page={page} campus={campus} />
       </ScrollView>
     </>
   );

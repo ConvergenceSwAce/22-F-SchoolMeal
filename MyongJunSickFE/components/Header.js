@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {
   View,
   Text,
@@ -15,7 +15,10 @@ import {restInfo} from '../states';
 
 const StatusBarHeight = Platform.OS === 'ios' ? getStatusBarHeight(true) : StatusBar.currentHeight;
 
-export default function Header({month, year}) {
+export default function Header({month, year, campus}) {
+  useEffect(() => {
+    campus === 'seoul' ? setRest('인문캠퍼스') : setRest('자연캠퍼스');
+  }, [campus]);
   const [rests, setRest] = useRecoilState(restInfo);
   const touchRest = () => {
     if (rests === '인문캠퍼스') {

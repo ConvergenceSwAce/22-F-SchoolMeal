@@ -1,4 +1,4 @@
-import {React, Suspense, useState} from 'react';
+import {React, Suspense, useEffect, useState} from 'react';
 import dayjs from 'dayjs';
 import {ScrollView, View, StyleSheet, StatusBar, ActivityIndicator} from 'react-native';
 import Header from './components/Header';
@@ -23,6 +23,7 @@ import codePush from 'react-native-code-push';
 import SeoulCamView from './pages/SeoulCamView';
 import YonginCamView from './pages/YonginCamView';
 import Footer from './components/Footer';
+import AsyncStorage from '@react-native-community/async-storage';
 
 let now = dayjs();
 let day = now.get('day');
@@ -141,6 +142,23 @@ let month = now.format('MM');
 // };
 
 function Main() {
+  const [campus, setCampus] = useState('seoul'); // 캠퍼스 설정
+  useEffect(() => {
+    get();
+  }, []);
+  const key = 'campus';
+  const get = async () => {
+    const rawData = await AsyncStorage.getItem(key)
+      .then(value => {
+        console.log(value);
+        setCampus(value); // AsyncStorage에서 데이터를 가져와서 selectData에 저장한다. (selectData는 캠퍼스 설정에 사용된다.)
+        return rawData;
+      })
+      .catch(err => {
+        console.log(err);
+      }); // AsyncStorage에서 데이터를 가져온다. (Promise 객체를 반환한다.)
+  };
+
   const restSelect = useRecoilValue(restInfo);
 
   // API에서 데이터를 가져온다.
@@ -155,14 +173,13 @@ function Main() {
       return (
         <View style={styles.container}>
           <StatusBar barStyle="dark-content" />
-          <Header year={year} month={month} />
+          <Header year={year} month={month} campus={campus} />
           <WeekCarousel day={day} setMealData={setMealData} setMealData2={setMealData2} />
           {restSelect === '인문캠퍼스' ? (
-            <SeoulCamView mealData={mealData} />
+            <SeoulCamView mealData={mealData} campus={campus} />
           ) : (
-            <YonginCamView mealData={mealData2} />
+            <YonginCamView mealData={mealData2} campus={campus} />
           )}
-          <Footer />
         </View>
       );
     case 'loading':
