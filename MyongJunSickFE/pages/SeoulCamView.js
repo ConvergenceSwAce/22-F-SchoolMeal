@@ -10,7 +10,7 @@ import MenuList from '../components/MenuList';
 import {heightPercentage} from '../Responsive';
 import {isDinnerSubmit} from '../states';
 
-export default function SeoulCamView({mealData, campus}) {
+export default function SeoulCamView({mealData}) {
   let now = dayjs();
   let date = now.format('MM.DD');
 
@@ -35,7 +35,7 @@ export default function SeoulCamView({mealData, campus}) {
         <></>
       )}
       <View style={{height: heightPercentage(60)}} />
-      <Footer campus={campus} />
+      <Footer />
     </ScrollView>
   );
 }

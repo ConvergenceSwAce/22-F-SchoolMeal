@@ -5,7 +5,7 @@ export default function YonginCamView({mealData, campus}) {
   console.log('yongincam', mealData);
   return (
     <>
-      <CafeteriaCarousel mealData={mealData} campus={campus} />
+      <CafeteriaCarousel mealData={mealData} />
     </>
   );
 }
