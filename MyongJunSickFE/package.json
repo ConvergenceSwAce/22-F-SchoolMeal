@@ -12,6 +12,9 @@
   },
   "dependencies": {
     "@react-native-community/async-storage": "^1.12.1",
+    "appcenter": "4.4.5",
+    "appcenter-analytics": "4.4.5",
+    "appcenter-crashes": "4.4.5",
     "dayjs": "^1.11.5",
     "eslint-config-prettier": "^8.5.0",
     "prop-types": "^15.8.1",
