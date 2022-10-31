@@ -4,7 +4,7 @@ import {fontPercentage, heightPercentage, widthPercentage} from '../Responsive';
 import Cafeteria from './Cafeteria';
 import Footer from './Footer';
 
-export default function CafeteriaCarousel({mealData, campus}) {
+export default function CafeteriaCarousel({mealData}) {
   console.log('cafeteriaCarousel :', mealData);
   const {width, height} = Dimensions.get('window');
   const [page, setPage] = useState(0); // 케러셀에서 포커스된 페이지 좌표
@@ -52,9 +52,9 @@ export default function CafeteriaCarousel({mealData, campus}) {
         }}
         scrollEventThrottle={1}
       >
-        <Cafeteria mealData={mealData} page={page} campus={campus} />
-        <Cafeteria mealData={mealData} page={page} campus={campus} />
-        <Cafeteria mealData={mealData} page={page} campus={campus} />
+        <Cafeteria mealData={mealData} page={page} />
+        <Cafeteria mealData={mealData} page={page} />
+        <Cafeteria mealData={mealData} page={page} />
       </ScrollView>
     </>
   );

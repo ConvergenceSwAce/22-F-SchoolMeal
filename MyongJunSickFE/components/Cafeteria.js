@@ -12,7 +12,7 @@ import MealSatisfaction from './MealSatisfaction';
 import MealTiltle from './MealTiltle';
 import MenuList from './MenuList';
 
-export default function Cafeteria({mealData, page, campus}) {
+export default function Cafeteria({mealData, page}) {
   let now = dayjs();
   let date = now.format('MM.DD');
 
@@ -44,7 +44,7 @@ export default function Cafeteria({mealData, page, campus}) {
             <></>
           )}
           <View style={{height: heightPercentage(60)}} />
-          <Footer campus={campus} />
+          <Footer />
         </ScrollView>
       );
     case 1:

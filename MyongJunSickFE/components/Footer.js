@@ -30,7 +30,7 @@ export default function Footer({campus}) {
       <TouchableOpacity activeOpacity={1}>
         <Text style={footerText.text}>@ 2022 MJU Convergence Software</Text>
       </TouchableOpacity>
-      <SettingModal campus={campus} />
+      <SettingModal />
     </View>
   );
 }
