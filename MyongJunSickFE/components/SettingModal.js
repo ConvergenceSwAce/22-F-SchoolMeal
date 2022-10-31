@@ -126,6 +126,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     fontSize: fontPercentage(14),
     fontFamily: 'NotoSansKR-Light',
+    color: '#ffffff',
   },
   modalTitle: {
     justifyContent: 'flex-start',
