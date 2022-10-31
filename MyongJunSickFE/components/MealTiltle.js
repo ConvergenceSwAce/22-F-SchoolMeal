@@ -5,8 +5,6 @@ import {widthPercentage, heightPercentage, fontPercentage} from '../Responsive';
 export default function MealTiltle(props) {
   const mealTitle = StyleSheet.create({
     component: {
-      width: widthPercentage(396),
-      height: heightPercentage(26),
       flex: 10,
       flexDirection: 'row',
       alignContent: 'center',

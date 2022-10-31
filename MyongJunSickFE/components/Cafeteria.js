@@ -6,20 +6,19 @@ import {heightPercentage, widthPercentage} from '../Responsive';
 import {isDinnerSubmit2, isLunchSubmit2} from '../states';
 import Btn from './Btn';
 import DinnerForm from './DinnerForm';
+import Footer from './Footer';
 import LunchForm from './LunchForm';
 import MealSatisfaction from './MealSatisfaction';
 import MealTiltle from './MealTiltle';
 import MenuList from './MenuList';
 
-export default function Cafeteria(props) {
+export default function Cafeteria({mealData, page, campus}) {
   let now = dayjs();
   let date = now.format('MM.DD');
 
   const LunchSubmit2 = useRecoilValue(isLunchSubmit2);
   const DinnerSubmit2 = useRecoilValue(isDinnerSubmit2);
 
-  const mealData = props.mealData;
-  let page = props.page;
   switch (page) {
     case 0:
       return (
@@ -44,6 +43,8 @@ export default function Cafeteria(props) {
           ) : (
             <></>
           )}
+          <View style={{height: heightPercentage(60)}} />
+          <Footer campus={campus} />
         </ScrollView>
       );
     case 1:
@@ -56,6 +57,7 @@ export default function Cafeteria(props) {
           ) : (
             <></>
           )}
+          <View style={{height: heightPercentage(60)}} />
         </ScrollView>
       );
     case 2:
@@ -82,6 +84,7 @@ export default function Cafeteria(props) {
           ) : (
             <></>
           )}
+          <View style={{height: heightPercentage(60)}} />
         </ScrollView>
       );
   }
