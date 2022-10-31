@@ -3,12 +3,9 @@ import {Modal, StyleSheet, Text, Pressable, View, Switch} from 'react-native';
 import {fontPercentage, heightPercentage, widthPercentage} from '../Responsive';
 import AsyncStorage from '@react-native-community/async-storage';
 
-const SettingModal = () => {
-  const [selectData, setSelectData] = useState('인문캠퍼스');
-
+const SettingModal = ({campus}) => {
   useEffect(() => {
-    setSelectData(get());
-    selectData === 'seoul' ? setIsEnabled(true) : setIsEnabled(false); // AsyncStorage에 저장된 데이터가 'seoul'이면 true, 'yongin'이면 false를 반환한다. (Switch의 값이 바뀐다.)
+    campus === 'yongin' ? setIsEnabled(true) : setIsEnabled(false); // AsyncStorage에 저장된 데이터가 'seoul'이면 true, 'yongin'이면 false를 반환한다. (Switch의 값이 바뀐다.)
   }, []); // AsyncStorage에서 데이터를 가져와서 selectData에 저장한다.
 
   const clearAll = async () => {
@@ -20,33 +17,18 @@ const SettingModal = () => {
   };
 
   const save = async () => {
-    try {
-      const select = isEnabled ? 'seoul' : 'yongin';
-      await AsyncStorage.setItem('campus', select, () => {
-        clearAll();}
-        );
-      AsyncStorage.getItem().then(value => console.log(JSON.stringify(value))); // AsyncStorage에 저장된 데이터를 출력한다. (이 때, AsyncStorage에 저장된 데이터가 출력된다.)
-    } catch (e) {
-      // 오류 예외 처리
-    }
-  };
-
-  const key = 'campus';
-  const get = async () => {
-    try {
-      const rawData = await AsyncStorage.getItem(key); // AsyncStorage에서 데이터를 가져온다.
-      if (!rawData) {
-        throw new Error('No saved ' + key);
-      }
-      const savedData = rawData;
-      return savedData;
-    } catch (e) {
-      throw new Error('Failed to load ' + key);
-    }
+    await AsyncStorage.setItem('campus', select)
+      .then(() => {
+        console.log('save success ' + select);
+      })
+      .catch(err => {
+        console.log(err);
+      }); // AsyncStorage에 데이터를 저장한다. (isEnabled가 true면 'seoul', false면 'yongin'을 저장한다.)
   };
 
   const [modalVisible, setModalVisible] = useState(false);
   const [isEnabled, setIsEnabled] = useState(false);
+  let select = !isEnabled ? 'seoul' : 'yongin'; // Switch의 값에 따라 select에 'seoul' 또는 'yongin'을 저장한다. (AsyncStorage에 저장하기 위함)
 
   const toggleSwitch = () => setIsEnabled(previousState => !previousState);
 
@@ -77,7 +59,6 @@ const SettingModal = () => {
               style={[styles.button, styles.buttonClose]}
               onPress={() => {
                 setModalVisible(!modalVisible);
-                clearAll();
                 save();
               }}
             >
