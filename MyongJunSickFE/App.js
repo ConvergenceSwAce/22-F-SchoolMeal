@@ -199,7 +199,7 @@ function Main() {
       );
   }
 }
-export default function App() {
+function App() {
   return (
     <RecoilRoot>
       <Suspense fallback={<Splash />}>
@@ -208,6 +208,7 @@ export default function App() {
     </RecoilRoot>
   );
 }
+export default codePush(App);
 
 const styles = StyleSheet.create({
   container: {
