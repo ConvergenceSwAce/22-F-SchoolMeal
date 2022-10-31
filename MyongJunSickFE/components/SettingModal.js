@@ -33,7 +33,7 @@ const SettingModal = ({campus}) => {
   const toggleSwitch = () => setIsEnabled(previousState => !previousState);
 
   return (
-    <View>
+    <View style={styles.centeredView}>
       <Modal
         animationType="slide"
         transparent={true}
@@ -75,6 +75,11 @@ const SettingModal = ({campus}) => {
 };
 
 const styles = StyleSheet.create({
+  centeredView: {
+    flexGrow: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
   modalView: {
     backgroundColor: 'white',
     borderRadius: 20,
