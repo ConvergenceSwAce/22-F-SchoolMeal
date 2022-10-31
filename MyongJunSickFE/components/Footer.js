@@ -16,7 +16,7 @@ export default function Footer({campus}) {
 
   const footerText = StyleSheet.create({
     text: {
-      paddingVertical: heightPercentage(10),
+      paddingVertical: heightPercentage(20),
       paddingHorizontal: widthPercentage(30),
       flexGrow: 1,
       fontSize: fontPercentage(12),
