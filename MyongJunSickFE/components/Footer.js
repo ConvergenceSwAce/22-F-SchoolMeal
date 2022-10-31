@@ -6,7 +6,7 @@ import SettingModal from './SettingModal';
 export default function Footer({campus}) {
   const footerStyle = StyleSheet.create({
     flexGrow: 1,
-    paddingVertical: heightPercentage(10),
+    paddingVertical: heightPercentage(5),
     flexDirection: 'row',
     justifyContent: 'space-around',
     alignItems: 'center',

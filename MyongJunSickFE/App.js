@@ -176,11 +176,10 @@ function Main() {
           <Header year={year} month={month} campus={campus} />
           <WeekCarousel day={day} setMealData={setMealData} setMealData2={setMealData2} />
           {restSelect === '인문캠퍼스' ? (
-            <SeoulCamView mealData={mealData} />
+            <SeoulCamView mealData={mealData} campus={campus} />
           ) : (
-            <YonginCamView mealData={mealData2} />
+            <YonginCamView mealData={mealData2} campus={campus} />
           )}
-          <Footer campus={campus} />
         </View>
       );
     case 'loading':
