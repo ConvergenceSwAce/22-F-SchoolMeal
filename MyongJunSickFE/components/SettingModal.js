@@ -1,9 +1,14 @@
 import React, {useEffect, useState} from 'react';
-import {Modal, StyleSheet, Text, Pressable, View, Switch} from 'react-native';
+import {StyleSheet, Text, Pressable, View, Switch} from 'react-native';
 import {fontPercentage, heightPercentage, widthPercentage} from '../Responsive';
 import AsyncStorage from '@react-native-community/async-storage';
+import Modal from 'react-native-modal';
+import {useRecoilState, useRecoilValue} from 'recoil';
+import {campusInfo} from '../states';
 
-const SettingModal = ({campus}) => {
+const SettingModal = () => {
+  const [campus, setCampus] = useRecoilState(campusInfo);
+
   useEffect(() => {
     campus === 'yongin' ? setIsEnabled(true) : setIsEnabled(false); // AsyncStorage에 저장된 데이터가 'seoul'이면 true, 'yongin'이면 false를 반환한다. (Switch의 값이 바뀐다.)
   }, []); // AsyncStorage에서 데이터를 가져와서 selectData에 저장한다.
@@ -20,6 +25,7 @@ const SettingModal = ({campus}) => {
     await AsyncStorage.setItem('campus', select)
       .then(() => {
         console.log('save success ' + select);
+        setCampus(select);
       })
       .catch(err => {
         console.log(err);
@@ -36,12 +42,11 @@ const SettingModal = ({campus}) => {
     <View style={styles.centeredView}>
       <Modal
         animationType="slide"
-        transparent={true}
         visible={modalVisible}
-        onRequestClose={() => {
-          setModalVisible(!modalVisible);
-        }}
         style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}
+        onBackdropPress={() => {
+          setModalVisible(false);
+        }}
       >
         <View style={styles.centeredView}>
           <View style={styles.modalView}>
@@ -101,6 +106,7 @@ const styles = StyleSheet.create({
   button: {
     borderRadius: 20,
     elevation: 2,
+    backgroundColor: '#005eb8',
   },
   buttonClose: {
     marginTop: heightPercentage(20),

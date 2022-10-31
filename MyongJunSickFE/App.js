@@ -6,7 +6,7 @@ import WeekCarousel from './components/WeekCarousel';
 import MealTitle from './components/MealTiltle';
 import MenuList from './components/MenuList';
 import Splash from './components/Splash';
-import {RecoilRoot, useRecoilValue, useRecoilValueLoadable} from 'recoil';
+import {RecoilRoot, useRecoilState, useRecoilValue, useRecoilValueLoadable} from 'recoil';
 import {
   getDayByMeal,
   isLunchSubmit,
@@ -15,6 +15,7 @@ import {
   getDayByMeal2,
   isLunchSubmit2,
   isDinnerSubmit2,
+  campusInfo,
 } from './states';
 import LunchForm from './components/LunchForm';
 import DinnerForm from './components/DinnerForm';
@@ -142,7 +143,7 @@ let month = now.format('MM');
 // };
 
 function Main() {
-  const [campus, setCampus] = useState('seoul'); // 캠퍼스 설정
+  const [campus, setCampus] = useRecoilState(campusInfo); // 캠퍼스 설정
   useEffect(() => {
     get();
   }, []);
@@ -176,9 +177,9 @@ function Main() {
           <Header year={year} month={month} campus={campus} />
           <WeekCarousel day={day} setMealData={setMealData} setMealData2={setMealData2} />
           {restSelect === '인문캠퍼스' ? (
-            <SeoulCamView mealData={mealData} campus={campus} />
+            <SeoulCamView mealData={mealData} />
           ) : (
-            <YonginCamView mealData={mealData2} campus={campus} />
+            <YonginCamView mealData={mealData2} />
           )}
         </View>
       );

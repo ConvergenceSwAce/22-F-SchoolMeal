@@ -1,6 +1,11 @@
 import {atom, selector, useRecoilValue, useSetRecoilState} from 'recoil';
 import axios from 'axios';
 
+export const campusInfo = atom({
+  key: 'campusInfo',
+  default: 'seoul',
+});
+
 export const restInfo = atom({
   key: 'restInfo',
   default: '인문캠퍼스',
