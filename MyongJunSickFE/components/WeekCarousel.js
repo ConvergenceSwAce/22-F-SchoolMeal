@@ -82,6 +82,8 @@ export default function WeekCarousel({day, setMealData, setMealData2}) {
     marginHorizontal: widthPercentage(50),
     justifyContent: 'space-between',
     alignItems: 'center',
+    zIndex: 10,
+    backgroundColor: '#fff',
   });
 
   const dayStyle = StyleSheet.create({
