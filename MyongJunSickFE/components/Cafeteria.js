@@ -57,7 +57,7 @@ export default function Cafeteria({mealData, page}) {
           ) : (
             <></>
           )}
-          <View style={{height: heightPercentage(120)}} />
+          <View style={{height: heightPercentage(155)}} />
           <Footer />
         </ScrollView>
       );
