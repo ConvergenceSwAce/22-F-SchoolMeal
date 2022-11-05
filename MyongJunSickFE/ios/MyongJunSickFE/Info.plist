@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>CFBundleDevelopmentRegion</key>
-	<string>kr</string>
+	<string>ko</string>
 	<key>CFBundleDisplayName</key>
 	<string>명준식</string>
 	<key>CFBundleExecutable</key>
@@ -17,13 +17,18 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.5</string>
+	<string>1.6</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
 	<string>202211011</string>
 	<key>CodePushDeploymentKey</key>
 	<string>${CODEPUSH_KEY}</string>
+	<key>Information Property List</key>
+	<dict>
+		<key>App Uses Non-Exempt Encryption</key>
+		<false/>
+	</dict>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSAppTransportSecurity</key>
