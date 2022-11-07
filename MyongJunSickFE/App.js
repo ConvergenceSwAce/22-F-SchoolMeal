@@ -13,16 +13,33 @@ import YonginCamView from './pages/YonginCamView';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
 import SplashScreen from 'react-native-splash-screen';
+import axios from 'axios';
+import DeviceInfo from 'react-native-device-info';
 
 let now = dayjs();
 let day = now.get('day');
 let year = now.format('YYYY');
 let month = now.format('MM');
 
+const deviceId = DeviceInfo.getUniqueId().then(uniqueId => {
+  console.log(uniqueId);
+  return uniqueId;
+});
+
 function Main() {
   const [campus, setCampus] = useRecoilState(campusInfo); // 캠퍼스 설정
   useEffect(() => {
     get();
+    axios
+      .post('#',{
+        // 보낼 내용
+      })
+      .then(res => {
+        console.log(res);
+      })
+      .catch(() => {
+        console.log("#");
+      });
   }, []);
   const key = 'campus';
   const get = async () => {
