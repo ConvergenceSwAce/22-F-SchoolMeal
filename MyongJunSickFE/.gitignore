@@ -62,3 +62,13 @@ buck-out/
 # Ruby / CocoaPods
 /ios/Pods/
 /vendor/bundle/
+
+#realse
+/Android/app/release/
+
+# config
+appcenter-config.json
+
+#gradle
+*.gradle
+gradle.properties

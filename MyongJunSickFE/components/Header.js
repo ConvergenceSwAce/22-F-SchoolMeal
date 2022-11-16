@@ -1,8 +1,7 @@
-import React, {useState} from 'react';
+import React, {useEffect} from 'react';
 import {
   View,
   Text,
-  Image,
   StyleSheet,
   StatusBar,
   Platform,
@@ -11,12 +10,15 @@ import {
 } from 'react-native';
 import {widthPercentage, heightPercentage, fontPercentage} from '../Responsive';
 import {getStatusBarHeight} from 'react-native-status-bar-height';
-import {useRecoilState, useRecoilValue} from 'recoil';
+import {useRecoilState} from 'recoil';
 import {restInfo} from '../states';
 
 const StatusBarHeight = Platform.OS === 'ios' ? getStatusBarHeight(true) : StatusBar.currentHeight;
 
-export default function Header({month, year}) {
+export default function Header({month, year, campus}) {
+  useEffect(() => {
+    campus === 'seoul' ? setRest('인문캠퍼스') : setRest('자연캠퍼스');
+  }, [campus]);
   const [rests, setRest] = useRecoilState(restInfo);
   const touchRest = () => {
     if (rests === '인문캠퍼스') {
@@ -28,7 +30,7 @@ export default function Header({month, year}) {
   };
 
   const headerStyle = StyleSheet.create({
-    width: widthPercentage(428),
+    width: widthPercentage(390),
     height: heightPercentage(60),
     marginTop: StatusBarHeight + heightPercentage(10),
     marginHorizontal: widthPercentage(20),
@@ -39,8 +41,6 @@ export default function Header({month, year}) {
 
   const dateStyle = StyleSheet.create({
     flex: 1,
-    width: widthPercentage(193),
-    height: heightPercentage(41),
     justifyContent: 'flex-start',
     flexDirection: 'row',
     alignItems: 'center',
@@ -49,8 +49,6 @@ export default function Header({month, year}) {
   const title = StyleSheet.create({
     component: {
       flex: 1,
-      width: widthPercentage(218),
-      height: heightPercentage(43),
       flexDirection: 'row',
       justifyContent: 'flex-end',
       alignItems: 'center',
@@ -58,11 +56,9 @@ export default function Header({month, year}) {
     text: {
       flexGrow: 1,
       fontSize: fontPercentage(16),
-      fontWeight: 'bold',
-      fontStyle: 'normal',
+      fontFamily: 'NotoSansKR-Bold',
       textAlign: 'center',
       color: '#071648',
-      marginLeft: widthPercentage(60),
     },
   });
 
@@ -83,9 +79,8 @@ export default function Header({month, year}) {
         />
         <Text
           style={{
-            fontSize: fontPercentage(28),
-            fontWeight: 'bold',
-            fontStyle: 'normal',
+            fontSize: fontPercentage(20),
+            fontFamily: 'NotoSansKR-Bold',
             color: '#071648',
             marginLeft: widthPercentage(10),
           }}
@@ -95,8 +90,7 @@ export default function Header({month, year}) {
         <Text
           style={{
             fontSize: fontPercentage(16),
-            fontWeight: '500',
-            fontStyle: 'normal',
+            fontFamily: 'NotoSansKR-Regular',
             letterSpacing: 0,
             color: '#a8a8a8',
             marginLeft: widthPercentage(10),

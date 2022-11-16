@@ -1,6 +1,11 @@
 import {atom, selector, useRecoilValue, useSetRecoilState} from 'recoil';
 import axios from 'axios';
 
+export const campusInfo = atom({
+  key: 'campusInfo',
+  default: 'seoul',
+});
+
 export const restInfo = atom({
   key: 'restInfo',
   default: '인문캠퍼스',
@@ -81,7 +86,7 @@ export const getDayByMeal2 = selector({
   key: 'dayByMeal/get2',
   get: async ({get}) => {
     const response2 = await axios.get(
-      'https://gea662yjyk.execute-api.ap-northeast-2.amazonaws.com/jacamCrawler',
+      'https://gea662yjyk.execute-api.ap-northeast-2.amazonaws.com/newJacamCrawler',
     );
     console.log(response2.data);
     return response2.data;
