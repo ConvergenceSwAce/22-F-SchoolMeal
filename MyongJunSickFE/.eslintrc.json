@@ -1,0 +1,23 @@
+{
+  "env": {
+    "es2021": true,
+    "node": true
+  },
+  "extends": ["plugin:react/recommended", "airbnb", "eslint:recommended", "plugin:prettier/recommended"],
+  "overrides": [],
+  "parser": "@babel/eslint-parser",
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "sourceType": "module",
+    "requireConfigFile" : "false"
+  },
+  // "babelOptions": { "configFile": "./.babelrc" },
+  "plugins": ["import", "react", "prettier"],
+  "rules": {
+    "prettier/prettier": "error",
+    "react/jsx-filename-extension": [1, {"extensions": [".js", "jsx"]}],
+    "react/function-component-definition": [2, {"namedcomponents": "arrow-function"}],
+    "react/prop-types": "off",
+    "react/require-default-props": "off"
+  }
+}

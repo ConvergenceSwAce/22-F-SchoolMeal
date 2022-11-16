@@ -1,0 +1,55 @@
+{
+  "name": "MyongJunSick",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "android": "react-native run-android",
+    "ios": "react-native run-ios",
+    "start": "react-native start",
+    "test": "jest",
+    "lint": "eslint .",
+    "apk": "react-native run-android --variant=release"
+  },
+  "dependencies": {
+    "@react-native-async-storage/async-storage": "^1.17.10",
+    "appcenter": "4.4.5",
+    "appcenter-analytics": "4.4.5",
+    "appcenter-crashes": "4.4.5",
+    "dayjs": "^1.11.5",
+    "eslint-config-prettier": "^8.5.0",
+    "prop-types": "^15.8.1",
+    "react": "18.1.0",
+    "react-native": "0.70.2",
+    "react-native-bouncy-checkbox": "^3.0.5",
+    "react-native-code-push": "^7.0.5",
+    "react-native-config": "^1.4.6",
+    "react-native-device-info": "^10.2.1",
+    "react-native-extra-dimensions-android": "^1.2.5",
+    "react-native-modal": "^13.0.1",
+    "react-native-responsive-dimensions": "^3.1.1",
+    "react-native-splash-screen": "^3.3.0",
+    "react-native-status-bar-height": "^2.6.0",
+    "recoil": "^0.7.6"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.9",
+    "@babel/eslint-parser": "^7.19.1",
+    "@babel/runtime": "^7.12.5",
+    "axios": "^0.27.2",
+    "babel-jest": "^26.6.3",
+    "eslint": "^8.25.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jsx-a11y": "^6.6.1",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react": "^7.31.10",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "jest": "^26.6.3",
+    "metro-react-native-babel-preset": "0.72.3",
+    "react-native-svg-transformer": "^1.0.0",
+    "react-test-renderer": "18.1.0"
+  },
+  "jest": {
+    "preset": "react-native"
+  }
+}
