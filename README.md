@@ -64,13 +64,16 @@
 ### 프로젝트 기간
 
 - 기획 및 설계 : 22.09.29 ~ (진행중)
-- 프로젝트 개발 : (Coming soon)
+- 프로젝트 개발 : (Completed)
 
 ### 프로젝트 기획, 설명
 
 - 명지대학교 재학생을 위한 간편 학식 확인 서비스
-  - 앱설치.
-  - 학식 확인한다.
+
+### Apple Appstore
+- https://apps.apple.com/kr/app/%EB%AA%85%EC%A4%80%EC%8B%9D-%EB%AA%85%EC%A7%80%EB%8C%80%ED%95%99%EA%B5%90-%EC%8B%9D%EB%8B%A8-%EC%95%B1/id6443898659
+### Google Playstore
+- https://play.google.com/store/apps/details?id=com.myongjunsickfe
 
 ---
 
