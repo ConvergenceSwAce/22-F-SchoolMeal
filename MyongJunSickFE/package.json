@@ -50,6 +50,7 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "husky": "^8.0.3",
     "jest": "^26.6.3",
+    "lint-staged": "^13.2.0",
     "metro-react-native-babel-preset": "0.72.3",
     "react-native-svg-transformer": "^1.0.0",
     "react-test-renderer": "18.1.0",
