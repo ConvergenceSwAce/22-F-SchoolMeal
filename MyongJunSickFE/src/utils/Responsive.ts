@@ -4,16 +4,16 @@ import {
   responsiveFontSize,
 } from 'react-native-responsive-dimensions';
 
-const ZEPLIN__WINDOW__WIDTH = 428;
-const ZEPLIN__WINDOW__HEIGHT = 926;
+const FIGMA__WINDOW__WIDTH = 428;
+const FIGMA__WINDOW__HEIGHT = 926;
 
 export const widthPercentage = (width: number) => {
-  const percentage = (width / ZEPLIN__WINDOW__WIDTH) * 100;
+  const percentage = (width / FIGMA__WINDOW__WIDTH) * 100;
 
   return responsiveWidth(percentage);
 };
 export const heightPercentage = (height: number) => {
-  const percentage = (height / ZEPLIN__WINDOW__HEIGHT) * 100;
+  const percentage = (height / FIGMA__WINDOW__HEIGHT) * 100;
 
   return responsiveHeight(percentage);
 };
