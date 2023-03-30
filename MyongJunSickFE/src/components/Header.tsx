@@ -1,13 +1,22 @@
-import {Container, Text, View} from 'native-base';
+import {Text, View} from 'native-base';
 import React from 'react';
+import {nowMonth, nowYear} from '../utils/Day';
+
+const month = nowMonth() || '..';
+const year = nowYear() || '....';
 
 const Header = () => {
   return (
-    <View className="flex flex-row items-baseline relative gap-2 ml-2">
-      <Text className="pt-3 flex-wrap flex-grow-0 text-[28px] font-bold text-center text-[BrandColor/Default]">
-        11월
+    <View className="flex-row border-2 justify-between items-center">
+      <View className="flex-grow-0 flex-row relative gap-2 ml-2 ">
+        <Text className="pt-3 flex-wrap text-[28px] font-bold self-center text-[#071648]">
+          {month}월
+        </Text>
+        <Text className="flex-grow-0 flex-wrap self-end font-medium text-[#a8a8a8]">{year}</Text>
+      </View>
+      <Text className="flex-grow-0 items-center text-center text-sm font-bold mr-2 text-[#071648]">
+        인문캠퍼스
       </Text>
-      <Text className="flex-wrap flex-grow-0 font-medium text-center text-[#a8a8a8]">2022</Text>
     </View>
   );
 };
