@@ -4,7 +4,8 @@ import React, {useEffect} from 'react';
 import codePush from 'react-native-code-push';
 import SplashScreen from 'react-native-splash-screen';
 import BottomNavigation from './src/components/BottomNavigation';
-import {NativeBaseProvider, StatusBar} from 'native-base';
+import {NativeBaseProvider} from 'native-base';
+import {StatusBar} from 'react-native';
 
 function App() {
   useEffect(() => {
@@ -13,7 +14,7 @@ function App() {
 
   return (
     <NativeBaseProvider>
-      <StatusBar />
+      <StatusBar barStyle={'dark-content'} />
       <BottomNavigation />
     </NativeBaseProvider>
   );
