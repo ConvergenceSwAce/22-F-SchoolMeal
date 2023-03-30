@@ -4,12 +4,10 @@ import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {Text} from 'react-native';
 import {CheckIcon, InfoIcon, MoonIcon, SearchIcon} from 'native-base';
 
+import HomeScreen from '../screens/HomeScreen';
+
 // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-call
 const Tab = createBottomTabNavigator();
-
-function HomeScreen() {
-  return <Text>Home</Text>;
-}
 
 function SearchScreen() {
   return <Text>Search</Text>;
@@ -42,6 +40,7 @@ const BottomTabNavigation = () => {
           component={HomeScreen}
           options={{
             title: '홈',
+            headerShown: false,
             tabBarIcon: ({color, size}: TabBarProps) => (
               <CheckIcon name="home" color={color} size={size} />
             ),
