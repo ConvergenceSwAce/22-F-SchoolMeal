@@ -1,4 +1,4 @@
-# 22-F-SchoolMeal(명지대 학식 간편 확인 서)
+# 22-F-SchoolMeal(명지대 학식 간편 확인 서비스)
 # <b>명</b>지대가 <b>준</b>비한 <b>식</b>사 명준식입니다
 
 ## 팀소개
@@ -22,9 +22,14 @@
             <img src="https://avatars.githubusercontent.com/u/79684339?v=4" width="100px" />
         </a>
     </td>
-        <td>
+    <td>
         <a href="https://github.com/wnd180">
             <img src="https://avatars.githubusercontent.com/u/23502888?v=4" width="100px" />
+        </a>
+    </td>
+    <td>
+        <a href="#">
+            <img src="https://avatars.githubusercontent.com/u/60644352?v=4" width="100px" />
         </a>
     </td>
 
@@ -35,12 +40,14 @@
     <td><b>김민수</b></td>
     <td><b>김보겸</b></td>
     <td><b>권성중</b></td>
+    <td><b>고승환</b></td>
   </tr>
   <tr>
     <td><b>FE</b></td>
     <td><b>FE</b></td>
     <td><b>BE</b></td>
     <td><b>DA</b></td>
+    <td><b>UI</b></td>
   </tr>
 </table>
 
