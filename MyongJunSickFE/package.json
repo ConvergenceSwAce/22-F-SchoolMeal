@@ -17,24 +17,25 @@
     "appcenter-crashes": "4.4.5",
     "dayjs": "^1.11.5",
     "eslint-config-prettier": "^8.5.0",
+    "nativewind": "^2.0.11",
     "prop-types": "^15.8.1",
     "react": "18.1.0",
     "react-native": "0.70.2",
-    "react-native-bouncy-checkbox": "^3.0.5",
     "react-native-code-push": "^7.0.5",
     "react-native-config": "^1.4.6",
-    "react-native-device-info": "^10.2.1",
-    "react-native-extra-dimensions-android": "^1.2.5",
-    "react-native-modal": "^13.0.1",
     "react-native-responsive-dimensions": "^3.1.1",
     "react-native-splash-screen": "^3.3.0",
-    "react-native-status-bar-height": "^2.6.0",
-    "recoil": "^0.7.6"
+    "recoil": "^0.7.6",
+    "tailwindcss": "^3.3.0"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",
     "@babel/eslint-parser": "^7.19.1",
     "@babel/runtime": "^7.12.5",
+    "@types/react": "^18.0.31",
+    "@types/react-native": "^0.71.5",
+    "@typescript-eslint/eslint-plugin": "^5.57.0",
+    "@typescript-eslint/parser": "^5.57.0",
     "axios": "^0.27.2",
     "babel-jest": "^26.6.3",
     "eslint": "^8.25.0",
@@ -42,14 +43,30 @@
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-jsx-a11y": "^6.6.1",
     "eslint-plugin-prettier": "^4.2.1",
-    "eslint-plugin-react": "^7.31.10",
+    "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-react-hooks": "^4.6.0",
+    "husky": "^8.0.3",
     "jest": "^26.6.3",
+    "lint-staged": "^13.2.0",
     "metro-react-native-babel-preset": "0.72.3",
     "react-native-svg-transformer": "^1.0.0",
-    "react-test-renderer": "18.1.0"
+    "react-test-renderer": "18.1.0",
+    "typescript": "^5.0.2"
   },
   "jest": {
     "preset": "react-native"
+  },
+  "lint-staged": {
+    "src/**/*.{ts,tsx}": [
+      "eslint --ext .tsx --ext .ts src/ --fix"
+    ],
+    "./src/**": [
+      "prettier --write ."
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   }
 }
