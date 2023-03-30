@@ -1,4 +1,4 @@
-# 22-F-SchoolMeal(명지대 학식 출시 기념 어플)
+# 22-F-SchoolMeal(명지대 학식 간편 확인 서)
 # <b>명</b>지대가 <b>준</b>비한 <b>식</b>사 명준식입니다
 
 ## 팀소개
@@ -7,9 +7,9 @@
 
 <table>
   <tr>
-    <td>
-        <a href="https://github.com/wnd180">
-            <img src="https://avatars.githubusercontent.com/u/23502888?v=4" width="100px" />
+      <td>
+        <a href="https://github.com/grayashh">
+            <img src="https://avatars.githubusercontent.com/u/49053676?v=4" width="100px" />
         </a>
     </td>
     <td>
@@ -22,38 +22,25 @@
             <img src="https://avatars.githubusercontent.com/u/79684339?v=4" width="100px" />
         </a>
     </td>
-    <td>
-        <a href="https://github.com/grayashh">
-            <img src="https://avatars.githubusercontent.com/u/49053676?v=4" width="100px" />
+        <td>
+        <a href="https://github.com/wnd180">
+            <img src="https://avatars.githubusercontent.com/u/23502888?v=4" width="100px" />
         </a>
     </td>
-    <td>
-        <a href="https://github.com/rhtjddls123">
-            <img src="https://avatars.githubusercontent.com/u/60644352?v=4" width="100px" />
-        </a>
-    </td>
-    <td>
-        <a href="#">
-            <img src="https://avatars.githubusercontent.com/u/60644352?v=4" width="100px" />
-        </a>
-    </td>
+
   </tr>
 
   <tr>
-    <td><b>권성중</b></td>
+    <td><b>김태강</b></td>
     <td><b>김민수</b></td>
     <td><b>김보겸</b></td>
-    <td><b>김태강</b></td>
-    <td><b>고성인</b></td>
-    <td><b>고승환</b></td>
+    <td><b>권성중</b></td>
   </tr>
   <tr>
-    <td><b>Data ML</b></td>
+    <td><b>FE</b></td>
     <td><b>FE</b></td>
     <td><b>BE</b></td>
-    <td><b>Full Stack</b></td>
-    <td><b>DB</b></td>
-    <td><b>Design</b></td>
+    <td><b>DA</b></td>
   </tr>
 </table>
 
@@ -64,7 +51,9 @@
 ### 프로젝트 기간
 
 - 기획 및 설계 : 22.09.29 ~ (진행중)
-- 프로젝트 개발 : (Completed)
+- 프로젝트 개발 : (V.1 Completed)
+
+- V.2 진행중
 
 ### 프로젝트 기획, 설명
 
@@ -79,31 +68,35 @@
 
 ## 기술 스택
 <div align=left>
-👨🏻‍💻Lang & Framework👩🏻‍💻
-<br>
-<img src="https://img.shields.io/badge/python-3776AB?style=for-the-badge&logo=Python&logoColor=white">
-<img src="https://img.shields.io/badge/react-61DAFB?style=for-the-badge&logo=react&logoColor=white">
-<img src="https://img.shields.io/badge/react Native-61DAFB?style=for-the-badge&logo=react&logoColor=white">
+<h3>👨🏻‍💻Language&Framwork👩🏻‍💻</h3>
+<h3>Common</h3>
 <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=JavaScript&logoColor=white">
-<img src="https://img.shields.io/badge/Flow-E5BB36?style=for-the-badge&logo=Flow&logoColor=white">
-<br>
+<img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=TypeScript&logoColor=white">
+<h3>FE</h3>
+<img src="https://img.shields.io/badge/React Native-61DAFB?style=for-the-badge&logo=react&logoColor=white">
+<img src="https://img.shields.io/badge/TailwindCSS-06B6D4?style=for-the-badge&logo=TailwindCSS&logoColor=white">
+<img src="https://img.shields.io/badge/Redux-764ABC?style=for-the-badge&logo=Redux&logoColor=white">
+<h3>BE</h3>
+<img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=Node.js&logoColor=white">
+<img src="https://img.shields.io/badge/Nestjs-E0234E?style=for-the-badge&logo=Nestjs&logoColor=white">
+<h3>DA</h3>
+<img src="https://img.shields.io/badge/python-3776AB?style=for-the-badge&logo=Python&logoColor=white">
 <img src="https://img.shields.io/badge/pandas-150458?style=for-the-badge&logo=pandas&logoColor=white">
-<img src="https://img.shields.io/badge/Selenium-43B02A?style=for-the-badge&logo=Selenium&logoColor=white">
+<img src="https://img.shields.io/badge/numpy-013243?style=for-the-badge&logo=numpy&logoColor=white">
+<img src="https://img.shields.io/badge/pytorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white">
+<img src="https://img.shields.io/badge/Keras-D00000?style=for-the-badge&logo=Keras&logoColor=white">
+<img src="https://img.shields.io/badge/Tensorflow-FF6F00?style=for-the-badge&logo=Tensorflow&logoColor=white">
+<img src="https://img.shields.io/badge/ApacheHadoop-66CCFF?style=for-the-badge&logo=ApacheHadoop&logoColor=white">
+<h3>DevOps</h3>
+<img src="https://img.shields.io/badge/AWS RDS-527FFF?style=for-the-badge&logo=Amazon+RDS&logoColor=white">
 <img src="https://img.shields.io/badge/AWS Lambda-FF9900?style=for-the-badge&logo=AWS+Lambda&logoColor=white">
-<br>
-🛠Dev Tool🛠
-<br>
-<img src="https://img.shields.io/badge/WebStorm-000000?style=for-the-badge&logo=WebStorm&logoColor=white">
-<img src="https://img.shields.io/badge/Visual Studio Code-007ACC?style=for-the-badge&logo=Visual+Studio+Code&logoColor=white">
-<img src="https://img.shields.io/badge/PyCharm-000000?style=for-the-badge&logo=PyCharm&logoColor=white">
-<br>
-🧑🏻‍🎨Design Tool👩🏻‍🎨
-<br>
+<img src="https://img.shields.io/badge/AWS S3-569A31?style=for-the-badge&logo=Amazon+S3&logoColor=white">
+<img src="https://img.shields.io/badge/AWS CloudWatch-FF4F8B?style=for-the-badge&logo=Amazon+CloudWatch&logoColor=white">
+<img src="https://img.shields.io/badge/AWS API Gateway-FF4F8B?style=for-the-badge&logo=Amazon+API+Gateway&logoColor=white">
+<h3>🧑🏻‍🎨Design Tool👩🏻‍🎨</h3>
 <img src="https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=Figma&logoColor=white">
 <img src="https://img.shields.io/badge/Zeplin-FFB230?style=for-the-badge&logo=Zeplin&logoColor=white">
-<br>
-👥Collaborative Tool👥
-<br>
+<h3>👥Collaborative Tool👥</h3>
 <img src="https://img.shields.io/badge/github-181717?style=for-the-badge&logo=github&logoColor=white">
 <img src="https://img.shields.io/badge/git-F05032?style=for-the-badge&logo=git&logoColor=white">
 <img src="https://img.shields.io/badge/notion-000000?style=for-the-badge&logo=notion&logoColor=white">
