@@ -11,9 +11,8 @@ const DayPicker = () => {
 
   // react-native에서 dom 안쓰고 상태관리로 버튼 클릭 했을 때 눌린 버튼만 className 바꾸기
   const handleTouch = (index: number) => {
-    setBtnActive((): number => {
-      return index;
-    });
+    setBtnActive(index);
+    return;
   };
 
   return (
