@@ -7,7 +7,7 @@ const DayPicker = () => {
   const date = getWeek() || ['.', '.', '.', '.', '.'];
   const day = ['월', '화', '수', '목', '금'];
 
-  let [btnActive, setBtnActive] = useState(0);
+  const [btnActive, setBtnActive] = useState(0);
 
   // react-native에서 dom 안쓰고 상태관리로 버튼 클릭 했을 때 눌린 버튼만 className 바꾸기
   const handleTouch = (index: number) => {
