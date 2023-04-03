@@ -18,7 +18,7 @@ const DayPicker = () => {
 
   return (
     <HStack space="26px" justifyContent="center" marginY={28}>
-      {date.map((date, index) => (
+      {date.map((date: string, index: number) => (
         <TouchableOpacity
           onPressOut={() => {
             handleTouch(index);
