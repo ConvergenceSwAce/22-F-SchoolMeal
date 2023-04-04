@@ -13,9 +13,8 @@ const DayPicker = () => {
     setBtnActive(index);
     return;
   };
-
   return (
-    <HStack space="26px" justifyContent="center" marginY={28}>
+    <HStack className="gap-[26px] justify-center py-5">
       {date.map((date: string, index: number) => (
         <TouchableOpacity
           onPressOut={() => {
@@ -25,7 +24,7 @@ const DayPicker = () => {
             btnActive === index ? 'bg-BrandColor/Default' : ''
           } w-[42px] h-[64px] rounded-[12px] justify-center items-center`}
         >
-          <VStack alignItems="center">
+          <VStack className="items-center">
             <Text
               color={btnActive === index ? 'white' : '#D9D9D9'}
               fontSize={16}
