@@ -23,6 +23,7 @@ const DayPicker = () => {
           className={`${
             btnActive === index ? 'bg-BrandColor/Default' : ''
           } w-[42px] h-[64px] rounded-[12px] justify-center items-center`}
+          key={index}
         >
           <VStack className="items-center">
             <Text
