@@ -1,17 +1,9 @@
 import React from 'react';
 import {Box, Container, Stack, Text, VStack} from 'native-base';
 
-type MealData = {
-  date: string;
-  day: string;
-  lunchA: string[];
-  lunchB: string[];
-  dinner: string[];
-};
-
 interface MealCardProps {
   course: string;
-  data: MealData[];
+  data: string[];
 }
 
 const MealCard = ({course, data}: MealCardProps) => {
@@ -26,20 +18,21 @@ const MealCard = ({course, data}: MealCardProps) => {
           space="8px"
           className="border-solid border-[1px] border-[#DBDBDB] rounded-[12px] p-[16px]"
         >
-          {data.map((item: MealData, index: number) => {
-            return (
-              <Stack key={index} className="flex-row justify-between items-center">
-                <Text className="text-[16px] font-normal">
-                  {course == 'A' ? item.lunchA[index] : item.lunchB[index]}
-                </Text>
-                <Text className="text-[8px] text-[#ABABAB]">●</Text>
-              </Stack>
-            );
-          })}
+          {data.map((item, index) => (
+            <Stack key={index} className="flex-row justify-between items-center">
+              <Text className="text-[16px] font-normal">{item}</Text>
+              <Text className="text-[8px] text-[#ABABAB]">●</Text>
+            </Stack>
+          ))}
         </VStack>
       </Box>
     </Container>
   );
+};
+
+MealCard.defaultProps = {
+  course: ' 준비중입니다.',
+  data: ['등록된 식단내용이 없습니다.'],
 };
 
 export default MealCard;
