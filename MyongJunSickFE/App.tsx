@@ -3,7 +3,7 @@
 import React, {useEffect} from 'react';
 import codePush from 'react-native-code-push';
 import SplashScreen from 'react-native-splash-screen';
-import BottomNavigation from './src/components/BottomNavigation';
+import BottomNavigation from './src/routes/BottomNavigation';
 import {NativeBaseProvider} from 'native-base';
 import {StatusBar} from 'react-native';
 
