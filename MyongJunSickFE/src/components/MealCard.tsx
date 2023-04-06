@@ -6,7 +6,10 @@ interface MealCardProps {
   data: string[];
 }
 
-const MealCard = ({course, data}: MealCardProps) => {
+const MealCard = ({
+  course = ' 준비중입니다.',
+  data = ['등록된 식단내용이 없습니다.'],
+}: MealCardProps) => {
   return (
     <Container className="flex-col w-screen items-center self-center">
       <Stack className="w-screen flex-row justify-between px-[16px]">
@@ -28,11 +31,6 @@ const MealCard = ({course, data}: MealCardProps) => {
       </Box>
     </Container>
   );
-};
-
-MealCard.defaultProps = {
-  course: ' 준비중입니다.',
-  data: ['등록된 식단내용이 없습니다.'],
 };
 
 export default MealCard;
