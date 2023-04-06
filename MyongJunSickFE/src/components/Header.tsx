@@ -7,7 +7,7 @@ const year: string = nowYear() || '....';
 
 const Header = () => {
   return (
-    <View className="items-center">
+    <View className="w-screen flex-row justify-between px-[16px]">
       <Stack className="flex-row gap-2">
         <Text className="pt-3 flex-wrap text-[28px] font-bold self-center text-[#071648]">
           {month}월
