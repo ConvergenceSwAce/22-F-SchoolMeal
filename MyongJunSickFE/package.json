@@ -15,6 +15,7 @@
     "@react-native-community/masked-view": "^0.1.11",
     "@react-navigation/bottom-tabs": "^6.5.7",
     "@react-navigation/native": "^6.1.6",
+    "@reduxjs/toolkit": "^1.9.3",
     "appcenter": "4.4.5",
     "appcenter-analytics": "4.4.5",
     "appcenter-crashes": "4.4.5",
@@ -35,7 +36,6 @@
     "react-native-splash-screen": "^3.3.0",
     "react-native-status-bar-height": "^2.6.0",
     "react-native-svg": "^12.1.1",
-    "recoil": "^0.7.6",
     "tailwindcss": "^3.3.0"
   },
   "devDependencies": {
