@@ -1,10 +1,10 @@
 import React from 'react';
 import {Box, Container, Stack, Text, VStack} from 'native-base';
 
-interface MealCardProps {
+type MealCardProps = {
   course: string;
   data: string[];
-}
+};
 
 const MealCard = ({
   course = ' 준비중입니다.',
