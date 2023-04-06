@@ -79,3 +79,4 @@ gradle.properties
 .env.test.local
 .env.production.local
 .env.local
+.env.d.ts
