@@ -2,9 +2,8 @@ import React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {Text} from 'react-native';
-import {CheckIcon, InfoIcon, MoonIcon, SearchIcon} from 'native-base';
-
 import HomeScreen from '../screens/HomeScreen';
+import Icon from 'react-native-vector-icons/FontAwesome';
 
 // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-call
 const Tab = createBottomTabNavigator();
@@ -33,6 +32,11 @@ const BottomTabNavigation = () => {
         initialRouteName="Home"
         screenOptions={{
           tabBarActiveTintColor: '#071648',
+          tabBarStyle: {
+            bottom: 5,
+            elevation: 0,
+            backgroundColor: '#fff',
+          },
         }}
       >
         <Tab.Screen
@@ -42,7 +46,7 @@ const BottomTabNavigation = () => {
             title: '홈',
             headerShown: false,
             tabBarIcon: ({color, size}: TabBarProps) => (
-              <CheckIcon name="home" color={color} size={size} />
+              <Icon name="home" color={color} size={size} />
             ),
           }}
         />
@@ -50,9 +54,9 @@ const BottomTabNavigation = () => {
           name="Search"
           component={SearchScreen}
           options={{
-            title: '알림',
+            title: '룰렛',
             tabBarIcon: ({color, size}: TabBarProps) => (
-              <MoonIcon name="notifications" color={color} size={size} />
+              <Icon name="random" color={color} size={size} />
             ),
           }}
         />
@@ -60,19 +64,19 @@ const BottomTabNavigation = () => {
           name="Notification"
           component={NotificationScreen}
           options={{
-            title: '검색',
+            title: '맛집지도',
             tabBarIcon: ({color, size}: TabBarProps) => (
-              <SearchIcon name="search" color={color} size={size} />
+              <Icon name="map" color={color} size={size} />
             ),
           }}
         />
         <Tab.Screen
-          name="Message"
+          name="Setting"
           component={MessageScreen}
           options={{
-            title: '메시지',
+            title: '설정',
             tabBarIcon: ({color, size}: TabBarProps) => (
-              <InfoIcon name="message" color={color} size={size} />
+              <Icon name="sliders" color={color} size={size} />
             ),
           }}
         />
