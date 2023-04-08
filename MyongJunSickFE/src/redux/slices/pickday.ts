@@ -1,4 +1,3 @@
-import {RootState} from '../store/reducers';
 import {PayloadAction, createSlice} from '@reduxjs/toolkit';
 
 const initialState: {day: number} = {
