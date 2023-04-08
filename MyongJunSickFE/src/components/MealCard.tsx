@@ -13,10 +13,6 @@ const MealCard = ({
 }) => {
   const day: number = useSelector((state: RootState) => state.pickDay.day);
 
-  useEffect(() => {
-    console.log('현재 선택한' + day);
-  }, [day]);
-
   const {
     data = ['준비중입니다.'],
     isFetching,
