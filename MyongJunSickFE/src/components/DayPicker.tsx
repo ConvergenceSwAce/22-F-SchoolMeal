@@ -2,16 +2,20 @@ import {HStack, Text, VStack} from 'native-base';
 import React, {useState} from 'react';
 import {getWeek} from '../utils/Day';
 import {TouchableOpacity} from 'react-native';
+import {useDispatch} from 'react-redux';
+import {setDay} from '../redux/slices/pickday';
 
 const DayPicker = () => {
   const date = getWeek() || ['.', '.', '.', '.', '.'];
   const day = ['월', '화', '수', '목', '금'];
 
+  const dispatch = useDispatch();
+
   const [btnActive, setBtnActive] = useState(0);
 
   const handleTouch = (index: number) => {
     setBtnActive(index);
-    return;
+    dispatch(setDay(index));
   };
   return (
     <HStack className="gap-[26px] justify-center py-5">
