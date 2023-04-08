@@ -1,8 +1,10 @@
 import {combineReducers} from 'redux';
 import settingSlice from '../slices/setting';
 import {MealDataApi} from '../api/mealDataApi';
+import pickDaySlice from '../slices/pickday';
 
 const rootReducer = combineReducers({
+  pickDay: pickDaySlice.reducer,
   setting: settingSlice.reducer,
   [MealDataApi.reducerPath]: MealDataApi.reducer,
 });
