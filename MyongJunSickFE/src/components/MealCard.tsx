@@ -40,13 +40,23 @@ const MealCard = ({
           space="8px"
           className="border-solid border-[1px] border-[#DBDBDB] rounded-[12px] p-[16px]"
         >
-          {data &&
+          {isLoading ? (
+            data &&
             data[day][mealType].map((item: [], index: number) => (
               <Stack key={index} className="flex-row justify-between items-center">
                 <Text className="text-[16px] font-normal">{item}</Text>
                 <Text className="text-[6px] text-[#ABABAB]">●</Text>
               </Stack>
-            ))}
+            ))
+          ) : (
+            <>
+              <Skeleton className="w-full h-[16px]" rounded="full" />
+              <Skeleton className="w-full h-[16px]" rounded="full" />
+              <Skeleton className="w-full h-[16px]" rounded="full" />
+              <Skeleton className="w-full h-[16px]" rounded="full" />
+              <Skeleton className="w-full h-[16px]" rounded="full" />
+            </>
+          )}
         </VStack>
       </Box>
     </Container>
