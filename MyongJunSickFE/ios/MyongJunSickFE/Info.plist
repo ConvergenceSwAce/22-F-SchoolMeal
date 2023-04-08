@@ -46,6 +46,10 @@
 	<string></string>
 	<key>UIAppFonts</key>
 	<array>
+		<string>MaterialIcons.ttf</string>
+		<string>Ionicons.ttf</string>
+		<string>Foundation.ttf</string>
+		<string>FontAwesome.ttf</string>
 		<string>NotoSansKR-Black.otf</string>
 		<string>NotoSansKR-Bold.otf</string>
 		<string>NotoSansKR-Light.otf</string>
