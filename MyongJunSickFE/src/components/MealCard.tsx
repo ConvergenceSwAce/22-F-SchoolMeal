@@ -21,9 +21,11 @@ const MealCard = ({
     data = ['준비중입니다.'],
     isFetching,
     isLoading,
+    isError,
   } = useGetIncamMealQuery({
     pollingInterval: 3000,
     refetchOnReconnect: true,
+    refetchOnMountOrArgChange: true,
     skip: false,
   });
 
@@ -40,8 +42,7 @@ const MealCard = ({
           space="8px"
           className="border-solid border-[1px] border-[#DBDBDB] rounded-[12px] p-[16px]"
         >
-          {isLoading ? (
-            data &&
+          {!isError && data && !isLoading && !isFetching ? (
             data[day][mealType].map((item: [], index: number) => (
               <Stack key={index} className="flex-row justify-between items-center">
                 <Text className="text-[16px] font-normal">{item}</Text>
