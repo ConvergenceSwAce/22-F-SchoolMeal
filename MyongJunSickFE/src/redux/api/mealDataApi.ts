@@ -11,9 +11,6 @@ export const MealDataApi = createApi({
     getIncamMeal: builder.query({
       query: () => '/info',
 
-      // query의 결과로 받은 내용을 변경.
-      transformResponse: (response: Response) => response.json(),
-
       // 쿼리 결과에 tag을 주입한다. 나중에 invalidesTags로 재 호출/렌더링한다.
       providesTags: (result, error, arg) => [{type: 'incamMealData'}],
       // query결과를 받아서 서버에 요청하여 결과를 받기 전에 캐쉬를 update하거나 다른 처리로 가공할 수 있다
@@ -39,7 +36,6 @@ export const MealDataApi = createApi({
     }),
     getJacamMeal: builder.query({
       query: () => '/newJacamCrawler',
-      transformResponse: (response: Response) => response.json(),
       providesTags: (result, error, arg) => [{type: 'jacamMealData'}],
 
       // query결과를 받아서 서버에 요청하여 결과를 받기 전에 캐쉬를 update하거나 다른 처리로 가공할 수 있다
