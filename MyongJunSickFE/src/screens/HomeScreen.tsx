@@ -3,11 +3,17 @@ import {SafeAreaView} from 'react-native';
 
 import DayPicker from '../components/DayPicker';
 import Header from '../components/Header';
-import IncamPage from '../pages/incamPage';
 import {useGetIncamMealQuery} from '../redux/api/mealDataApi';
 import ErrorModal from '../components/ErrorModal';
+import IncamPage from '../pages/IncamPage';
+import {useSelector} from 'react-redux';
+import {campus} from '../redux/slices/setting';
+import JacamPage from '../pages/JacamPage';
+// import JacamPage from '../pages/JacamPage';
 
 const Home = () => {
+  const getCampus: boolean = useSelector(campus);
+
   const {isError} = useGetIncamMealQuery({
     pollingInterval: 3000,
     refetchOnReconnect: true,
@@ -23,7 +29,7 @@ const Home = () => {
     <SafeAreaView>
       <Header />
       <DayPicker />
-      <IncamPage />
+      {getCampus ? <JacamPage /> : <IncamPage />}
     </SafeAreaView>
   );
 };
