@@ -4,6 +4,7 @@ import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {Text} from 'react-native';
 import HomeScreen from '../screens/HomeScreen';
 import Icon from 'react-native-vector-icons/FontAwesome';
+import SettingPage from '../screens/SettingScreen';
 
 // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-call
 const Tab = createBottomTabNavigator();
@@ -14,10 +15,6 @@ function SearchScreen() {
 
 function NotificationScreen() {
   return <Text>Notification</Text>;
-}
-
-function MessageScreen() {
-  return <Text>Message</Text>;
 }
 
 interface TabBarProps {
@@ -72,7 +69,7 @@ const BottomTabNavigation = () => {
         />
         <Tab.Screen
           name="Setting"
-          component={MessageScreen}
+          component={SettingPage}
           options={{
             title: '설정',
             tabBarIcon: ({color, size}: TabBarProps) => (
