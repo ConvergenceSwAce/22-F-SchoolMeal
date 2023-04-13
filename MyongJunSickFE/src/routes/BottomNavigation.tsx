@@ -25,15 +25,31 @@ interface TabBarProps {
 const BottomTabNavigation = () => {
   const insets = useSafeAreaInsets();
 
+  const MyTheme = {
+    dark: false,
+    colors: {
+      primary: '#071648',
+      card: '#fff',
+      text: '#071648',
+      border: '#071648',
+      notification: '#071648',
+      background: '#fff',
+    },
+  };
+
   return (
     <SafeAreaProvider>
-      <NavigationContainer>
+      <NavigationContainer theme={MyTheme}>
         <BottomTab.Navigator
           initialRouteName="Home"
           screenOptions={{
             tabBarActiveTintColor: '#071648',
+            tabBarInactiveTintColor: '#BCBCBC',
             tabBarStyle: {
               elevation: 0,
+              borderTopWidth: 0.2,
+              borderRadius: 20,
+              backgroundColor: '#fff',
               paddingBottom: insets.bottom,
             },
           }}
