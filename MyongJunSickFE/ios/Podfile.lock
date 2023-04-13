@@ -332,6 +332,8 @@ PODS:
     - react-native-config/App (= 1.4.6)
   - react-native-config/App (1.4.6):
     - React-Core
+  - react-native-pager-view (6.2.0):
+    - React-Core
   - react-native-restart (0.0.27):
     - React-Core
   - react-native-safe-area-context (3.4.1):
@@ -500,6 +502,7 @@ DEPENDENCIES:
   - React-jsinspector (from `../node_modules/react-native/ReactCommon/jsinspector`)
   - React-logger (from `../node_modules/react-native/ReactCommon/logger`)
   - react-native-config (from `../node_modules/react-native-config`)
+  - react-native-pager-view (from `../node_modules/react-native-pager-view`)
   - react-native-restart (from `../node_modules/react-native-restart`)
   - react-native-safe-area-context (from `../node_modules/react-native-safe-area-context`)
   - react-native-splash-screen (from `../node_modules/react-native-splash-screen`)
@@ -599,6 +602,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon/logger"
   react-native-config:
     :path: "../node_modules/react-native-config"
+  react-native-pager-view:
+    :path: "../node_modules/react-native-pager-view"
   react-native-restart:
     :path: "../node_modules/react-native-restart"
   react-native-safe-area-context:
@@ -688,6 +693,7 @@ SPEC CHECKSUMS:
   React-jsinspector: 26c42646ab0bb69e29e837e23754fe7121eeaf94
   React-logger: 1bfd109a0ffa4c0989bbfac0c2d8c4abe4637faa
   react-native-config: 7cd105e71d903104e8919261480858940a6b9c0e
+  react-native-pager-view: 0ccb8bf60e2ebd38b1f3669fa3650ecce81db2df
   react-native-restart: 7595693413fe3ca15893702f2c8306c62a708162
   react-native-safe-area-context: 9e40fb181dac02619414ba1294d6c2a807056ab9
   react-native-splash-screen: 4312f786b13a81b5169ef346d76d33bc0c6dc457

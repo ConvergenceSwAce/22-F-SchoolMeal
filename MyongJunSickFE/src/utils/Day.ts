@@ -26,3 +26,8 @@ export const getWeek = (): string[] => {
 
   return week;
 };
+
+// 오늘 요일 number 반환
+export const getDay = (): number => {
+  return dayjs().day();
+};

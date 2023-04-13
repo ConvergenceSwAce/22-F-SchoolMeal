@@ -1,13 +1,19 @@
 import React from 'react';
-import {AlertDialog, Button, Center} from 'native-base';
+import {Alert, AlertDialog, Button, Center, Slide, Text} from 'native-base';
 import RNRestart from 'react-native-restart';
 
 const ErrorModal = () => {
-  const isOpen = true;
-
   const cancelRef = React.useRef(null);
   return (
     <Center>
+      <Slide in placement="top">
+        <Alert justifyContent="center" status="error" safeAreaTop={8}>
+          <Alert.Icon />
+          <Text color="error.600" fontWeight="medium">
+            No Internet Connection
+          </Text>
+        </Alert>
+      </Slide>
       <AlertDialog isOpen leastDestructiveRef={cancelRef}>
         <AlertDialog.Content>
           <AlertDialog.Header>인터넷에 연결되지 않았습니다.</AlertDialog.Header>
