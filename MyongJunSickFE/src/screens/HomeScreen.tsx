@@ -15,10 +15,8 @@ const Home = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    console.log('Home.tsx');
     getItemFromAsync('campus')
       .then(res => {
-        console.log(res);
         if (res === 'incam') {
           dispatch(setCampus(false));
         } else if (res === 'jacam') {
