@@ -9,7 +9,7 @@ export const MealDataApi = createApi({
   tagTypes: ['incamMealData', 'jacamMealData'],
   endpoints: builder => ({
     getIncamMeal: builder.query({
-      query: () => '/info',
+      query: () => '/incam',
 
       // 쿼리 결과에 tag을 주입한다. 나중에 invalidesTags로 재 호출/렌더링한다.
       providesTags: (result, error, arg) => [{type: 'incamMealData'}],
@@ -35,7 +35,7 @@ export const MealDataApi = createApi({
       ) {},
     }),
     getJacamMeal: builder.query({
-      query: () => '/newJacamCrawler',
+      query: () => '/jacam',
       providesTags: (result, error, arg) => [{type: 'jacamMealData'}],
 
       // query결과를 받아서 서버에 요청하여 결과를 받기 전에 캐쉬를 update하거나 다른 처리로 가공할 수 있다
