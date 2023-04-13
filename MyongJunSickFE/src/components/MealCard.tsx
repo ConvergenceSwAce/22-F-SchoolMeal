@@ -1,6 +1,6 @@
-import React, {useEffect} from 'react';
-import {Box, Container, Skeleton, Stack, Text, VStack} from 'native-base';
-import {incamMealData, useGetIncamMealQuery, useGetJacamMealQuery} from '../redux/api/mealDataApi';
+import React from 'react';
+import {Box, Container, Stack, Text, VStack} from 'native-base';
+import {useGetIncamMealQuery, useGetJacamMealQuery} from '../redux/api/mealDataApi';
 import {useSelector} from 'react-redux';
 import {RootState} from '../redux/store/reducers';
 import CardSkeleton from './CardSkeleton';

@@ -1,7 +1,6 @@
 import React from 'react';
 import MealCard from '../components/MealCard';
 import {ScrollView} from 'native-base';
-import {useGetIncamMealQuery} from '../redux/api/mealDataApi';
 
 const IncamPage = () => {
   return (

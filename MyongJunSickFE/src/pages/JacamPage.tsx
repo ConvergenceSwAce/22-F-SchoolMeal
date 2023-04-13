@@ -1,5 +1,4 @@
-import * as React from 'react';
-import {Text, View} from 'react-native';
+import React from 'react';
 import {createMaterialTopTabNavigator} from '@react-navigation/material-top-tabs';
 import {ScrollView} from 'native-base';
 import MealCard from '../components/MealCard';
