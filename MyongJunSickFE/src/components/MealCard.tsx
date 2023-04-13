@@ -1,29 +1,55 @@
 import React, {useEffect} from 'react';
 import {Box, Container, Skeleton, Stack, Text, VStack} from 'native-base';
-import {useGetIncamMealQuery} from '../redux/api/mealDataApi';
+import {incamMealData, useGetIncamMealQuery, useGetJacamMealQuery} from '../redux/api/mealDataApi';
 import {useSelector} from 'react-redux';
 import {RootState} from '../redux/store/reducers';
-
+import CardSkeleton from './CardSkeleton';
 const MealCard = ({
   course = '이 준비중입니다.',
-  mealType = 'lunchA',
+  mealType = 'incam',
+  order = 0,
 }: {
   course: string;
   mealType: string;
+  order: number;
 }) => {
   const day: number = useSelector((state: RootState) => state.pickDay.day);
 
-  const {
-    data = ['준비중입니다.'],
-    isFetching,
-    isLoading,
-    isError,
-  } = useGetIncamMealQuery({
+  const {data, isLoading, isError} = useGetIncamMealQuery({
     pollingInterval: 3000,
     refetchOnReconnect: true,
     refetchOnMountOrArgChange: true,
     skip: false,
   });
+
+  const {
+    data: data2,
+    isLoading: isLoading2,
+    isError: isError2,
+  } = useGetJacamMealQuery({
+    pollingInterval: 3000,
+    refetchOnReconnect: true,
+    refetchOnMountOrArgChange: true,
+    skip: false,
+  });
+
+  // mealType이 명진당이면 0, 학생회관이면 1, 생활관식당이면 2, 교직원식당이면 3
+
+  const mealTypeNum = (): number => {
+    if (mealType === '명진당') {
+      return 0;
+    } else if (mealType === '학생회관') {
+      return 1;
+    } else if (mealType === '생활관식당') {
+      return 2;
+    } else if (mealType === '교직원식당') {
+      return 3;
+    } else return 0;
+  };
+
+  if (isError || !data || isLoading || isError2 || !data2 || isLoading2) {
+    return <CardSkeleton />;
+  }
 
   return (
     <Container className="flex-col w-screen items-center self-center">
@@ -38,22 +64,19 @@ const MealCard = ({
           space="8px"
           className="border-solid border-[1px] border-[#DBDBDB] rounded-[12px] p-[16px]"
         >
-          {!isError && data && !isLoading && !isFetching ? (
-            data[day][mealType].map((item: [], index: number) => (
-              <Stack key={index} className="flex-row justify-between items-center">
-                <Text className="text-[16px] font-normal">{item}</Text>
-                <Text className="text-[6px] text-[#ABABAB]">●</Text>
-              </Stack>
-            ))
-          ) : (
-            <>
-              <Skeleton className="w-full h-[16px]" rounded="full" />
-              <Skeleton className="w-full h-[16px]" rounded="full" />
-              <Skeleton className="w-full h-[16px]" rounded="full" />
-              <Skeleton className="w-full h-[16px]" rounded="full" />
-              <Skeleton className="w-full h-[16px]" rounded="full" />
-            </>
-          )}
+          {mealType === 'incam'
+            ? data[day]['menu'][order].map((item: [], index: number) => (
+                <Stack key={index} className="flex-row justify-between items-center">
+                  <Text className="text-[16px] font-normal">{item}</Text>
+                  <Text className="text-[6px] text-[#ABABAB]">●</Text>
+                </Stack>
+              ))
+            : data2[mealTypeNum()][day]['menu'][order].map((item: [], index: number) => (
+                <Stack key={index} className="flex-row justify-between items-center">
+                  <Text className="text-[16px] font-normal">{item}</Text>
+                  <Text className="text-[6px] text-[#ABABAB]">●</Text>
+                </Stack>
+              ))}
         </VStack>
       </Box>
     </Container>

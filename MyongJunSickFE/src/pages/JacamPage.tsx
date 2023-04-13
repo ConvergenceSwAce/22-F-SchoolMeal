@@ -1,35 +1,42 @@
 import * as React from 'react';
 import {Text, View} from 'react-native';
 import {createMaterialTopTabNavigator} from '@react-navigation/material-top-tabs';
+import {ScrollView} from 'native-base';
+import MealCard from '../components/MealCard';
 
 function 명진당() {
   return (
-    <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-      <Text>명진당</Text>
-    </View>
+    <ScrollView className="pt-3">
+      <MealCard course={'백반'} mealType={'명진당'} order={0} />
+      <MealCard course={'샐러드'} mealType={'명진당'} order={1} />
+      <MealCard course={'볶음밥'} mealType={'명진당'} order={2} />
+    </ScrollView>
   );
 }
 
 function 학생회관() {
   return (
-    <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-      <Text>학생회관</Text>
-    </View>
+    <ScrollView className="pt-3">
+      <MealCard course={'중식A'} mealType={'학생회관'} order={0} />
+      <MealCard course={'중식B'} mealType={'학생회관'} order={1} />
+    </ScrollView>
   );
 }
 function 생활관식당() {
   return (
-    <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-      <Text>생활관</Text>
-    </View>
+    <ScrollView className="pt-3">
+      <MealCard course={'중식A'} mealType={'생활관식당'} order={0} />
+      <MealCard course={'중식B'} mealType={'생활관식당'} order={1} />
+    </ScrollView>
   );
 }
 
 function 교직원식당() {
   return (
-    <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-      <Text>교직원식당</Text>
-    </View>
+    <ScrollView className="pt-3">
+      <MealCard course={'중식A'} mealType={'교직원식당'} order={0} />
+      <MealCard course={'중식B'} mealType={'교직원식당'} order={1} />
+    </ScrollView>
   );
 }
 
