@@ -3,15 +3,17 @@ import React from 'react';
 import {nowMonth, nowYear} from '../utils/Day';
 import {useSelector} from 'react-redux';
 import {campus} from '../redux/slices/setting';
+import {useSafeAreaInsets} from 'react-native-safe-area-context';
 
 const month: string = nowMonth() || '..';
 const year: string = nowYear() || '....';
 
 const Header = () => {
   const getCampus: boolean = useSelector(campus);
+  const insets = useSafeAreaInsets();
 
   return (
-    <View className="w-screen flex-row justify-between px-[16px]">
+    <View className="w-screen flex-row justify-between px-[16px]" paddingTop={insets.top}>
       <Stack className="flex-row gap-2">
         <Text className="pt-3 flex-wrap text-[28px] font-bold self-center text-[#071648]">
           {month}월
