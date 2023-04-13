@@ -5,9 +5,9 @@ import {Text} from 'react-native';
 import HomeScreen from '../screens/HomeScreen';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import SettingPage from '../screens/SettingScreen';
+import {SafeAreaProvider, useSafeAreaInsets} from 'react-native-safe-area-context';
 
-// eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-call
-const Tab = createBottomTabNavigator();
+const BottomTab = createBottomTabNavigator();
 
 function SearchScreen() {
   return <Text>Search</Text>;
@@ -23,62 +23,65 @@ interface TabBarProps {
 }
 
 const BottomTabNavigation = () => {
+  const insets = useSafeAreaInsets();
+
   return (
-    <NavigationContainer>
-      <Tab.Navigator
-        initialRouteName="Home"
-        screenOptions={{
-          tabBarActiveTintColor: '#071648',
-          tabBarStyle: {
-            bottom: 5,
-            elevation: 0,
-            backgroundColor: '#fff',
-          },
-        }}
-      >
-        <Tab.Screen
-          name="Home"
-          component={HomeScreen}
-          options={{
-            title: '홈',
-            headerShown: false,
-            tabBarIcon: ({color, size}: TabBarProps) => (
-              <Icon name="home" color={color} size={size} />
-            ),
+    <SafeAreaProvider>
+      <NavigationContainer>
+        <BottomTab.Navigator
+          initialRouteName="Home"
+          screenOptions={{
+            tabBarActiveTintColor: '#071648',
+            tabBarStyle: {
+              elevation: 0,
+              paddingBottom: insets.bottom,
+            },
           }}
-        />
-        <Tab.Screen
-          name="Search"
-          component={SearchScreen}
-          options={{
-            title: '룰렛',
-            tabBarIcon: ({color, size}: TabBarProps) => (
-              <Icon name="random" color={color} size={size} />
-            ),
-          }}
-        />
-        <Tab.Screen
-          name="Notification"
-          component={NotificationScreen}
-          options={{
-            title: '맛집지도',
-            tabBarIcon: ({color, size}: TabBarProps) => (
-              <Icon name="map" color={color} size={size} />
-            ),
-          }}
-        />
-        <Tab.Screen
-          name="Setting"
-          component={SettingPage}
-          options={{
-            title: '설정',
-            tabBarIcon: ({color, size}: TabBarProps) => (
-              <Icon name="sliders" color={color} size={size} />
-            ),
-          }}
-        />
-      </Tab.Navigator>
-    </NavigationContainer>
+        >
+          <BottomTab.Screen
+            name="Home"
+            component={HomeScreen}
+            options={{
+              title: '홈',
+              headerShown: false,
+              tabBarIcon: ({color, size}: TabBarProps) => (
+                <Icon name="home" color={color} size={size} />
+              ),
+            }}
+          />
+          <BottomTab.Screen
+            name="Search"
+            component={SearchScreen}
+            options={{
+              title: '룰렛',
+              tabBarIcon: ({color, size}: TabBarProps) => (
+                <Icon name="random" color={color} size={size} />
+              ),
+            }}
+          />
+          <BottomTab.Screen
+            name="Notification"
+            component={NotificationScreen}
+            options={{
+              title: '맛집지도',
+              tabBarIcon: ({color, size}: TabBarProps) => (
+                <Icon name="map" color={color} size={size} />
+              ),
+            }}
+          />
+          <BottomTab.Screen
+            name="Setting"
+            component={SettingPage}
+            options={{
+              title: '설정',
+              tabBarIcon: ({color, size}: TabBarProps) => (
+                <Icon name="sliders" color={color} size={size} />
+              ),
+            }}
+          />
+        </BottomTab.Navigator>
+      </NavigationContainer>
+    </SafeAreaProvider>
   );
 };
 
