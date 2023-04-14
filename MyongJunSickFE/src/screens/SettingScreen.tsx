@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {Center, HStack, Switch, Text, VStack, View} from 'native-base';
+import {Center, HStack, ScrollView, Switch, Text, VStack, View} from 'native-base';
 import {useDispatch, useSelector} from 'react-redux';
 import {campus, setCampus} from '../redux/slices/setting';
 import {setItemToAsync} from '../utils/AsyncStorage';
@@ -18,7 +18,7 @@ const SettingPage = () => {
   };
 
   return (
-    <View className="flex-1 justify-center">
+    <ScrollView className="flex-1 py-[10]">
       <VStack className="items-center space-y-5">
         <Center w="64" h="20" bg="indigo.100" rounded="md" shadow={3}>
           <HStack space={2} alignItems="center">
@@ -57,7 +57,7 @@ const SettingPage = () => {
           <Text>@ 2023 MJS Copyright.</Text>
         </Center>
       </VStack>
-    </View>
+    </ScrollView>
   );
 };
 
