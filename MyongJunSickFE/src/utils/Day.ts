@@ -29,5 +29,8 @@ export const getWeek = (): string[] => {
 
 // 오늘 요일 number 반환
 export const getDay = (): number => {
-  return dayjs().day();
+  const now = dayjs().day();
+  // 주말 식단이 없으므로 1을 반환
+  if (now > 5) return 1;
+  return now;
 };
