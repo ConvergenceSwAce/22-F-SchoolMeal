@@ -63,16 +63,6 @@ const BottomTabNavigation = () => {
             }}
           />
           <BottomTab.Screen
-            name="Search"
-            component={SearchScreen}
-            options={{
-              title: '룰렛',
-              tabBarIcon: ({color, size}: TabBarProps) => (
-                <Icon name="random" color={color} size={size} />
-              ),
-            }}
-          />
-          <BottomTab.Screen
             name="공지사항"
             component={NotificationScreen}
             options={{
