@@ -17,13 +17,11 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.6</string>
+	<string>2.0</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
-	<string>202211011</string>
-	<key>CodePushDeploymentKey</key>
-	<string>${CODEPUSH_KEY}</string>
+	<string>20230415</string>
 	<key>Information Property List</key>
 	<dict>
 		<key>App Uses Non-Exempt Encryption</key>
