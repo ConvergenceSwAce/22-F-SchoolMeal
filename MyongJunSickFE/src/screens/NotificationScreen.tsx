@@ -1,6 +1,7 @@
 import React from 'react';
 import {Box, FlatList, HStack, Heading, Skeleton, Spacer, Text, VStack} from 'native-base';
 import {useGetNoticeQuery} from '../redux/api/mealDataApi';
+import {Linking, TouchableOpacity} from 'react-native';
 
 const NotificationScreen = () => {
   const {data, isLoading, isError} = useGetNoticeQuery({
@@ -27,6 +28,16 @@ const NotificationScreen = () => {
 
   return (
     <Box>
+      <TouchableOpacity
+        onPressOut={() => {
+          Linking.openURL('https://www.mju.ac.kr/mjukr/255/subview.do');
+        }}
+        className="items-center"
+      >
+        <Heading className="text-[#071648] font-bold text-[20px] pt-[10px]">
+          공지사항 바로가기 👈🏻
+        </Heading>
+      </TouchableOpacity>
       <FlatList
         data={data}
         className="flex-0 h-full"
