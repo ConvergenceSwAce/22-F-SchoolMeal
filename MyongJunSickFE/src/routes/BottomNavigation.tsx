@@ -1,20 +1,17 @@
 import React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-import {Text} from 'react-native';
+import {Linking, Text, TouchableOpacity} from 'react-native';
 import HomeScreen from '../screens/HomeScreen';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import SettingPage from '../screens/SettingScreen';
 import {SafeAreaProvider, useSafeAreaInsets} from 'react-native-safe-area-context';
+import NotificationScreen from '../screens/NotificationScreen';
 
 const BottomTab = createBottomTabNavigator();
 
 function SearchScreen() {
   return <Text>Search</Text>;
-}
-
-function NotificationScreen() {
-  return <Text>Notification</Text>;
 }
 
 interface TabBarProps {
@@ -66,22 +63,24 @@ const BottomTabNavigation = () => {
             }}
           />
           <BottomTab.Screen
-            name="Search"
-            component={SearchScreen}
-            options={{
-              title: '룰렛',
-              tabBarIcon: ({color, size}: TabBarProps) => (
-                <Icon name="random" color={color} size={size} />
-              ),
-            }}
-          />
-          <BottomTab.Screen
-            name="Notification"
+            name="공지사항"
             component={NotificationScreen}
             options={{
-              title: '맛집지도',
+              title: '공지사항',
               tabBarIcon: ({color, size}: TabBarProps) => (
-                <Icon name="map" color={color} size={size} />
+                <Icon name="bullhorn" color={color} size={size} />
+              ),
+              headerRight: () => (
+                <TouchableOpacity
+                  onPressOut={() => {
+                    Linking.openURL('https://www.mju.ac.kr/mjukr/255/subview.do');
+                  }}
+                  className="items-center"
+                >
+                  <Text className="text-[#071648] font-bold text-[15px] p-[10px] items-center">
+                    바로가기 👈🏻
+                  </Text>
+                </TouchableOpacity>
               ),
             }}
           />

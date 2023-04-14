@@ -58,7 +58,29 @@ export const MealDataApi = createApi({
         },
       ) {},
     }),
+    getNotice: builder.query({
+      query: () => '/notice',
+      // query결과를 받아서 서버에 요청하여 결과를 받기 전에 캐쉬를 update하거나 다른 처리로 가공할 수 있다
+      async onQueryStarted(
+        arg,
+        {dispatch, getState, extra, requestId, queryFulfilled, getCacheEntry, updateCachedData}, //queryFulfilled는 Promise
+      ) {},
+      // The 2nd parameter is the destructured `QueryCacheLifecycleApi`
+      async onCacheEntryAdded(
+        arg, //endpoint 호출에서 전달된 값 예, { id, post}
+        {
+          dispatch,
+          getState,
+          extra,
+          requestId,
+          cacheEntryRemoved,
+          cacheDataLoaded,
+          getCacheEntry,
+          updateCachedData,
+        },
+      ) {},
+    }),
   }),
 });
 
-export const {useGetIncamMealQuery, useGetJacamMealQuery} = MealDataApi;
+export const {useGetIncamMealQuery, useGetJacamMealQuery, useGetNoticeQuery} = MealDataApi;
