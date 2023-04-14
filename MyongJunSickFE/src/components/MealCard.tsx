@@ -47,17 +47,69 @@ const MealCard = ({
     } else return 0;
   };
 
+  const getTimeText = (mealType: string, course: string) => {
+    if (mealType === 'incam') {
+      if (course === '중식A') {
+        return '11:30 - 14:00';
+      }
+      if (course === '중식B') {
+        return '11:30 - 14:00';
+      }
+
+      if (course === '석식') {
+        return '17:30 - 19:00';
+      } else {
+        return '준비중입니다.';
+      }
+    } else if (mealType === '명진당') {
+      if (course === '백반') {
+        return '11:00 - 14:30';
+      }
+      if (course === '샐러드' || '볶음밥') {
+        return '11:00 - 16:00';
+      } else {
+        return '준비중입니다.';
+      }
+    } else if (mealType === '학생회관') {
+      if (course === '조식') {
+        return '08:30 - 09:30';
+      }
+      if (course === '중식') {
+        return '10:00 - 15:00';
+      } else {
+        return '준비중입니다.';
+      }
+    } else if (mealType === '생활관식당') {
+      if (course === '중식') {
+        return '11:30 - 13:30';
+      }
+      if (course === '석식') {
+        return '17:00 - 18:30';
+      } else {
+        return '준비중입니다.';
+      }
+    } else if (mealType === '교직원식당') {
+      if (course === '점심') {
+        return '11:30 - 13:30';
+      }
+      if (course === '저녁') {
+        return '17:30 - 18:30';
+      } else {
+        return '준비중입니다.';
+      }
+    } else {
+      return '준비중입니다.';
+    }
+  };
+
   if (isError || !data || isLoading || isError2 || !data2 || isLoading2) {
     return <CardSkeleton />;
   }
-
   return (
     <Container className="flex-col w-screen items-center self-center">
       <Stack className="w-screen flex-row justify-between px-[16px]">
         <Text className="text-[18px] font-bold">오늘의 {course}</Text>
-        <Text className="text-[#7B7B7B] text-[14px]">
-          {course === '석식' ? '17:30 - 19:00' : '11:30 - 14:00'}
-        </Text>
+        <Text className="text-[#7B7B7B] text-[14px]">{getTimeText(mealType, course)}</Text>
       </Stack>
       <Box className="w-screen flex-col px-[16px] py-[24px]">
         <VStack

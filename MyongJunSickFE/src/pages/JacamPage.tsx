@@ -16,16 +16,16 @@ function 명진당() {
 function 학생회관() {
   return (
     <ScrollView className="pt-3">
-      <MealCard course={'중식A'} mealType={'학생회관'} order={0} />
-      <MealCard course={'중식B'} mealType={'학생회관'} order={1} />
+      <MealCard course={'조식'} mealType={'학생회관'} order={0} />
+      <MealCard course={'중식'} mealType={'학생회관'} order={1} />
     </ScrollView>
   );
 }
 function 생활관식당() {
   return (
     <ScrollView className="pt-3">
-      <MealCard course={'중식A'} mealType={'생활관식당'} order={0} />
-      <MealCard course={'중식B'} mealType={'생활관식당'} order={1} />
+      <MealCard course={'중식'} mealType={'생활관식당'} order={0} />
+      <MealCard course={'석식'} mealType={'생활관식당'} order={1} />
     </ScrollView>
   );
 }
@@ -33,8 +33,8 @@ function 생활관식당() {
 function 교직원식당() {
   return (
     <ScrollView className="pt-3">
-      <MealCard course={'중식A'} mealType={'교직원식당'} order={0} />
-      <MealCard course={'중식B'} mealType={'교직원식당'} order={1} />
+      <MealCard course={'점심'} mealType={'교직원식당'} order={0} />
+      <MealCard course={'저녁'} mealType={'교직원식당'} order={1} />
     </ScrollView>
   );
 }
