@@ -6,15 +6,12 @@ import HomeScreen from '../screens/HomeScreen';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import SettingPage from '../screens/SettingScreen';
 import {SafeAreaProvider, useSafeAreaInsets} from 'react-native-safe-area-context';
+import NotificationScreen from '../screens/NotificationScreen';
 
 const BottomTab = createBottomTabNavigator();
 
 function SearchScreen() {
   return <Text>Search</Text>;
-}
-
-function NotificationScreen() {
-  return <Text>Notification</Text>;
 }
 
 interface TabBarProps {
@@ -76,12 +73,12 @@ const BottomTabNavigation = () => {
             }}
           />
           <BottomTab.Screen
-            name="Notification"
+            name="공지사항"
             component={NotificationScreen}
             options={{
-              title: '맛집지도',
+              title: '공지사항',
               tabBarIcon: ({color, size}: TabBarProps) => (
-                <Icon name="map" color={color} size={size} />
+                <Icon name="bullhorn" color={color} size={size} />
               ),
             }}
           />
