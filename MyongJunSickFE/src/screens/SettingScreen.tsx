@@ -27,16 +27,6 @@ const SettingPage = () => {
             <Text>자연캠퍼스</Text>
           </HStack>
         </Center>
-        <Center w="64" h="20" bg="indigo.200" rounded="md" shadow={3}>
-          <TouchableOpacity
-            className="w-64 h-20 items-center justify-center"
-            onPressOut={() => {
-              Linking.openURL('https://toss.me/grayash/1000');
-            }}
-          >
-            <Text>☕️커피 값 후원하기☕️</Text>
-          </TouchableOpacity>
-        </Center>
         <Center w="64" h="20" bg="indigo.300" rounded="md" shadow={3}>
           <TouchableOpacity
             className="w-64 h-20 items-center justify-center"
