@@ -1,7 +1,6 @@
 /// <reference types="nativewind/types" />
 
 import React, {useEffect} from 'react';
-import codePush from 'react-native-code-push';
 import SplashScreen from 'react-native-splash-screen';
 import BottomNavigation from './src/routes/BottomNavigation';
 import {NativeBaseProvider, extendTheme} from 'native-base';
@@ -22,13 +21,13 @@ function App() {
   });
 
   return (
-    <Provider store={store}>
-      <NativeBaseProvider theme={theme}>
+    <NativeBaseProvider theme={theme}>
+      <Provider store={store}>
         <StatusBar barStyle={'dark-content'} />
         <BottomNavigation />
-      </NativeBaseProvider>
-    </Provider>
+      </Provider>
+    </NativeBaseProvider>
   );
 }
 
-export default codePush(App);
+export default App;

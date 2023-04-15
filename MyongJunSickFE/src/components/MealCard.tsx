@@ -16,7 +16,6 @@ const MealCard = ({
   const day: number = useSelector((state: RootState) => state.pickDay.day);
 
   const {data, isLoading, isError} = useGetIncamMealQuery({
-    pollingInterval: 3000,
     refetchOnReconnect: true,
     refetchOnMountOrArgChange: true,
     skip: false,
@@ -27,7 +26,6 @@ const MealCard = ({
     isLoading: isLoading2,
     isError: isError2,
   } = useGetJacamMealQuery({
-    pollingInterval: 3000,
     refetchOnReconnect: true,
     refetchOnMountOrArgChange: true,
     skip: false,
