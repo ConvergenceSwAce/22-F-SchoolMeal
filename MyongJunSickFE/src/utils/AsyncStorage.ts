@@ -14,6 +14,7 @@ const isEmpty = function (value: any) {
 };
 
 // AsyncStorage get 함수 모듈
+
 export const getItemFromAsync = (storageName: string) => {
   if (isEmpty(storageName)) {
     throw Error('Storage Name is empty');
@@ -29,7 +30,7 @@ export const getItemFromAsync = (storageName: string) => {
         resolve(null);
       }
 
-      resolve(JSON.parse(result));
+      resolve(result);
     });
   });
 };
@@ -41,7 +42,7 @@ export const setItemToAsync = (storageName: string, item: string) => {
   }
 
   return new Promise((resolve, reject) => {
-    AsyncStorage.setItem(storageName, JSON.stringify(item), error => {
+    AsyncStorage.setItem(storageName, item, error => {
       if (error) {
         reject(error);
       }

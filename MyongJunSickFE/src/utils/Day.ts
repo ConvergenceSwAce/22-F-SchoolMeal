@@ -31,6 +31,6 @@ export const getWeek = (): string[] => {
 export const getDay = (): number => {
   const now = dayjs().day();
   // 주말 식단이 없으므로 1을 반환
-  if (now > 5) return 1;
+  if (now === 0 || 6) return 1;
   return now;
 };
