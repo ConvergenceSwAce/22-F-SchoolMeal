@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 
 import DayPicker from '../components/DayPicker';
 import Header from '../components/Header';
@@ -6,27 +6,11 @@ import {useGetIncamMealQuery, useGetJacamMealQuery} from '../redux/api/mealDataA
 import ErrorModal from '../components/ErrorModal';
 import IncamPage from '../pages/IncamPage';
 import JacamPage from '../pages/JacamPage';
-import {useDispatch, useSelector} from 'react-redux';
-import {campus, setCampus} from '../redux/slices/setting';
-import {getItemFromAsync} from '../utils/AsyncStorage';
+import {useSelector} from 'react-redux';
+import {campus} from '../redux/slices/setting';
 
 const Home = () => {
   const getCampus: boolean = useSelector(campus);
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-    getItemFromAsync('campus')
-      .then(res => {
-        if (res === 'incam') {
-          dispatch(setCampus(false));
-        } else if (res === 'jacam') {
-          dispatch(setCampus(true));
-        }
-      })
-      .catch(err => {
-        console.log(err);
-      });
-  }, []);
 
   const {isError} = useGetIncamMealQuery({
     refetchOnReconnect: true,

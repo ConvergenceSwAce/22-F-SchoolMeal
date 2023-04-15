@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {Linking, Text, TouchableOpacity} from 'react-native';
@@ -6,6 +6,9 @@ import HomeScreen from '../screens/HomeScreen';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import SettingPage from '../screens/SettingScreen';
 import NotificationScreen from '../screens/NotificationScreen';
+import {getItemFromAsync, setItemToAsync} from '../utils/AsyncStorage';
+import {useDispatch} from 'react-redux';
+import {setCampus} from '../redux/slices/setting';
 
 const BottomTab = createBottomTabNavigator();
 
@@ -15,6 +18,22 @@ interface TabBarProps {
 }
 
 const BottomTabNavigation = () => {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    getItemFromAsync('campus')
+      .then(res => {
+        if (res === 'incam') {
+          dispatch(setCampus(false));
+        } else if (res === 'jacam') {
+          dispatch(setCampus(true));
+        }
+      })
+      .catch(err => {
+        setItemToAsync('campus', 'incam');
+        dispatch(setCampus(false));
+      });
+  }, []);
   const MyTheme = {
     dark: false,
     colors: {
