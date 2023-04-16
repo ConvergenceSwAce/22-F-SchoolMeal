@@ -58,9 +58,7 @@
 ### 프로젝트 기간
 
 - 기획 및 설계 : 22.09.29 ~ (진행중)
-- 프로젝트 개발 : (V.1 Completed)
-
-- V.2 진행중
+- 프로젝트 개발 : (V.1 Completed) ~ (V.2 Completed)
 
 ### 프로젝트 기획, 설명
 
@@ -102,7 +100,6 @@
 <img src="https://img.shields.io/badge/AWS API Gateway-FF4F8B?style=for-the-badge&logo=Amazon+API+Gateway&logoColor=white">
 <h3>🧑🏻‍🎨Design Tool👩🏻‍🎨</h3>
 <img src="https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=Figma&logoColor=white">
-<img src="https://img.shields.io/badge/Zeplin-FFB230?style=for-the-badge&logo=Zeplin&logoColor=white">
 <h3>👥Collaborative Tool👥</h3>
 <img src="https://img.shields.io/badge/github-181717?style=for-the-badge&logo=github&logoColor=white">
 <img src="https://img.shields.io/badge/git-F05032?style=for-the-badge&logo=git&logoColor=white">
