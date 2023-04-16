@@ -8,16 +8,32 @@
 
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* MyongJunSickFETests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* MyongJunSickFETests.m */; };
-		0C80B921A6F3F58F76C31292 /* libPods-MyongJunSickFE.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DCACB8F33CDC322A6C60F78 /* libPods-MyongJunSickFE.a */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		1D3D8970F0AC42D0B2A9ACF1 /* NotoSansKR-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0E713CD663584993A97FD452 /* NotoSansKR-Bold.otf */; };
 		42C577FFAE944689AAFDCBA3 /* NotoSansKR-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 09D21E0BFBAC4E4991565BA8 /* NotoSansKR-Black.otf */; };
 		4AC0E6D207E0418ABCF08642 /* NotoSansKR-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 95C3A4BA95EF4200BD15CBCC /* NotoSansKR-Light.otf */; };
-		7699B88040F8A987B510C191 /* libPods-MyongJunSickFE-MyongJunSickFETests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-MyongJunSickFE-MyongJunSickFETests.a */; };
+		85CAC172F1FA131F92AE97F1 /* libPods-MyongJunSickFE-MyongJunSickFETests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DAF7FD827955A9F7EBBF8AE /* libPods-MyongJunSickFE-MyongJunSickFETests.a */; };
+		8AFE3692DC9B965973F62C1C /* libPods-MyongJunSickFE.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 848CA2FE5652B79F0BABA31E /* libPods-MyongJunSickFE.a */; };
 		9D9D6A99EB944636816848F2 /* NotoSansKR-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3EEC10090A614FF488B6541A /* NotoSansKR-Medium.otf */; };
-		B3CBC5E12904E64400D8CD23 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3CBC5E02904E64400D8CD23 /* Launch Screen.storyboard */; };
+		B3187FD729E1E7840077F6B8 /* Fontisto.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B3187FC729E1E7840077F6B8 /* Fontisto.ttf */; };
+		B3187FD829E1E7840077F6B8 /* Octicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B3187FC829E1E7840077F6B8 /* Octicons.ttf */; };
+		B3187FD929E1E7840077F6B8 /* Feather.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B3187FC929E1E7840077F6B8 /* Feather.ttf */; };
+		B3187FDA29E1E7840077F6B8 /* Entypo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B3187FCA29E1E7840077F6B8 /* Entypo.ttf */; };
+		B3187FDB29E1E7840077F6B8 /* FontAwesome5_Brands.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B3187FCB29E1E7840077F6B8 /* FontAwesome5_Brands.ttf */; };
+		B3187FDC29E1E7840077F6B8 /* MaterialCommunityIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B3187FCC29E1E7840077F6B8 /* MaterialCommunityIcons.ttf */; };
+		B3187FDD29E1E7840077F6B8 /* AntDesign.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B3187FCD29E1E7840077F6B8 /* AntDesign.ttf */; };
+		B3187FDE29E1E7840077F6B8 /* Foundation.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B3187FCE29E1E7840077F6B8 /* Foundation.ttf */; };
+		B3187FDF29E1E7840077F6B8 /* Ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B3187FCF29E1E7840077F6B8 /* Ionicons.ttf */; };
+		B3187FE029E1E7840077F6B8 /* FontAwesome5_Solid.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B3187FD029E1E7840077F6B8 /* FontAwesome5_Solid.ttf */; };
+		B3187FE129E1E7840077F6B8 /* FontAwesome5_Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B3187FD129E1E7840077F6B8 /* FontAwesome5_Regular.ttf */; };
+		B3187FE229E1E7840077F6B8 /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B3187FD229E1E7840077F6B8 /* FontAwesome.ttf */; };
+		B3187FE329E1E7840077F6B8 /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B3187FD329E1E7840077F6B8 /* Zocial.ttf */; };
+		B3187FE429E1E7840077F6B8 /* EvilIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B3187FD429E1E7840077F6B8 /* EvilIcons.ttf */; };
+		B3187FE529E1E7840077F6B8 /* SimpleLineIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B3187FD529E1E7840077F6B8 /* SimpleLineIcons.ttf */; };
+		B3187FE629E1E7840077F6B8 /* MaterialIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B3187FD629E1E7840077F6B8 /* MaterialIcons.ttf */; };
+		B38E647B29D45AF0001DF780 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B38E647A29D45AF0001DF780 /* Launch Screen.storyboard */; };
 		CD34CCC81B4E42C1B21005DE /* NotoSansKR-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1C638D5E781F4BF7879E773F /* NotoSansKR-Thin.otf */; };
 		F4DFF899BBD44A328D2783D4 /* NotoSansKR-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8A352CFCA1A2471D8B4781A4 /* NotoSansKR-Regular.otf */; };
 /* End PBXBuildFile section */
@@ -36,6 +52,7 @@
 		00E356EE1AD99517003FC87E /* MyongJunSickFETests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyongJunSickFETests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* MyongJunSickFETests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyongJunSickFETests.m; sourceTree = "<group>"; };
+		02DDD4719DCDD36B102C765B /* Pods-MyongJunSickFE.staging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyongJunSickFE.staging.xcconfig"; path = "Target Support Files/Pods-MyongJunSickFE/Pods-MyongJunSickFE.staging.xcconfig"; sourceTree = "<group>"; };
 		09D21E0BFBAC4E4991565BA8 /* NotoSansKR-Black.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "NotoSansKR-Black.otf"; path = "../assets/fonts/NotoSansKR-Black.otf"; sourceTree = "<group>"; };
 		0E713CD663584993A97FD452 /* NotoSansKR-Bold.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "NotoSansKR-Bold.otf"; path = "../assets/fonts/NotoSansKR-Bold.otf"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* MyongJunSickFE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyongJunSickFE.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,19 +61,34 @@
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = MyongJunSickFE/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = MyongJunSickFE/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = MyongJunSickFE/main.m; sourceTree = "<group>"; };
-		19F6CBCC0A4E27FBF8BF4A61 /* libPods-MyongJunSickFE-MyongJunSickFETests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MyongJunSickFE-MyongJunSickFETests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C638D5E781F4BF7879E773F /* NotoSansKR-Thin.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "NotoSansKR-Thin.otf"; path = "../assets/fonts/NotoSansKR-Thin.otf"; sourceTree = "<group>"; };
-		3B4392A12AC88292D35C810B /* Pods-MyongJunSickFE.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyongJunSickFE.debug.xcconfig"; path = "Target Support Files/Pods-MyongJunSickFE/Pods-MyongJunSickFE.debug.xcconfig"; sourceTree = "<group>"; };
+		1DAF7FD827955A9F7EBBF8AE /* libPods-MyongJunSickFE-MyongJunSickFETests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MyongJunSickFE-MyongJunSickFETests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EEC10090A614FF488B6541A /* NotoSansKR-Medium.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "NotoSansKR-Medium.otf"; path = "../assets/fonts/NotoSansKR-Medium.otf"; sourceTree = "<group>"; };
-		5709B34CF0A7D63546082F79 /* Pods-MyongJunSickFE.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyongJunSickFE.release.xcconfig"; path = "Target Support Files/Pods-MyongJunSickFE/Pods-MyongJunSickFE.release.xcconfig"; sourceTree = "<group>"; };
-		5B7EB9410499542E8C5724F5 /* Pods-MyongJunSickFE-MyongJunSickFETests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyongJunSickFE-MyongJunSickFETests.debug.xcconfig"; path = "Target Support Files/Pods-MyongJunSickFE-MyongJunSickFETests/Pods-MyongJunSickFE-MyongJunSickFETests.debug.xcconfig"; sourceTree = "<group>"; };
-		5DCACB8F33CDC322A6C60F78 /* libPods-MyongJunSickFE.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MyongJunSickFE.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		68820F28868C4CE89B04213F /* Pods-MyongJunSickFE-MyongJunSickFETests.staging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyongJunSickFE-MyongJunSickFETests.staging.xcconfig"; path = "Target Support Files/Pods-MyongJunSickFE-MyongJunSickFETests/Pods-MyongJunSickFE-MyongJunSickFETests.staging.xcconfig"; sourceTree = "<group>"; };
-		89C6BE57DB24E9ADA2F236DE /* Pods-MyongJunSickFE-MyongJunSickFETests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyongJunSickFE-MyongJunSickFETests.release.xcconfig"; path = "Target Support Files/Pods-MyongJunSickFE-MyongJunSickFETests/Pods-MyongJunSickFE-MyongJunSickFETests.release.xcconfig"; sourceTree = "<group>"; };
+		416A7CA505EEE699D383DD02 /* Pods-MyongJunSickFE.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyongJunSickFE.debug.xcconfig"; path = "Target Support Files/Pods-MyongJunSickFE/Pods-MyongJunSickFE.debug.xcconfig"; sourceTree = "<group>"; };
+		73A7D680B46894FE62C21ACC /* Pods-MyongJunSickFE.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyongJunSickFE.release.xcconfig"; path = "Target Support Files/Pods-MyongJunSickFE/Pods-MyongJunSickFE.release.xcconfig"; sourceTree = "<group>"; };
+		848CA2FE5652B79F0BABA31E /* libPods-MyongJunSickFE.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MyongJunSickFE.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A352CFCA1A2471D8B4781A4 /* NotoSansKR-Regular.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "NotoSansKR-Regular.otf"; path = "../assets/fonts/NotoSansKR-Regular.otf"; sourceTree = "<group>"; };
 		95C3A4BA95EF4200BD15CBCC /* NotoSansKR-Light.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "NotoSansKR-Light.otf"; path = "../assets/fonts/NotoSansKR-Light.otf"; sourceTree = "<group>"; };
-		B3CBC5E02904E64400D8CD23 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
-		D2C740F45D8845C2D29D09E4 /* Pods-MyongJunSickFE.staging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyongJunSickFE.staging.xcconfig"; path = "Target Support Files/Pods-MyongJunSickFE/Pods-MyongJunSickFE.staging.xcconfig"; sourceTree = "<group>"; };
+		994F793D96624A6D19874855 /* Pods-MyongJunSickFE-MyongJunSickFETests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyongJunSickFE-MyongJunSickFETests.debug.xcconfig"; path = "Target Support Files/Pods-MyongJunSickFE-MyongJunSickFETests/Pods-MyongJunSickFE-MyongJunSickFETests.debug.xcconfig"; sourceTree = "<group>"; };
+		B13F5A27CB9ABC95C1016C07 /* Pods-MyongJunSickFE-MyongJunSickFETests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyongJunSickFE-MyongJunSickFETests.release.xcconfig"; path = "Target Support Files/Pods-MyongJunSickFE-MyongJunSickFETests/Pods-MyongJunSickFE-MyongJunSickFETests.release.xcconfig"; sourceTree = "<group>"; };
+		B3187FC729E1E7840077F6B8 /* Fontisto.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Fontisto.ttf; sourceTree = "<group>"; };
+		B3187FC829E1E7840077F6B8 /* Octicons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Octicons.ttf; sourceTree = "<group>"; };
+		B3187FC929E1E7840077F6B8 /* Feather.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Feather.ttf; sourceTree = "<group>"; };
+		B3187FCA29E1E7840077F6B8 /* Entypo.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Entypo.ttf; sourceTree = "<group>"; };
+		B3187FCB29E1E7840077F6B8 /* FontAwesome5_Brands.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome5_Brands.ttf; sourceTree = "<group>"; };
+		B3187FCC29E1E7840077F6B8 /* MaterialCommunityIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = MaterialCommunityIcons.ttf; sourceTree = "<group>"; };
+		B3187FCD29E1E7840077F6B8 /* AntDesign.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = AntDesign.ttf; sourceTree = "<group>"; };
+		B3187FCE29E1E7840077F6B8 /* Foundation.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Foundation.ttf; sourceTree = "<group>"; };
+		B3187FCF29E1E7840077F6B8 /* Ionicons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Ionicons.ttf; sourceTree = "<group>"; };
+		B3187FD029E1E7840077F6B8 /* FontAwesome5_Solid.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome5_Solid.ttf; sourceTree = "<group>"; };
+		B3187FD129E1E7840077F6B8 /* FontAwesome5_Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome5_Regular.ttf; sourceTree = "<group>"; };
+		B3187FD229E1E7840077F6B8 /* FontAwesome.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome.ttf; sourceTree = "<group>"; };
+		B3187FD329E1E7840077F6B8 /* Zocial.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Zocial.ttf; sourceTree = "<group>"; };
+		B3187FD429E1E7840077F6B8 /* EvilIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = EvilIcons.ttf; sourceTree = "<group>"; };
+		B3187FD529E1E7840077F6B8 /* SimpleLineIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SimpleLineIcons.ttf; sourceTree = "<group>"; };
+		B3187FD629E1E7840077F6B8 /* MaterialIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = MaterialIcons.ttf; sourceTree = "<group>"; };
+		B38E647A29D45AF0001DF780 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		E1EFA208ABC54FAB404110A5 /* Pods-MyongJunSickFE-MyongJunSickFETests.staging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyongJunSickFE-MyongJunSickFETests.staging.xcconfig"; path = "Target Support Files/Pods-MyongJunSickFE-MyongJunSickFETests/Pods-MyongJunSickFE-MyongJunSickFETests.staging.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -65,7 +97,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7699B88040F8A987B510C191 /* libPods-MyongJunSickFE-MyongJunSickFETests.a in Frameworks */,
+				85CAC172F1FA131F92AE97F1 /* libPods-MyongJunSickFE-MyongJunSickFETests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -73,7 +105,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0C80B921A6F3F58F76C31292 /* libPods-MyongJunSickFE.a in Frameworks */,
+				8AFE3692DC9B965973F62C1C /* libPods-MyongJunSickFE.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -103,9 +135,9 @@
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.mm */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
-				B3CBC5E02904E64400D8CD23 /* Launch Screen.storyboard */,
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				13B07FB71A68108700A75B9A /* main.m */,
+				B38E647A29D45AF0001DF780 /* Launch Screen.storyboard */,
 			);
 			name = MyongJunSickFE;
 			sourceTree = "<group>";
@@ -114,8 +146,8 @@
 			isa = PBXGroup;
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
-				5DCACB8F33CDC322A6C60F78 /* libPods-MyongJunSickFE.a */,
-				19F6CBCC0A4E27FBF8BF4A61 /* libPods-MyongJunSickFE-MyongJunSickFETests.a */,
+				848CA2FE5652B79F0BABA31E /* libPods-MyongJunSickFE.a */,
+				1DAF7FD827955A9F7EBBF8AE /* libPods-MyongJunSickFE-MyongJunSickFETests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -155,6 +187,7 @@
 		93C7188B9E334F59AEE41D3B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				B3187FC629E1E7840077F6B8 /* Fonts */,
 				09D21E0BFBAC4E4991565BA8 /* NotoSansKR-Black.otf */,
 				0E713CD663584993A97FD452 /* NotoSansKR-Bold.otf */,
 				95C3A4BA95EF4200BD15CBCC /* NotoSansKR-Light.otf */,
@@ -165,15 +198,39 @@
 			name = Resources;
 			sourceTree = "<group>";
 		};
+		B3187FC629E1E7840077F6B8 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				B3187FC729E1E7840077F6B8 /* Fontisto.ttf */,
+				B3187FC829E1E7840077F6B8 /* Octicons.ttf */,
+				B3187FC929E1E7840077F6B8 /* Feather.ttf */,
+				B3187FCA29E1E7840077F6B8 /* Entypo.ttf */,
+				B3187FCB29E1E7840077F6B8 /* FontAwesome5_Brands.ttf */,
+				B3187FCC29E1E7840077F6B8 /* MaterialCommunityIcons.ttf */,
+				B3187FCD29E1E7840077F6B8 /* AntDesign.ttf */,
+				B3187FCE29E1E7840077F6B8 /* Foundation.ttf */,
+				B3187FCF29E1E7840077F6B8 /* Ionicons.ttf */,
+				B3187FD029E1E7840077F6B8 /* FontAwesome5_Solid.ttf */,
+				B3187FD129E1E7840077F6B8 /* FontAwesome5_Regular.ttf */,
+				B3187FD229E1E7840077F6B8 /* FontAwesome.ttf */,
+				B3187FD329E1E7840077F6B8 /* Zocial.ttf */,
+				B3187FD429E1E7840077F6B8 /* EvilIcons.ttf */,
+				B3187FD529E1E7840077F6B8 /* SimpleLineIcons.ttf */,
+				B3187FD629E1E7840077F6B8 /* MaterialIcons.ttf */,
+			);
+			name = Fonts;
+			path = "../node_modules/react-native-vector-icons/Fonts";
+			sourceTree = "<group>";
+		};
 		BBD78D7AC51CEA395F1C20DB /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				3B4392A12AC88292D35C810B /* Pods-MyongJunSickFE.debug.xcconfig */,
-				5709B34CF0A7D63546082F79 /* Pods-MyongJunSickFE.release.xcconfig */,
-				5B7EB9410499542E8C5724F5 /* Pods-MyongJunSickFE-MyongJunSickFETests.debug.xcconfig */,
-				89C6BE57DB24E9ADA2F236DE /* Pods-MyongJunSickFE-MyongJunSickFETests.release.xcconfig */,
-				D2C740F45D8845C2D29D09E4 /* Pods-MyongJunSickFE.staging.xcconfig */,
-				68820F28868C4CE89B04213F /* Pods-MyongJunSickFE-MyongJunSickFETests.staging.xcconfig */,
+				416A7CA505EEE699D383DD02 /* Pods-MyongJunSickFE.debug.xcconfig */,
+				73A7D680B46894FE62C21ACC /* Pods-MyongJunSickFE.release.xcconfig */,
+				02DDD4719DCDD36B102C765B /* Pods-MyongJunSickFE.staging.xcconfig */,
+				994F793D96624A6D19874855 /* Pods-MyongJunSickFE-MyongJunSickFETests.debug.xcconfig */,
+				B13F5A27CB9ABC95C1016C07 /* Pods-MyongJunSickFE-MyongJunSickFETests.release.xcconfig */,
+				E1EFA208ABC54FAB404110A5 /* Pods-MyongJunSickFE-MyongJunSickFETests.staging.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -185,12 +242,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "MyongJunSickFETests" */;
 			buildPhases = (
-				A55EABD7B0C7F3A422A6CC61 /* [CP] Check Pods Manifest.lock */,
+				E48AB3126DB4E733321B45DC /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
 				00E356EB1AD99517003FC87E /* Frameworks */,
 				00E356EC1AD99517003FC87E /* Resources */,
-				C59DA0FBD6956966B86A3779 /* [CP] Embed Pods Frameworks */,
-				F6A41C54EA430FDDC6A6ED99 /* [CP] Copy Pods Resources */,
+				418C2D4C5C81776DCE31CFCF /* [CP] Embed Pods Frameworks */,
+				AAFAEF01D7A2972C927BCF23 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -206,14 +263,14 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "MyongJunSickFE" */;
 			buildPhases = (
-				C38B50BA6285516D6DCD4F65 /* [CP] Check Pods Manifest.lock */,
+				C5DF7BED4C26248C71A33456 /* [CP] Check Pods Manifest.lock */,
 				FD10A7F022414F080027D42C /* Start Packager */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
-				00EEFC60759A1932668264C0 /* [CP] Embed Pods Frameworks */,
-				E235C05ADACE081382539298 /* [CP] Copy Pods Resources */,
+				C8F7947C156AA753BB8D3962 /* [CP] Embed Pods Frameworks */,
+				134223691F67458F7F718809 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -230,7 +287,7 @@
 		83CBB9F71A601CBA00E9B192 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1400;
+				LastUpgradeCheck = 1420;
 				TargetAttributes = {
 					00E356ED1AD99517003FC87E = {
 						CreatedOnToolsVersion = 6.2;
@@ -272,12 +329,28 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B3CBC5E12904E64400D8CD23 /* Launch Screen.storyboard in Resources */,
+				B3187FD829E1E7840077F6B8 /* Octicons.ttf in Resources */,
+				B3187FE429E1E7840077F6B8 /* EvilIcons.ttf in Resources */,
+				B3187FDE29E1E7840077F6B8 /* Foundation.ttf in Resources */,
+				B3187FDA29E1E7840077F6B8 /* Entypo.ttf in Resources */,
+				B3187FD929E1E7840077F6B8 /* Feather.ttf in Resources */,
+				B3187FDF29E1E7840077F6B8 /* Ionicons.ttf in Resources */,
+				B3187FD729E1E7840077F6B8 /* Fontisto.ttf in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				B3187FE629E1E7840077F6B8 /* MaterialIcons.ttf in Resources */,
+				B3187FDB29E1E7840077F6B8 /* FontAwesome5_Brands.ttf in Resources */,
 				42C577FFAE944689AAFDCBA3 /* NotoSansKR-Black.otf in Resources */,
+				B38E647B29D45AF0001DF780 /* Launch Screen.storyboard in Resources */,
+				B3187FE129E1E7840077F6B8 /* FontAwesome5_Regular.ttf in Resources */,
+				B3187FE229E1E7840077F6B8 /* FontAwesome.ttf in Resources */,
+				B3187FDC29E1E7840077F6B8 /* MaterialCommunityIcons.ttf in Resources */,
+				B3187FE329E1E7840077F6B8 /* Zocial.ttf in Resources */,
+				B3187FDD29E1E7840077F6B8 /* AntDesign.ttf in Resources */,
 				1D3D8970F0AC42D0B2A9ACF1 /* NotoSansKR-Bold.otf in Resources */,
 				4AC0E6D207E0418ABCF08642 /* NotoSansKR-Light.otf in Resources */,
 				9D9D6A99EB944636816848F2 /* NotoSansKR-Medium.otf in Resources */,
+				B3187FE029E1E7840077F6B8 /* FontAwesome5_Solid.ttf in Resources */,
+				B3187FE529E1E7840077F6B8 /* SimpleLineIcons.ttf in Resources */,
 				F4DFF899BBD44A328D2783D4 /* NotoSansKR-Regular.otf in Resources */,
 				CD34CCC81B4E42C1B21005DE /* NotoSansKR-Thin.otf in Resources */,
 			);
@@ -302,46 +375,58 @@
 			shellPath = /bin/sh;
 			shellScript = "set -e\n\nWITH_ENVIRONMENT=\"../node_modules/react-native/scripts/xcode/with-environment.sh\"\nREACT_NATIVE_XCODE=\"../node_modules/react-native/scripts/react-native-xcode.sh\"\n\n/bin/sh -c \"$WITH_ENVIRONMENT $REACT_NATIVE_XCODE\"\n";
 		};
-		00EEFC60759A1932668264C0 /* [CP] Embed Pods Frameworks */ = {
+		134223691F67458F7F718809 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MyongJunSickFE/Pods-MyongJunSickFE-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-MyongJunSickFE/Pods-MyongJunSickFE-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MyongJunSickFE/Pods-MyongJunSickFE-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MyongJunSickFE/Pods-MyongJunSickFE-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		418C2D4C5C81776DCE31CFCF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MyongJunSickFE-MyongJunSickFETests/Pods-MyongJunSickFE-MyongJunSickFETests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MyongJunSickFE/Pods-MyongJunSickFE-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-MyongJunSickFE-MyongJunSickFETests/Pods-MyongJunSickFE-MyongJunSickFETests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MyongJunSickFE/Pods-MyongJunSickFE-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MyongJunSickFE-MyongJunSickFETests/Pods-MyongJunSickFE-MyongJunSickFETests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		A55EABD7B0C7F3A422A6CC61 /* [CP] Check Pods Manifest.lock */ = {
+		AAFAEF01D7A2972C927BCF23 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MyongJunSickFE-MyongJunSickFETests/Pods-MyongJunSickFE-MyongJunSickFETests-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
+			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-MyongJunSickFE-MyongJunSickFETests-checkManifestLockResult.txt",
+				"${PODS_ROOT}/Target Support Files/Pods-MyongJunSickFE-MyongJunSickFETests/Pods-MyongJunSickFE-MyongJunSickFETests-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MyongJunSickFE-MyongJunSickFETests/Pods-MyongJunSickFE-MyongJunSickFETests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C38B50BA6285516D6DCD4F65 /* [CP] Check Pods Manifest.lock */ = {
+		C5DF7BED4C26248C71A33456 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -363,55 +448,43 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C59DA0FBD6956966B86A3779 /* [CP] Embed Pods Frameworks */ = {
+		C8F7947C156AA753BB8D3962 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MyongJunSickFE-MyongJunSickFETests/Pods-MyongJunSickFE-MyongJunSickFETests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-MyongJunSickFE/Pods-MyongJunSickFE-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MyongJunSickFE-MyongJunSickFETests/Pods-MyongJunSickFE-MyongJunSickFETests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-MyongJunSickFE/Pods-MyongJunSickFE-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MyongJunSickFE-MyongJunSickFETests/Pods-MyongJunSickFE-MyongJunSickFETests-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MyongJunSickFE/Pods-MyongJunSickFE-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		E235C05ADACE081382539298 /* [CP] Copy Pods Resources */ = {
+		E48AB3126DB4E733321B45DC /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MyongJunSickFE/Pods-MyongJunSickFE-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			name = "[CP] Copy Pods Resources";
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MyongJunSickFE/Pods-MyongJunSickFE-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MyongJunSickFE-MyongJunSickFETests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MyongJunSickFE/Pods-MyongJunSickFE-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		F6A41C54EA430FDDC6A6ED99 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MyongJunSickFE-MyongJunSickFETests/Pods-MyongJunSickFE-MyongJunSickFETests-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MyongJunSickFE-MyongJunSickFETests/Pods-MyongJunSickFE-MyongJunSickFETests-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MyongJunSickFE-MyongJunSickFETests/Pods-MyongJunSickFE-MyongJunSickFETests-resources.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FD10A7F022414F080027D42C /* Start Packager */ = {
@@ -466,7 +539,7 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5B7EB9410499542E8C5724F5 /* Pods-MyongJunSickFE-MyongJunSickFETests.debug.xcconfig */;
+			baseConfigurationReference = 994F793D96624A6D19874855 /* Pods-MyongJunSickFE-MyongJunSickFETests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -494,7 +567,7 @@
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 89C6BE57DB24E9ADA2F236DE /* Pods-MyongJunSickFE-MyongJunSickFETests.release.xcconfig */;
+			baseConfigurationReference = B13F5A27CB9ABC95C1016C07 /* Pods-MyongJunSickFE-MyongJunSickFETests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -519,17 +592,15 @@
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3B4392A12AC88292D35C810B /* Pods-MyongJunSickFE.debug.xcconfig */;
+			baseConfigurationReference = 416A7CA505EEE699D383DD02 /* Pods-MyongJunSickFE.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "Apple Development";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
-				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 202211011;
-				DEVELOPMENT_TEAM = "";
-				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 5UU4FUZH93;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 20230416;
+				DEVELOPMENT_TEAM = 5UU4FUZH93;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = MyongJunSickFE/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "명준식";
@@ -538,7 +609,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.5;
+				MARKETING_VERSION = 2.0.1;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
@@ -547,7 +618,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mju.convergence-software";
 				PRODUCT_NAME = MyongJunSickFE;
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = MjsMealAppProfile;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -556,17 +626,15 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5709B34CF0A7D63546082F79 /* Pods-MyongJunSickFE.release.xcconfig */;
+			baseConfigurationReference = 73A7D680B46894FE62C21ACC /* Pods-MyongJunSickFE.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "Apple Development";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
-				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 202211011;
-				DEVELOPMENT_TEAM = "";
-				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 5UU4FUZH93;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 20230416;
+				DEVELOPMENT_TEAM = 5UU4FUZH93;
 				INFOPLIST_FILE = MyongJunSickFE/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "명준식";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.food-and-drink";
@@ -574,7 +642,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.5;
+				MARKETING_VERSION = 2.0.1;
 				MULTI_DEPLOYMENT_CONFIG = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
@@ -584,7 +652,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mju.convergence-software";
 				PRODUCT_NAME = MyongJunSickFE;
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = MjsMealAppProfile;
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -619,7 +686,6 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODEPUSH_KEY = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -651,7 +717,6 @@
 					"\"$(inherited)\"",
 				);
 				MTL_ENABLE_DEBUG_INFO = YES;
-				MULTI_DEPLOYMENT_CONFIG = "";
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CPLUSPLUSFLAGS = (
 					"$(OTHER_CFLAGS)",
@@ -693,7 +758,6 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODEPUSH_KEY = "1NpkE8isX-hOYPwKndgElCiSmd8K1bsrPEWji";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
@@ -718,7 +782,6 @@
 					"\"$(inherited)\"",
 				);
 				MTL_ENABLE_DEBUG_INFO = NO;
-				MULTI_DEPLOYMENT_CONFIG = "$(BUILD_DIR)/$(CONFIGURATION)$\n(EFFECTIVE_PLATFORM_NAME)";
 				OTHER_CPLUSPLUSFLAGS = (
 					"$(OTHER_CFLAGS)",
 					"-DFOLLY_NO_CONFIG",
@@ -760,7 +823,6 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODEPUSH_KEY = "IzM-UWX2Qtrvu0uHYDAYNmvE771vf8Hg3F7yi";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
@@ -785,7 +847,6 @@
 					"\"$(inherited)\"",
 				);
 				MTL_ENABLE_DEBUG_INFO = NO;
-				MULTI_DEPLOYMENT_CONFIG = "$(BUILD_DIR)/Release$\n(EFFECTIVE_PLATFORM_NAME)";
 				OTHER_CPLUSPLUSFLAGS = (
 					"$(OTHER_CFLAGS)",
 					"-DFOLLY_NO_CONFIG",
@@ -800,17 +861,15 @@
 		};
 		B3FEDFCD290656FD00AAD6F5 /* Staging */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D2C740F45D8845C2D29D09E4 /* Pods-MyongJunSickFE.staging.xcconfig */;
+			baseConfigurationReference = 02DDD4719DCDD36B102C765B /* Pods-MyongJunSickFE.staging.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "Apple Development";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
-				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 202211011;
-				DEVELOPMENT_TEAM = "";
-				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 5UU4FUZH93;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 20230416;
+				DEVELOPMENT_TEAM = 5UU4FUZH93;
 				INFOPLIST_FILE = MyongJunSickFE/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "명준식";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.food-and-drink";
@@ -818,7 +877,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.5;
+				MARKETING_VERSION = 2.0.1;
 				MULTI_DEPLOYMENT_CONFIG = "$(BUILD_DIR)/Release$(EFFECTIVE_PLATFORM_NAME)";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
@@ -828,7 +887,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mju.convergence-software";
 				PRODUCT_NAME = MyongJunSickFE;
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = MjsMealAppProfile;
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -836,7 +894,7 @@
 		};
 		B3FEDFCE290656FD00AAD6F5 /* Staging */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 68820F28868C4CE89B04213F /* Pods-MyongJunSickFE-MyongJunSickFETests.staging.xcconfig */;
+			baseConfigurationReference = E1EFA208ABC54FAB404110A5 /* Pods-MyongJunSickFE-MyongJunSickFETests.staging.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
