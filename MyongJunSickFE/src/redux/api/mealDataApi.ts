@@ -2,6 +2,7 @@ import {createApi, fetchBaseQuery} from '@reduxjs/toolkit/query/react';
 import {API_URL} from '@env';
 
 const baseUrl = API_URL;
+console.log(baseUrl);
 
 export const MealDataApi = createApi({
   reducerPath: 'mealDataApi',
