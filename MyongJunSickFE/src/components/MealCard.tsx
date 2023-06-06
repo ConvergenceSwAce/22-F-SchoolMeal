@@ -115,7 +115,7 @@ const MealCard = ({
           space="8px"
           className="border-solid border-[1px] border-[#DBDBDB] rounded-[12px] p-[16px]"
         >
-          {data[day]['menu'][order] == undefined ? (
+          {data[day]['menu'][order] ? (
             mealType === 'incam' ? (
               data[day]['menu'][order]?.map((item: [], index: number) => (
                 <Stack key={index} className="flex-row justify-between items-center">
