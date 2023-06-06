@@ -1,5 +1,6 @@
 # 22-F-SchoolMeal(명지대 학식 간편 확인 서비스)
-# <b>명</b>지대가 <b>준</b>비한 <b>식</b>사 명준식입니다
+# <b>명지대가 준비한 식사 : 명준식</b>
+![cover](https://github.com/ConvergenceSwAce/22-F-SchoolMeal/assets/49053676/fd481ab1-25d2-4da5-9d05-61028df0060c)
 
 ## 팀소개
 
@@ -75,12 +76,12 @@
 <div align=left>
 <h3>👨🏻‍💻Language&Framwork👩🏻‍💻</h3>
 <h3>Common</h3>
-<img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=JavaScript&logoColor=white">
 <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=TypeScript&logoColor=white">
 <h3>FE</h3>
 <img src="https://img.shields.io/badge/React Native-61DAFB?style=for-the-badge&logo=react&logoColor=white">
+<img src="https://img.shields.io/badge/Redux Toolkit-764ABC?style=for-the-badge&logo=Redux&logoColor=white">
+<img src="https://img.shields.io/badge/RTK Query-764ABC?style=for-the-badge&logo=Redux&logoColor=white">
 <img src="https://img.shields.io/badge/TailwindCSS-06B6D4?style=for-the-badge&logo=TailwindCSS&logoColor=white">
-<img src="https://img.shields.io/badge/Redux-764ABC?style=for-the-badge&logo=Redux&logoColor=white">
 <h3>BE</h3>
 <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=Node.js&logoColor=white">
 <img src="https://img.shields.io/badge/Nestjs-E0234E?style=for-the-badge&logo=Nestjs&logoColor=white">
