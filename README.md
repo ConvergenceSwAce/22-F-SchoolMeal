@@ -1,6 +1,8 @@
 # 22-F-SchoolMeal(명지대 학식 간편 확인 서비스)
 # <b>명지대가 준비한 식사 : 명준식</b>
 ![cover](https://github.com/ConvergenceSwAce/22-F-SchoolMeal/assets/49053676/99f98a92-2784-4a7b-8a38-45ed52aacb16)
+## [ICT 융합대학 학우 인터뷰 3호](https://drive.google.com/file/d/1ZvbrT1n54ZlSIQsBzM4p3t9QaD9i4ks-/view)
+
 
 ## 팀소개
 
